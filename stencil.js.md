@@ -24,18 +24,18 @@ export class SampleText {
 #### ☑ Special Tags
 |Name|Desc|Params|Persian desc|
 |-|-|-|-|
-|<slot />|Display content added to the component |____|____|
+|```<slot />```|Display content added to the component |||
 
 #### ☑ Decorators
 |Name|Desc|Params|Persian desc|
 |-|-|-|-|
-|@Component()|new web component|____|____|
-|@Prop()|exposed property/attribute|____|____|
-|@State()|internal state of the component|____|____|
-|@Watch()|hook that runs when a property or state changes|____|____|
-|@Element()| reference to the host element|aaaa|aaaa|
-|@Method()| exposed public method|____|____|
-|@Event()|DOM event the component might emit|____|____|
-|@Listen()|listens for DOM events|____|____|
+|@Component()|new web component|||
+|@Prop()|exposed property/attribute|||
+|@State()|internal state of the component|||
+|@Watch()|hook that runs when a property or state changes|||
+|@Element()| reference to the host element|||
+|@Method()| exposed public method|||
+|@Event()|DOM event the component might emit|||
+|@Listen()|listens for DOM events|||
 
 
