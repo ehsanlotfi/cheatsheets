@@ -3,7 +3,7 @@
 import { Component } from '@stencil/core';
 
 @Component({
-  tag: 'uc-sample-text'
+  tag: 'sample-text'
 })
 export class SampleText {
   render() {
