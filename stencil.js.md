@@ -12,6 +12,7 @@ export class SampleText {
   render() {
     return (
         <h1>Sample {this.text}</h1>
+        <section><slot /></section>
     );
   }
 }
