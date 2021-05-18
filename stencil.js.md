@@ -40,7 +40,7 @@ export class SampleText {
 
 #### ☑ Lifecycle
 |Name|Desc|Persian desc|
-|-|-|-|-|
+|-|-|-|
 | ```connectedCallback()	 ```|||
 | ```disconnectedCallback()	 ```|||
 | ```componentWillLoad()	 ```|||
