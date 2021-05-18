@@ -24,14 +24,7 @@ export class SampleText {
 #### ☑ Special Tags
 |Name|Desc|Params|
 |-|-|-|
-|```<slot />```|Display content added to the component | 
-``` 
-<my-component>
-  <p slot='my-header'>Hello</p>
-  <p slot='my-footer'>Thanks</p>
-</my-component>
-```
-|
+|```<slot />```|Display content added to the component |<code>{<br>  "code": 400,<br>  "msg": balabala"<br>}</code>|
 
 #### ☑ Decorators
 |Name|Desc|Params|Persian desc|
