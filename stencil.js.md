@@ -24,7 +24,7 @@ export class SampleText {
 #### ☑ Special Tags
 |Name|Desc|Params|
 |-|-|-|
-|```<slot />```|Display content added to the component |<code><my-component><br><p slot='my-header'>Hello</p><br><p slot='my-footer'>Thanks</p><br></my-component></code>|
+|```<slot />```|Display content added to the component |<code>```<my-component>```<br>```<p slot='my-header'>Hello</p>```<br>```<p slot='my-footer'>Thanks</p>```<br>```</my-component>```</code>|
 
 #### ☑ Decorators
 |Name|Desc|Params|Persian desc|
