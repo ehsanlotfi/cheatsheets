@@ -38,6 +38,21 @@ export class SampleText {
 |@Event()|DOM event the component might emit|||
 |@Listen()|listens for DOM events|||
 
+#### ☑ Lifecycle
+|Name|Desc|Persian desc|
+|-|-|-|-|
+| ```connectedCallback()	 ```|||
+| ```disconnectedCallback()	 ```|||
+| ```componentWillLoad()	 ```|||
+| ```componentDidLoad()		 ```|||
+| ```componentShouldUpdate() ```|||
+| ```componentWillRender()	 ```|||
+| ```componentDidRender()	 ```|||
+| ```componentWillUpdate()	 ```|||
+| ```componentDidUpdate()    ```|||
+
+
+
 ### ☑ Example
 #### ☑ slot
 ```
