@@ -22,9 +22,9 @@ export class SampleText {
 ```
 
 #### ☑ Special Tags
-|Name|Desc|Params|Persian desc|
-|-|-|-|-|
-|```<slot />```|Display content added to the component |||
+|Name|Desc|Params|
+|-|-|-|
+|```<slot />```|Display content added to the component ||
 
 #### ☑ Decorators
 |Name|Desc|Params|Persian desc|
