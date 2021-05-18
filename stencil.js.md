@@ -22,9 +22,9 @@ export class SampleText {
 ```
 
 #### ☑ Special Tags
-|Name|Desc|Params|
+|Name|Desc|Persian desc|
 |-|-|-|
-|```<slot />```|Display content added to the component |<code>```<my-component>```<br>```<p slot='my-header'>Hello</p>```<br>```<p slot='my-footer'>Thanks</p>```<br>```</my-component>```</code>|
+|```<slot />```|Display content added to the component ||
 
 #### ☑ Decorators
 |Name|Desc|Params|Persian desc|
@@ -38,4 +38,20 @@ export class SampleText {
 |@Event()|DOM event the component might emit|||
 |@Listen()|listens for DOM events|||
 
+### ☑ Example
+#### ☑ slot
+```
+<my-component>
+  <p slot='my-header'>Hello</p>
+  <p slot='my-footer'>Thanks</p>
+</my-component>
+```
+```
+render () {
+  return <div>
+    <header><slot name='my-header' /></header>
+    <footer><slot name='my-footer' /></footer>
+  </div>
+}
+```
 
