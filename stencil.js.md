@@ -16,3 +16,6 @@ export class SampleText {
   }
 }
 ```
+```
+  <sample-text text="hello world!"></sample-text>
+```
