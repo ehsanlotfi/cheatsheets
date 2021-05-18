@@ -21,16 +21,21 @@ export class SampleText {
   <sample-text text="hello world!"></sample-text>
 ```
 
+#### ☑ Special Tags
+|Name|Desc|Params|Persian desc|
+|-|-|-|-|
+|<slot />|Display content added to the component |____|____|
+
 #### ☑ Decorators
 |Name|Desc|Params|Persian desc|
 |-|-|-|-|
-|@Component()|new web component|aaaa|aaaa|
-|@Prop()|exposed property/attribute|aaaa|aaaa|
-|@State()|internal state of the component|aaaa|aaaa|
-|@Watch()|hook that runs when a property or state changes|aaaa|aaaa|
+|@Component()|new web component|____|____|
+|@Prop()|exposed property/attribute|____|____|
+|@State()|internal state of the component|____|____|
+|@Watch()|hook that runs when a property or state changes|____|____|
 |@Element()| reference to the host element|aaaa|aaaa|
-|@Method()| exposed public method|aaaa|aaaa|
-|@Event()|DOM event the component might emit|aaaa|aaaa|
-|@Listen()|listens for DOM events|aaaa|aaaa|
+|@Method()| exposed public method|____|____|
+|@Event()|DOM event the component might emit|____|____|
+|@Listen()|listens for DOM events|____|____|
 
 
