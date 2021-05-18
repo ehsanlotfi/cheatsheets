@@ -1,4 +1,4 @@
-### ☑ basic usage
+#### ☑ basic usage
 ```
 import { Component } from '@stencil/core';
 
