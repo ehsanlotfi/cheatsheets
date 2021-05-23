@@ -1,6 +1,16 @@
+#### ☑ getting started
+```
+npm install -g stencil
+```
+```
+npm init stencil
+```
+We want to build a reusable component so we will choose the third option, **component**.
+
+
 #### ☑ basic usage
 ```
-import { Component, Prop } from '@stencil/core';
+{ Component, Host, h, Prop, State } from '@stencil/core';
 
 @Component({
   tag: 'sample-text'
@@ -8,6 +18,7 @@ import { Component, Prop } from '@stencil/core';
 export class SampleText {
 
  @Prop() text: string;
+ @State() validFlag: string;
 
   render() {
     return (
