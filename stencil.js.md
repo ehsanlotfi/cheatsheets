@@ -45,7 +45,7 @@ export class SampleText {
 |@State()|internal state of the component|||
 |@Watch()|hook that runs when a property or state changes|||
 |@Element()| reference to the host element|||
-|@Method()| exposed public method|||
+|@Method()| exposed public method||<p dir='rtl' align='right'>فراخوانی متد از بیرون بوسیله انتخابگر المنت</p>|
 |@Event()|DOM event the component might emit|||
 |@Listen()|listens for DOM events|||
 
