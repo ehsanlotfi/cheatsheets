@@ -44,8 +44,7 @@ export class SampleText {
 |@Prop()|exposed property/attribute|||
 |@State()|internal state of the component|||
 |@Watch()|hook that runs when a property or state changes|||
-|@Element()| reference to the host element||<font size="+1">
-<p dir='rtl' align='right'>برای دسترسی به المنت های تعریف شده داخل کامپوننت ستفاده میشود  برای دسترسی به shadowDOM از shadowRoot استفاده میکنیم</p></font>|
+|@Element()| reference to the host element||<p dir='rtl' align='right'>برای دسترسی به المنت های تعریف شده داخل کامپوننت ستفاده میشود  برای دسترسی به shadowDOM از shadowRoot استفاده میکنیم</p>|
 |@Method()| exposed public method||<p dir='rtl'  align='right'>فراخوانی متد از بیرون بوسیله انتخابگر المنت</p>|
 |@Event()|DOM event the component might emit|||
 |@Listen()|listens for DOM events|||
