@@ -19,17 +19,28 @@ export class SampleText {
 
  @Prop() text: string;
  @State() validFlag: string;
+ 
+ @Method() showConsole() {
+    console.log("showConsole");
+ }
 
   render() {
     return (
         <h1>Sample {this.text}</h1>
-        <section><slot /></section>
+        <section>
+          <slot />
+        </section>
     );
   }
 }
 ```
 ```
   <sample-text text="hello world!"></sample-text>
+
+  <script>
+    const sampleText = document.querySelector('sample-text');
+    sampleText.showConsole();
+  </script>
 ```
 
 #### ☑ Special Tags
