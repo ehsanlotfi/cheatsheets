@@ -25,7 +25,7 @@ export class AppModule {
   
  }
 ```
-#####⚠️ Add your component to entryComponents and comment bootstrap: [AppComponent] line
+##### ⚠️ Add your component to entryComponents and comment bootstrap: [AppComponent] line
 ###### create build-elements.js file in root project
 ```
 npm i fs-extra --save
