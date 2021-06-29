@@ -57,8 +57,8 @@ const concat = require('concat');
     await fs.ensureDir('elements');
     const es5 = ['./dist/test-sample/runtime-es5.js','./dist/test-sample/polyfills-es5.js','./dist/test-sample/main-es5.js'];
     const es2015= ['./dist/test-sample/runtime-es2015.js','./dist/test-sample/polyfills-es2015.js','./dist/test-sample/main-es2015.js'];
-    await concat(es5, 'elements/exir-header-web-component-es5.js');
-    await concat(es2015, 'elements/exir-header-web-component.js');
+    await concat(es5, 'elements/web-component-file-es5.js');
+    await concat(es2015, 'elements/web-component-file-es2015e.js');
 })();
 ```
 
