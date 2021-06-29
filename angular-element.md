@@ -27,6 +27,10 @@ export class AppModule {
 ```
 ###### create build-elements.js file in root project
 ```
+npm i fs-extra --save
+npm i concat --save
+```
+```
 const fs = require('fs-extra');
 const concat = require('concat');
 
