@@ -34,3 +34,7 @@ SELECT * FROM Table2
 SET STATISTICS IO OFF
 GO
 ```
+#### تکرار یک مقدار به تعداد مورد نظر
+```
+ select REPLICATE('hello', 1000)
+```
