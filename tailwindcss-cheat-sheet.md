@@ -8,3 +8,9 @@
 - Minimal custom css
 - Better developer experience
 - Mobile first design
+
+### Sizing
+16px => 1rem => 4 tailwindcss
+```
+<div class="w-4"></div>
+```
