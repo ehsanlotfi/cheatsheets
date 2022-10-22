@@ -16,7 +16,7 @@
 ```
 <div class="w-4"></div>
 ```
-w-{number}, h-{number}, max-w-{number}, min-w-{number}
+##### w-{number}, h-{number}, max-w-{number}, min-w-{number}
 ```
 .w-96
 .w-80
@@ -31,7 +31,7 @@ w-{number}, h-{number}, max-w-{number}, min-w-{number}
 
 ...
 ```
-w-{fraction}, h-{fraction}, max-w-{fraction}, min-w-{fraction}
+##### w-{fraction}, h-{fraction}, max-w-{fraction}, min-w-{fraction}
 ```
 .w-1/2
 .w-2/5
