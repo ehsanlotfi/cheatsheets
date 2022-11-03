@@ -6,8 +6,6 @@
 - Highly customizable
 - Low level framework
 - No pre built components
-- Building block full creative components
-- Minimal custom css
 - Better developer experience
 - Mobile first design
 
@@ -20,6 +18,25 @@
 - xl (1280px)	max-width: 1280px;
 - 2xl (1536px)	max-width: 1536px;
 
+##### columns-{count}  => count = { number[1-12], 3xs-7xl }
+```
+<div class="columns-3xs ...">
+  <img class="w-full aspect-video ..." src="..." />
+  <img class="w-full aspect-square ..." src="..." />
+  <!-- ... -->
+</div>
+```
+##### break-after-{value} => value = { auto, avoid, all, avoid-page, page, right, column }
+##### break-Before-{value} 
+##### break-Inside-{value}
+```
+<div class="columns-2">
+  <p>Well, let me tell you something, ...</p>
+  <p class="break-inside-avoid-column">Sure, go ahead, laugh...</p>
+  <p>Maybe we can live without...</p>
+  <p>Look. If you think this is...</p>
+</div>
+```
 
 ##### aspect-{ratio}  => ratio = { auto, square, video }
 ```
