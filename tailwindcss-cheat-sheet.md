@@ -3,6 +3,7 @@
 ### Basic definitions
 - Utility first css framework
 - Rapidly build custom design
+- Use atomic CSS methodology.
 - Highly customizable
 - Low level framework
 - No pre built components
