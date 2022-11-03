@@ -38,6 +38,8 @@
 </div>
 ```
 
+##### (🛈)[https://www.w3schools.com/cssref/tryit.php?filename=trycss3_box-decoration-break] break-Inside-{value} => value = { clone, slice }
+
 ##### aspect-{ratio}  => ratio = { auto, square, video }
 ```
 <iframe class="w-full aspect-video" src="https://www.youtube.com"></iframe>
