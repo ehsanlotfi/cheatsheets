@@ -1,6 +1,7 @@
 ## Tailwind CSS Cheat Sheet
 ### useful link
 [stateofcss](https://2021.stateofcss.com/en-US/technologies/css-frameworks)
+[cheatsheet](https://umeshmk.github.io/Tailwindcss-cheatsheet/v2.0/)
 
 
 ### Basic definitions
