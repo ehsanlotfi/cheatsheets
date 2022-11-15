@@ -57,27 +57,34 @@ EXPOSE <port> [<port> ...]
 ENV <key> <value>
 ENV <key>=<value> [<key>=<value> ...]
 ```
+- متغیرهای محلی ایمیج را مشخص می کند.
+
 
 # ADD
 ```
 ADD <src> [<src> ...] <dest>
 ADD ["<src>", ... "<dest>"] (this form is required for paths containing whitespace)
 ```
+- فایل‌ها، دایرکتوری‌ها یا آدرس‌های اینترنتی فایل خارجی را از <src> کپی می‌کند و آنها را به سیستم فایل تصویر در مسیر <dest> اضافه می‌کند.
+
 
 # COPY
 ```
 COPY <src> [<src> ...] <dest>
 COPY ["<src>", ... "<dest>"] (this form is required for paths containing whitespace)
 ```
-
+ - مشابه دستور ```ADD``` عمل می کند.
+  
 # ENTRYPOINT
-
 Usage:
 ```
 ENTRYPOINT ["<executable>", "<param1>", "<param2>"] (exec form, preferred)
 ENTRYPOINT <command> <param1> <param2> (shell form)
 ```
 
+- به شما این امکان را می دهد تا یک کانتینر را پیکربندی کنید که به عنوان یک فایل اجرایی اجرا شود.
+
+  
 # VOLUME
 ```
 VOLUME ["<path>", ...]
