@@ -34,6 +34,10 @@ CMD ["<param1>","<param2>"] (as default parameters to ENTRYPOINT)
 CMD <command> <param1> <param2> (shell form)
 ```
 
+- برای اینکه یه دستوری رو به ایمیج ساخته شده معرفی بکنی که همیشه اونو اجرا بکنه.
+- فقط یک دستور ```CMD``` در داکر فایل میتواند وجود داشته باشد.
+- اگر چند تا ```CMD``` داشته باشید فقط آخرین آن مورد اجرا است.
+
 # LABEL
 ```
 LABEL <key>=<value> [<key>=<value> ...]
