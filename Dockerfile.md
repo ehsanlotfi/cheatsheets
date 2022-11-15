@@ -83,6 +83,8 @@ ENTRYPOINT <command> <param1> <param2> (shell form)
 ```
 
 - به شما این امکان را می دهد تا یک کانتینر را پیکربندی کنید که به عنوان یک فایل اجرایی اجرا شود.
+ - اجرا کردن یک دستور بعد از ساخته شدن Container
+
 
   
 # VOLUME
@@ -102,29 +104,34 @@ USER <username | UID>
 ```
 WORKDIR </path/to/workdir>
 ```
+- ست کردن دایرکتوری اجرایی در Container
 
 # ARG
 ```
 ARG <name>[=<default value>]
 ```
-
+- متغیری را تعریف می‌کند که کاربران می‌توانند در زمان ساخت به سازنده با آن ارسال کنند مانند ```docker build``` دستوراتی که داخل فلگ ```--build-arg <varname>=<value>``` می آید.
+ 
 # ONBUILD
 ```
 ONBUILD <Dockerfile INSTRUCTION>
 ```
-
+- دستورات را بصورت ```trigger``` اضافه میکند تا در زمان دیگری استفاده شود.
 # STOPSIGNAL
 ```
 STOPSIGNAL <signal>
 ```
+- دستورالعمل سیگنال فراخوانی سیستم را تنظیم می کند که برای خروج به کانتینر ارسال می شود.
 
 # HEALTHCHECK
 ```
 HEALTHCHECK [<options>] CMD <command> (check container health by running a command inside the container)
 HEALTHCHECK NONE (disable any healthcheck inherited from the base image)
 ```
+- به داکر می‌گوید چگونه یک ایمیج را تست کند تا بررسی کند که هنوز کار می‌کند.
 
 # SHELL
 ```
 SHELL ["<executable>", "<param1>", "<param2>"]
 ```
+- شل پیش فرض را برای اجرا دستورات مشخص می کند.
