@@ -13,13 +13,19 @@ FROM <image>@<digest>
 ```
 MAINTAINER <name>
 ```
+- نام نویسنده ایمیج را مشخص می کند.
 
 # RUN
 ```
 RUN <command> (shell form, the command is run in a shell, which by default is /bin/sh -c on Linux or cmd /S /C on Windows)
 RUN ["<executable>", "<param1>", "<param2>"]
-```
 
+// example
+RUN apt-get update
+
+```
+- برای اجرای دستور روی ایمیج پیش فرض استفاده می شود.
+- برای تغییر ایمیج پیش فرض از ```SHELL``` استفاده می شود. 
 
 # CMD
 ```
