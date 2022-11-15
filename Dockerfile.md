@@ -90,14 +90,13 @@ ENTRYPOINT <command> <param1> <param2> (shell form)
 VOLUME ["<path>", ...]
 VOLUME <path> [<path> ...]
 ```
-
-- یک پوشه میزبان برای ذخیره داده ها استفاده می شود.
+ - اضافه کردن یک mount point در ماشین میزبان یا Containerهای دیگر.
  
 # USER
 ```
 USER <username | UID>
 ```
-
+- ست کردن یک user یا UID در Container
 
 # WORKDIR
 ```
