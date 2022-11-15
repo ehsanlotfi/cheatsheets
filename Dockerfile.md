@@ -91,6 +91,8 @@ VOLUME ["<path>", ...]
 VOLUME <path> [<path> ...]
 ```
 
+- یک پوشه میزبان برای ذخیره داده ها استفاده می شود.
+ 
 # USER
 ```
 USER <username | UID>
