@@ -1,120 +1,15 @@
 
 # Rxjs cheat sheet 
 
-## Subjects
-- #### Subject  
-    No initial value or replay behavior.
-- #### AsyncSubject
-    Emits latest value to observers upon completion.
-- #### BehaviorSubject 
-    Requires an initial value and emits its current value (last emitted item) to new subscribers.
-- #### ReplaySubject 
-    Emits specified number of last emitted values (a replay) to new subscribers.
+#### MergeMap, FlatMap
+مرج مپ نسخه جدید فلت مپ هست درخواست ها باهم ارسال میشوند و بدون در نظر گرفتن ترتیب هر کدوم تمام شد بر میگردد. 
 
-## Operators
-- #### Combination
-    - combineAll
-    - combineLatest ⭐
-    - concat ⭐
-    - concatAll
-    - endWith
-    - forkJoin
-    - merge ⭐
-    - mergeAll
-    - pairwise
-    - race
-    - startWith ⭐
-    - withLatestFrom ⭐
-    - zip
-- #### Conditional
-    - defaultIfEmpty
-    - every
-    - iif
-    - sequenceequal
-- #### Creation
-    - ajax ⭐
-    - create
-    - defer
-    - empty
-    - from ⭐
-    - fromEvent
-    - generate
-    - interval
-    - of ⭐
-    - range
-    - throw
-    - timer
-- #### Error Handling
-    - catch / catchError ⭐
-    - retry
-    - retryWhen
-- #### Filtering
-    - audit
-    - auditTime
-    - debounce
-    - debounceTime ⭐
-    - distinct
-    - distinctUntilChanged ⭐
-    - distinctUntilKeyChanged
-    - filter ⭐
-    - find
-    - first
-    - ignoreElements
-    - last
-    - sample
-    - single
-    - skip
-    - skipUntil
-    - skipWhile
-    - take ⭐
-    - takeLast
-    - takeUntil ⭐
-    - takeWhile
-    - throttle
-    - throttleTime
-- #### Multicasting
-    - multicast
-    - publish
-    - share ⭐
-    - shareReplay ⭐
-- #### Transformation
-    - buffer
-    - bufferCount
-    - bufferTime ⭐
-    - bufferToggle
-    - bufferWhen
-    - concatMap ⭐
-    - concatMapTo
-    - expand
-    - exhaustMap
-    - groupBy
-    - map ⭐
-    - mapTo
-    - mergeMap / flatMap ⭐
-    - mergeScan
-    - partition
-    - pluck
-    - reduce
-    - scan ⭐
-    - switchMap ⭐
-    - switchMapTo
-    - toArray
-    - window
-    - windowCount
-    - windowTime
-    - windowToggle
-    - windowWhen
-- #### Utility
-    - tap / do ⭐
-    - delay
-    - delayWhen
-    - dematerialize
-    - finalize / finally
-    - let
-    - repeat
-    - repeatWhen
-    - timeInterval
-    - timeout
-    - timeoutWith
-    - toPromise
-    - ⭐ - commonly used
+#### ConcatMap
+درخواست بصورت سری و با توجه به زمان تمام شدن قبلی بر میگردد
+
+#### SwitchMap
+درخواست ها ارسال میشود به محض دریافت درخواست جدید درخواست قبلی کنسل می شود و به درخواست آخری پاسخ داده می شود مثلا برای استفاده در کادر جستجو
+
+#### ExhaustMap
+
+برعکس سوئیچ مپ فقط درخواست اول پاسخ داده میشود بقیه همه کنسل می شود
