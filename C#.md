@@ -37,6 +37,7 @@
 زمانی که یک متد برای کلاسی که به آن دسترسی ندارم بخواهیم تعریف کنیم مثلا متدی برای کلاس string  در خود هسته #C بخواهیم تعریف کنیم.
 
 ## Encapsulation 
+اگر یک کلاسی سطح دسترسی آن مشخص نشود پیش فرض internal قرار میگرد.
 ### public
 دسترسی کامل در کلاس فعلی و همه کلاس ها و همه پروژه که اسمبلی شده از این کلاس
 ### private
@@ -46,5 +47,24 @@
 ### protected
 ### protectedInternal
 
+## constractor of class
+### Default Constructor.
+### Parameterized Constructor.
+حتما باید ورودی داشته باشد.
+### Copy Constructor.
+### Private Constructor.
+زمانی که کلاس از این Constructor استفاده کند قابلیت نمونه سازی نیست. 
+### Static Constructor.
+زمانی اجرا می شود که متدهای استاتیک همان کلاس اجرا شود.
+
+
+## throw vs throw x
+throw اطلاعات بیشتری بر میگرداند
+
+## ArrayList vs HashTable 
+### ArrayList
+در افزودن کلید نیاز ندارد
+### HashTable
+در افزودن کلید نیاز دارد.
 
 
