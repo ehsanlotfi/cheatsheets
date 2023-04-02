@@ -21,6 +21,18 @@
 این هوک شبیه به useEffect هست ولی useLayoutEffect قبل از این که صفحه render بشه و به کاربر نمایش داده
 ### useDebugValue 
 برای دیباگ یک فانکشن استفاده میشود و زمانی اجرا میشه که React DevTools باز باشه .
+### useDeferredValue 
+این هوک یک مقدار رو میگیره و یه کپی از اون برمیگردونه
+
+### useTransition 
+
+### useId 
+برای آیدی های یونیک استفاده میشه.
+### useSyncExternalStore 
+ 
+ برای وقتی استفاده میشه که قراره از یه منبع خارجی یک سری دیتا بخونیم
+### useInsertionEffect 
+عملکردی مثل useEffect داره با این تفاوت که قبل از این که DOM اجرا شده باشه عمل میکنه
 
 ## Tools
 - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
