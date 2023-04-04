@@ -147,7 +147,14 @@ $Volvo = $multiDimensional[0][0];
 ```
   class Fruit {
     public $name;
-
+    protected $color;
+    private $weight;
+    
+    // Constructor
+    function __construct($name) { 
+        $this->name = $name;
+    }
+    
     function set_name($name) {
        $this->name = $name;
     }
@@ -155,11 +162,19 @@ $Volvo = $multiDimensional[0][0];
      function get_name() {
         return $this->name;
     }
+    
+    // Destructor
+    function __destruct() { 
+      echo "The fruit is {$this->name} and the color is {$this->color}.";
+    }
+
   }
 
   $apple = new Fruit();
   $apple->set_name('Apple');
   echo $banana->get_name();
-
+  
+  $apple->color = 'Yellow'; // ERROR
+  
   if($apple instanceof Fruit) { }; // بررسی اینکه یک آبجکت مشتق شده یک کلاس است یا نه
 ```
