@@ -33,6 +33,15 @@
     }
 ```
 
+## Functions
+```
+  function writeMsg() {
+    echo "Hello world!";
+  }
+
+  writeMsg(); 
+```
+
 ## switch Statement
 ```
 switch (n) {
