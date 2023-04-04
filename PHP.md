@@ -142,3 +142,24 @@ $Volvo = $multiDimensional[0][0];
       echo "Process complete.";
   }
 ```
+
+# Class and Objects
+```
+  class Fruit {
+    public $name;
+
+    function set_name($name) {
+       $this->name = $name;
+    }
+    
+     function get_name() {
+        return $this->name;
+    }
+  }
+
+  $apple = new Fruit();
+  $apple->set_name('Apple');
+  echo $banana->get_name();
+
+  if($apple instanceof Fruit) { }; // بررسی اینکه یک آبجکت مشتق شده یک کلاس است یا نه
+```
