@@ -4,18 +4,14 @@
 
 ## define varible
 ```
-<?php
   $color = "red";
   echo "My car is " . $color . "<br>";
-?>
 ```
 
 ## define Constant
 ```
-<?php
   define("Hello", "Hello world!");
   echo Hello;
-?>
 ```
 ### Data Types
 - String
@@ -45,4 +41,30 @@ switch (n) {
     ...
   default:
 }
+```
+
+## Loop
+```
+    while (condition is true) {
+    }
+```
+```
+    do {
+    } while (condition is true);
+```
+```
+  for ($x = 0; $x <= 10; $x++) {
+     if ($x != 4) {
+        break;
+     } elseif ($x == 4) {
+        continue;
+     }
+  }
+```
+```
+  $colors = array("red", "green", "blue", "yellow");
+
+  foreach ($colors as $value) {
+    echo "$value <br>";
+  }
 ```
