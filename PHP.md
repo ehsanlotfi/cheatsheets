@@ -122,3 +122,10 @@ $Volvo = $multiDimensional[0][0];
 زمانی از include استفاده میکنیم که اگر به هر دلیلی خطا خورد ( آدرس اشتباه بود یا هرچیزی) برنامه متوقف نشود ولی در require اگر خطا بخورد برنامه fatal error خورد و متوقف میشود.
 
 توابع include_once و require_once کاملا مشابه تابع include و require عمل می کنند فقط با این تفاوت که اگر فایل قبلا یکبار خوانده شده باشد در دفعه دوم و سوم و ... دوباره خوانده نمی شوند.
+
+## JSON
+```
+  $cars = array("Volvo", "BMW", "Toyota");
+  echo json_encode($age); // {"Peter":35,"Ben":37,"Joe":43}
+  echo json_encode($cars); // ["Volvo","BMW","Toyota"]
+```
