@@ -131,3 +131,14 @@ $Volvo = $multiDimensional[0][0];
   $cars = array("Volvo", "BMW", "Toyota");  
   echo json_encode($cars); // ["Volvo","BMW","Toyota"]
 ```
+
+## try...catch
+```
+  try {
+     echo divide(5, 0);
+  } catch(Exception $ex) {
+      $message = $ex->getMessage();
+  } finally {
+      echo "Process complete.";
+  }
+```
