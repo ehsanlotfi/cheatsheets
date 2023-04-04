@@ -1,6 +1,6 @@
 ## PSR
 مخفف PHP Standards Recommendation یا «توصیه های استاندارد PHP» است.
-PSR-0	-PSR-20	
+21 گروه استاندارد تعریف شده از PSR-0 تا PRS-20 که برخی هاش دیپریکت شده اند
 
 ## define varible
 ```
