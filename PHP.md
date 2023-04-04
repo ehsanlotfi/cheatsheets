@@ -18,4 +18,5 @@ echo "My car is " . $color . "<br>";
 - Object // classes Or objects
 - NULL
 - Resource
+
  دیتاتایپ Resource یک نوع داده نیست، بلکه ذخیره reference ها در توابع و منابع خارج از php است. مثلا resource درخواست های پایگاه داده.
