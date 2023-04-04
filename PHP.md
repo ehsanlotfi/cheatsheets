@@ -36,3 +36,13 @@
     } else {
     }
 ```
+
+## switch Statement
+```
+switch (n) {
+  case label1:
+    break;
+    ...
+  default:
+}
+```
