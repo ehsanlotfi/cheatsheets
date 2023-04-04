@@ -8,6 +8,21 @@
   echo "My car is " . $color . "<br>";
 ```
 
+## Super Globals Variables
+- $GLOBALS
+```
+$GLOBALS['my_var'] = "hello world!";
+echo $my_var;
+```
+- $_SERVER
+- $_REQUEST
+- $_POST
+- $_GET
+- $_FILES
+- $_ENV
+- $_COOKIE
+- $_SESSION
+
 ## define Constant
 ```
   define("Hello", "Hello world!");
