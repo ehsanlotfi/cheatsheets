@@ -177,4 +177,18 @@ $Volvo = $multiDimensional[0][0];
   $apple->color = 'Yellow'; // ERROR
   
   if($apple instanceof Fruit) { }; // بررسی اینکه یک آبجکت مشتق شده یک کلاس است یا نه
+
+  class Apple extends Fruit { }  // Inheritance
+  
+}
+
+```
+## Class Constants
+```
+  class SocialNetwork {
+    const TELEGRAM = "telegram";
+    const TWITTER = "twitter";
+  }
+
+  echo SocialNetwork::TELEGRAM;
 ```
