@@ -5,8 +5,16 @@
 ## define varible
 ```
 <?php
-$color = "red";
-echo "My car is " . $color . "<br>";
+  $color = "red";
+  echo "My car is " . $color . "<br>";
+?>
+```
+
+## define Constant
+```
+<?php
+  define("Hello", "Hello world!");
+  echo Hello;
 ?>
 ```
 ### Data Types
