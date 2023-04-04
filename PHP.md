@@ -108,4 +108,15 @@ $Volvo = $multiDimensional[0][0];
   }
   
 ```
+## Modularity
+```
+<html>
+  <body>
+    <?php include 'header.php';?>
+    <?php require 'body.php'; ?>
+    <?php include 'footer.php';?>
+  </body>
+</html>
+```
 
+زمانی از include استفاده میکنیم که اگر به هر دلیلی خطا خورد ( آدرس اشتباه بود یا هرچیزی) برنامه متوقف نشود ولی در require اگر خطا بخورد برنامه fatal error خورد و متوقف میشود.
