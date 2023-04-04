@@ -9,3 +9,13 @@ $color = "red";
 echo "My car is " . $color . "<br>";
 ?>
 ```
+### Data Types
+- String
+- Integer
+- Float (floating point numbers - also called double)
+- Boolean
+- Array
+- Object // classes Or objects
+- NULL
+- Resource
+ دیتاتایپ Resource یک نوع داده نیست، بلکه ذخیره reference ها در توابع و منابع خارج از php است. مثلا resource درخواست های پایگاه داده.
