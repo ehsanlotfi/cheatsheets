@@ -227,3 +227,10 @@ $Volvo = $multiDimensional[0][0];
   ClassName::staticMethod();
   ClassName::$staticProp;
 ```
+
+## Namespaces
+- امکان ایجاد گروه بندی کلاس را محیا میکند
+- اجازه میدهد دو کلاس با نام یکسان داشته باشیم.
+```
+  namespace Html;
+```
