@@ -234,3 +234,28 @@ $Volvo = $multiDimensional[0][0];
 ```
   namespace Html;
 ```
+
+## MySQLi
+برای اتصال به پایگاه داده از دو کتابخانه PDO و MySQli میتوان استفاده کرد PDO با 12 پایگاه داده سازگار است ولی MySQLi فقط با MySQL کار میکند.
+
+کتابخانه MySQli را میتوان به دو صورت شی گرا و رویه ای استفاده کرد مثل های زیر نوع شی گرا آن است.
+```
+$conn = new mysqli($servername, $username, $password);
+
+$conn->connect_error; // بررسی اتصال موفقیت آمیز به دیتابیس
+
+$conn->query($sql) // اجرای تک کوئری خروجی بولین
+
+$conn->multi_query($sql) // اجرای چند کوئری خورجی بولین
+
+$conn->close();
+
+```
+
+## MySQLi Prepared Statement
+قابلیت  موثر برای مقابله با حملات SQL Injection هستند و نحوه ی کار در سه گام prepare و bind_param و execute است.
+```
+  $stmt = $conn->prepare("INSERT INTO MyGuests (firstname, lastname, email) VALUES (?, ?, ?)");
+  $stmt->bind_param("sss", $firstname, $lastname, $email);
+  $stmt->execute();
+```
