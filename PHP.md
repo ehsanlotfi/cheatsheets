@@ -244,7 +244,7 @@ $conn = new mysqli($servername, $username, $password);
 
 $conn->connect_error; // بررسی اتصال موفقیت آمیز به دیتابیس
 
-$conn->query($sql) // اجرای تک کوئری خروجی بولین
+$conn->query($sql) // اجرای تک کوئری خروجی بولین و اگر سلکت باشد لیست برمیگرداند
 
 $conn->multi_query($sql) // اجرای چند کوئری خورجی بولین
 
