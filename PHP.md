@@ -189,7 +189,7 @@ $Volvo = $multiDimensional[0][0];
     const TELEGRAM = "telegram";
     const TWITTER = "twitter";
   }
-
+  
   echo SocialNetwork::TELEGRAM;
 ```
 ## Abstract Classes
@@ -214,14 +214,16 @@ $Volvo = $multiDimensional[0][0];
   }
 ```
 
-## Static Methods
-متدهایی که بدون نمونه سازی از کلاس مستقیم میشه فراخوانی کرد.
+## Static Methods And Properties
+متدهایی  و ویژگی هایی که بدون نمونه سازی از کلاس مستقیم میشه فراخوانی کرد.
 ```
   class ClassName {
+     public static $staticProp = "My Static Prop";
      public static function staticMethod() {
         echo "Hello World!";
     } 
   }
 
   ClassName::staticMethod();
+  ClassName::$staticProp;
 ```
