@@ -201,3 +201,15 @@ $Volvo = $multiDimensional[0][0];
      abstract public function someMethod2($name, $color);
   }
 ```
+## Interfaces
+```
+  interface Animal {
+     public function makeSound();
+  }
+  
+  class Cat implements Animal {
+    public function makeSound() {
+       echo "Meow";
+    }
+  }
+```
