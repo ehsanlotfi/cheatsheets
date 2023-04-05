@@ -213,3 +213,15 @@ $Volvo = $multiDimensional[0][0];
     }
   }
 ```
+
+## Static Methods
+متدهایی که بدون نمونه سازی از کلاس مستقیم میشه فراخوانی کرد.
+```
+  class ClassName {
+     public static function staticMethod() {
+        echo "Hello World!";
+    } 
+  }
+
+  ClassName::staticMethod();
+```
