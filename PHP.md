@@ -192,3 +192,12 @@ $Volvo = $multiDimensional[0][0];
 
   echo SocialNetwork::TELEGRAM;
 ```
+## Abstract Classes
+به کلاسی که حداقل یک متد ابسترکت داشته باشد میگویند 
+کلاس ابسترکت کلاسی است که برای تکمیل وظایفش حتما باید کلاسی از آن ارث بری کند.
+```
+  abstract class ParentClass {
+     abstract public function someMethod1();
+     abstract public function someMethod2($name, $color);
+  }
+```
