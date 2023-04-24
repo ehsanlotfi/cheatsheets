@@ -227,6 +227,23 @@ $Volvo = $multiDimensional[0][0];
   ClassName::staticMethod();
   ClassName::$staticProp;
 ```
+## Traits
+- زبان PHP سینگل اینهرتنس است با ویژگی Traits میتوان چند اینهرتنس داشته باشیم.
+```
+trait message1 {
+public function msg1() {
+    echo "OOP is fun! ";
+  }
+}
+
+class Welcome {
+  use message1;
+}
+
+$obj = new Welcome();
+$obj->msg1();
+```
+
 
 ## Namespaces
 - امکان ایجاد گروه بندی کلاس را محیا میکند
