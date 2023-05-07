@@ -40,12 +40,18 @@
 - [gamma](https://gamma.ai)
 - [tome](https://beta.tome.app)
 - [slidesai](https://www.slidesai.io)
+  ایجاد اسلایدر خودکار که به گوگل اسلایدر متصل میشه و پولی است
 
 
 ### Research
 
 - [consensus](https://consensus.app)
 - [chatpdf](https://www.chatpdf.com)
+
+
+### Programming
+- [text2sql](https://www.text2sql.ai/app)
+  تبدیل متن به کوئری sql 
 
 
 
