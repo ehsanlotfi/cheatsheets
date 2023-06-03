@@ -22,6 +22,7 @@
 - [synthesia](https://www.synthesia.io)
 - [tweethunter](https://tweethunter.io)
 - [taplio](https://taplio.com)
+- [heygen](https://www.heygen.com) تبدیل متن به اراده یک شخصیت
 
 ### Productivity
 
