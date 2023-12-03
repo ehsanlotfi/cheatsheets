@@ -112,3 +112,10 @@ else
 
 
 ### 9 - Async Streams
+ در جریان از داده‌ها را به صورت همروند و ناهمزمان میتوان استفاده کرد.
+```
+await foreach (var number in GenerateNumbersAsync())
+  {
+      Console.WriteLine(number);
+  }
+```
