@@ -119,3 +119,13 @@ await foreach (var number in GenerateNumbersAsync())
       Console.WriteLine(number);
   }
 ```
+
+# C# 9.0
+### 1 - Improved Target Typing 
+### 2 - Top level statements
+### 3 - Init-Only, record feature
+### 4 - AND، OR, NOT
+### 5 - Covariant returns
+### 6 -  Module initializer
+### 7 - Improved Lambdas 
+### 8 - Attributes on local functions
