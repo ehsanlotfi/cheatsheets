@@ -123,9 +123,48 @@ await foreach (var number in GenerateNumbersAsync())
 # C# 9.0
 ### 1 - Improved Target Typing 
 ### 2 - Top level statements
+با Top-level statements، شما می‌توانید کد خود را به صورت ساده‌تر بنویسید بدون نیاز به اعلام کلاس یا تابع Main. به عبارت دیگر، شما می‌توانید دستورات اجرایی برنامه خود را در بالای فایل بنویسید بدون این که به یک کلاس یا تابع خاصی محدود شوید.
+```
+using System;
+Console.WriteLine("Hello, World!");
+```
 ### 3 - Init-Only, record feature
+با ویژگی Init-Only، شما می‌توانید تعیین کنید که کدام خاصیت تنها در زمان ایجاد نمونه (instantiation) قابل تنظیم باشد و پس از آن قفل گردد. در مثال زیر شی Person یک بار مقادیرش پر می شود و دیگر نمیتوان تغییر کند.
+```
+public record Person
+{
+    public string FirstName { get; init; }
+    public string LastName { get; init; }
+}
+
+```
 ### 4 - AND، OR, NOT
-### 5 - Covariant returns
+### 5 - Covariant returns (کوواریانت)
+این ویژگی در C# 9 است که به برنامه‌نویسان این امکان را می‌دهد که نوع بازگشتی یک متد را در کلاس‌های مشتق (Subclasses) تغییر دهند، بدون این که نیاز به کست کردن داشته باشند.
 ### 6 -  Module initializer
+این ویژگی امکان اجرای کد در زمان بارگذاری ماژول (module) را فراهم می‌کند. ماژول در اینجا به یک فایل DLL یا EXE اشاره دارد. استفاده از آن مفید است زمانی که نیاز دارید کدی را قبل از شروع اجرای توابع اصلی برنامه اجرا کنید. به عبارت دیگر، می‌توانید مراحلی مانند پیکربندی یا آماده‌سازی محیط را در زمان بارگذاری ماژول انجام دهید.
+```
+using System;
+using System.Runtime.CompilerServices;
+
+public class MyModuleInitializer
+{
+    [ModuleInitializer] // این attribue باعث میشه کلاس ما به عنوان ModuleInitializer شناخته شود
+    public static void Initialize()
+    {
+        Console.WriteLine("Module Initialization Code");
+    }
+}
+
+public class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Main Method");
+    }
+}
+
+```
+
 ### 7 - Improved Lambdas 
 ### 8 - Attributes on local functions
