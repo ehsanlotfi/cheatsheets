@@ -168,3 +168,9 @@ public class Program
 
 ### 7 - Improved Lambdas 
 ### 8 - Attributes on local functions
+# C# 10.0
+### 7 - Global using directives
+یا این ویژگی ما نیازی به تعریف  directives در ابتدای هر فایل نداریم و میتوان همه directives مشترک را در یک فایل ذخیره کرد.
+```
+<ImplicitUsings>enable</ImplicitUsings>
+```
