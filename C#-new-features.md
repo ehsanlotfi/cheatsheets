@@ -120,6 +120,9 @@ await foreach (var number in GenerateNumbersAsync())
   }
 ```
 
+
+
+
 # C# 9.0
 ### 1 - Improved Target Typing 
 ### 2 - Top level statements
@@ -168,9 +171,56 @@ public class Program
 
 ### 7 - Improved Lambdas 
 ### 8 - Attributes on local functions
+
+
+
 # C# 10.0
-### 7 - Global using directives
+### 0 - Global using directives
 یا این ویژگی ما نیازی به تعریف  directives در ابتدای هر فایل نداریم و میتوان همه directives مشترک را در یک فایل ذخیره کرد.
 ```
 <ImplicitUsings>enable</ImplicitUsings>
 ```
+### 1 - Record structs
+### 2 - Improvements of structure types
+### 3 - Interpolated string handler
+### 4 - Global using directives
+### 5 - File-scoped namespace declaration
+### 6 - Extended property patterns
+### 7 - Lambda expression improvements
+### 8 - Constant interpolated strings
+### 9 - Record types can seal ToString
+### 10 - Assignment and declaration in same deconstruction
+### 11 - Improved definite assignment
+### 12 - Allow AsyncMethodBuilder attribute on methods
+### 13 - CallerArgumentExpression attribute diagnostics
+### 14 - Enhanced #line pragma
+
+
+
+# C# 11.0
+### 1 - Generic attributes
+### 2 - Generic math support
+### 3 - Numeric IntPtr and UIntPtr
+### 4 - Newlines in string interpolations
+### 5 - List patterns
+### 6 - Improved method group conversion to delegate
+### 7 - Raw string literals
+### 8 - Auto-default struct
+### 9 - Pattern match Span<char> or ReadOnlySpan<char> on a constant string
+### 10 - Extended nameof scope
+### 11 - UTF-8 string literals
+### 12 - Required members
+### 13 - ref fields and ref scoped variables
+### 14 - File local types
+
+
+
+# C# 12.0
+### 1 - Primary constructors
+### 2 - Collection expressions
+### 3 - ref readonly parameters
+### 4 - Default lambda parameters
+### 5 - Alias any type
+### 6 - Inline arrays
+### 7 - Experimental attribute
+### 8 - Interceptors
