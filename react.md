@@ -36,3 +36,112 @@
 
 ## Tools
 - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+
+## React Routing
+```
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/user/:userId" component={User} />
+      </Switch>
+    </Router>
+  );
+}
+
+```
+```
+function HomePage() {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push('/about');
+  };
+  return (
+    <div>
+      <h1>صفحه اصلی</h1>
+      <button onClick={handleClick}>انتقال به صفحه About</button>
+    </div>
+  );
+}
+```
+```
+function HomePage() {
+  const history = useHistory();
+  const handleClick = (userId) => {
+    history.push(`/user/${userId}`);
+  };
+  return (
+    <div>
+      <button onClick={() => handleClick(123)}>انتقال به صفحه کاربر با شناسه 123</button>
+    </div>
+  );
+}
+
+function User({ match }) {
+  const { userId } = match.params;
+  return (
+    <div>
+      <h1>پروفایل کاربر با شناسه {userId}</h1>
+    </div>
+  );
+}
+```
+
+## Services in React
+```
+import axios from 'axios';
+
+class DataService {
+  static async fetchData() {
+    try {
+      const response = await axios.get('https://api.example.com/data');
+      return response.data;
+    } catch (error) {
+      throw new Error('Error fetching data');
+    }
+  }
+}
+```
+## Loading show
+```
+// در کامپوننت یا فایل مورد نظر
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+
+function DataComponent() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://api.example.com/data');
+        setData(response.data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+
+  return (
+    <div>
+      {/* show Data */}
+      {data && (
+        <ul>
+          {data.map(item => (
+            <li key={item.id}>{item.name}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
+```
