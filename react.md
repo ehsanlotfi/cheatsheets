@@ -3,7 +3,14 @@
 برای فراخوانی یک عنصر در DOM استفاده می شود.
 ### useState 
 - معادل setState در کامپوننت های کلاس محور می باشد.
-- برای ایجاد و ویرایش state ها در React مورد استفاده قرار میگرد
+- برای ایجاد و ویرایش state ها در React مورد استفاده قرار میگرد.
+```
+const [count, setCounter] = useState(0);
+const setCount = () => {
+  setCounter(count + 1);
+};
+```
+
 ### useEffect
  هر بار که یک state تغییر کند، یک افکت ایجاد می‌کند.
  
@@ -37,6 +44,16 @@
 ## Tools
 - [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
+### key 
+یک ویژگی رشته ای است که در لیست ها مورد استفاده قرار میگیرد. این ویژگی کمک میکند ریاکت تغییرات را تشخیص دهد و هویت و ترتیب یونیک به هر آیتم می دهد
+```
+const ids = [1,2,3,4,5];
+const listElements = ids.map((id)=>{
+    return(
+        <li key={id.toString()}>{id}</li>
+    )
+})
+```
 ## React Routing
 ```
 function App() {
