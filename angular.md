@@ -6,4 +6,15 @@
 در مورد ng-container  دقیقا دو مورد بالا را برعکس کنید.
  
 ### pure pipe vs impure pipe
-<div align="center"><img src="https://github.com/ehsanlotfi/cheatsheets/assets/25532726/fc84b2c5-88ef-4033-943f-8633c69813b4" /></div>
+بصورت پیش فرض pure است این نوع پایپ ها زمانی فراخوانی میشوند که ورودی تغییر کند و impure ها همیشه فراخوانی می شوند.
+### Annotation vs Decorator
+ فرقی پیدا نکردم فقط Annotation ها درون کلاس استفاده می شود برای تعریف یک متغیر مثل `()Input@` ولی Decorator برای تعریف یک کلاس استفاده می شود مثل `()component@` 
+### Observable vs Promise 
+ هر دو برای کارهای غیرهمزمان در جاوااسکریپت کاربرد دارد اما promise ها یک ایونت را هندل می کنند و قابل کنسل شدن نیستند ولی observable استریم هستند و همزمان میتونن چند جواب برگردونن و قابل کنسل شدن هستند.
+### Lazy loading vs Eager loading
+لیزی لود یعنی همه اسکریپت های پروژه در لود اولیه نیایند ولی هر ماژول لود خودش را داشته باشه
+### ViewChild VS ContentChild
+هر دو برای دسترسی به المان های DOM استفاده می شود ولی ViewChild برای دسترسی به المان های داخل کامپوننت کاربرد دارد ولی ContentChild برای دسترسی به المان های داخل `<ng-content>` کاربرد دارد.
+
+### Unit Test ( Jasmine , Karma  )
+در آنگولار، تست واحد با استفاده از فریمورک Jasmine برای نوشتن ادعای تست (test assertions) و ابزار Karma برای اجرای تست‌ها انجام می‌شود.
