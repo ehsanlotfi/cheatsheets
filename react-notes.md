@@ -13,3 +13,27 @@
 - - برای پاس دادن مقادیر به فرزند یا کامپوننت دیگر
 ##### State
 - متغیر های درون یک کامپوننت و دیگر کامپوننت ها آن را نمی بینند.
+
+### Events in React and HTML
+- تعریف ایونت در HTML بصورت loverCase است و در react بصورت camelCase
+- توی HTML برای جلوگیری از رفتار پیش فرض می تونیم return کنیم ولی در react حتما باید PreventDefault استفاده بشه
+- در HTML حتما باید پرانتز ها گذاشته شود در React اجباری نیست.
+```
+// HTML
+<button onclick="activateLasers()"></button>
+<a href="#" onclick='console.log("The link was clicked."); return false;' />
+
+// React
+<button onClick={activateLasers}>Test</button>
+function activateLasers(event) {
+  event.preventDefault();
+}
+```
+### NOTES
+- اگر `state` را مستقیم آپدیت کنیم کامپوننت ما ری رندر نمی شود.
+- متدهای `Callback` در ریاکت معمولا به عنوان پارمترهای دوم هوکس ها می آیند و بعد از عملیات هوکس می شود کاری انجام داد.
+```
+setState({ name: "John" }, () =>
+  console.log("The name has updated and component re-rendered")
+)
+```
