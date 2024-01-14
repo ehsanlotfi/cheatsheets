@@ -1,3 +1,34 @@
+### Virtual DOM
+مفهومیه که توسط کتابخونه‌ها مثل ریاکت برای مدیریت DOM توسط جاواسکریپت با استفاده از APIهای مرورگرها اجرا شده.در سه مرحله ایجاد می شود.
+- هر زمان که داده‌های اساسی تغییر ‌می‌کنن، کل رابط کاربری توسط DOM مجازی مجددا رندر میشه.
+- تفاوت بین DOM قبلی و جدید محاسبه میشه.
+- بعد از انجام محاسبات، DOM واقعی فقط با مواردی که واقعاً تغییر کردن به روز میشه.
+### Reconciliation
+به معنای لغوی اصلاح وقتی state‌ یا props یه کامپوننت تغییر‌می‌کنه، ری‌اکت با مقایسه عنصر تازه return شده و نمونه render شده قبلی تصمیم میگیره که به روزرسانی DOM واقعا ضروریه یا نه. وقتی این دو مقدار با هم برابر نباشه، ری‌اکت به روزرسانی DOM رو انجام میده. به این فرایند reconciliation گفته میشه.
+
+### React Fiber
+موتور جدید برای عملیات reconciliation هست یا میشه گفت که پیاده‌سازی مجدد الگوریتم هسته ری‌اکت نسخه ۱۶ هست. هدف پیاده‌سازی ReactFiber برای بهبود کارکرد توی جاهایی مثل ایجاد انیمیشن، کار روی layout، کار با gestureها و قابلیت اینکه عملیات در حال اجرا رو متوقف، قطع یا مجددا فعال کنیم ساخته شده. البته می‌تونه برای اولویت‌بندی بروزسانی‌های لازم توی DOM رو هم مدیریت کنه. مهم‌ترین ویژگی incremental-rendering بوده که قابلیت بخش‌بندی(chunk کردن) عملیات اجرایی و متوقف و اجرا کردن اون توی فریم‌های مختلف هست.
+### set state for dynamic Model
+```
+const [myState, setMyState] = useState();
+const handleInputChange = (event) => {
+  setMyState({ [event.target.id]: event.target.value });
+}
+```
+
+### lifecycle Class Component
+- Mounting `constructor,  getDerivedStateFromProps,  render,  componentDidMount`
+- Updating `getDerivedStateFromProps, shouldComponentUpdate,  render,  getDerivedStateFromProps,  componentDidUpdate`
+- Unmounting `componentWillUnmount`
+
+### lifecycle phases
+- Render
+- Pre-commit
+- Commit
+
+### HOC ( Hight Order Component )
+کامپوننت با مرتبه بالا
+در واقع یک تابع است که یک کامپوننت را به عنوان ورودی می‌گیرد و یک کامپوننت جدید با ویژگی‌ها یا عملکردهای جدید به عنوان خروجی برمی‌گرداند. برای مثال، فرض کنید شما یک کامپوننت دارید که اطلاعات  یک فرد را نمایش می‌دهد، و شما می‌خواهید این اطلاعات را بر اساس سن فرد تغییر دهید. می‌توانید یک HOC بنویسید که با توجه به سن افراد، ویژگی‌های مختلفی به کامپوننت اضافه کند.
 ### Handlle component Re render
 - PureComponent and shouldComponentUpdate in Class component
 - React.memo in function Component
@@ -35,6 +66,29 @@ function activateLasers(event) {
 ### Ref and ForwardRef
 در کلاس کامپوننت از React.createRef() استفاده میکنیم و در فانکشن کامپوننت از هوکس userRef 
 مفهوم Ref forwarding ویژگی‌ایه که به بعضی از کامپوننت‌ها این اجازه رو میده ref دریافت شده رو به کامپوننت فرزند انتقال بدن.
+### props proxy in HOC
+می‌تونیم prop‌های انتقال داده شده به کامپوننت رو با استفاده از الگوی props proxy اضافه یا ویرایش کنیم:
+```
+function HOC(WrappedComponent) {
+  return class Test extends Component {
+    render() {
+      const newProps = {
+        title: "New Header",
+        footer: false,
+        showFeatureX: false,
+        showFeatureY: true,
+      };
+
+      return <WrappedComponent {...this.props} {...newProps} />;
+    }
+  };
+}
+```
+
+### context
+برای انتقال اطلاعات بین کامپوننت ها 
+``` const { Provider, Consumer } = React.createContext(defaultValue); ```
+
 
 ### NOTES
 - اگر `state` را مستقیم آپدیت کنیم کامپوننت ما ری رندر نمی شود.
