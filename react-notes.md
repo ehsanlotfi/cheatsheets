@@ -89,7 +89,33 @@ function HOC(WrappedComponent) {
 برای انتقال اطلاعات بین کامپوننت ها 
 ``` const { Provider, Consumer } = React.createContext(defaultValue); ```
 
+### Fragment
+استفاده چندین المنت بدون افزودن نود اضافی
+```
+render() {
+  return (
+    // First type
+    <React.Fragment>
+      <ChildA />
+      <ChildB />
+    </React.Fragment>
 
+   // Second type
+    <>
+        <ChildA />
+        <ChildB />
+      </>
+  )
+}
+
+### portal in React
+روشی توصیه شده برای رندر کردن کامپوننت فرزند به شکل DOM و خارج از سلسله مراتب DOM کامپوننت والد هستش. اولین آرگومان یه فرزند قابل رندر شدن هستش، مثل عنصر، رشته، یا fragment. آرگومان دوم عنصر DOM هستش.
+
+```
+ReactDOM.createPortal(child, container);
+```
+
+```
 ### NOTES
 - اگر `state` را مستقیم آپدیت کنیم کامپوننت ما ری رندر نمی شود.
 - متدهای `Callback` در ریاکت معمولا به عنوان پارمترهای دوم هوکس ها می آیند و بعد از عملیات هوکس می شود کاری انجام داد.
