@@ -341,8 +341,43 @@ render() {
 
 
 
+### animation package
+- React Transition Group
+- React Spring
+- React Motion
 
 
+### React router
+```
+const Page = (props, context) => {
+
+  // old version
+  const history = useHistory();
+  // new 
+  const navigate = useNavigate();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { slug } = useParams();
+
+  return (
+    <button
+      type="button"
+      onClick={() => {
+
+        // old
+        history.push("/new-location");
+
+        // new 
+        navigate("/new-location");
+
+      }}
+    >
+      {"Click Me!"}
+    </button>
+  );
+};
+```
 
 
 
@@ -401,3 +436,9 @@ setState({ name: "John" }, () =>
   "start": "set HTTPS=true && react-scripts start"
 }
 ```
+
+- بستر React Router یه wrapper روی کتابخونه history هست که اعمال اجرایی بر روی window.history رو با استفاده از ابجکت‌های hash و browser مدیریت می‌کنه.
+
+
+- برای چند زبانگی در React از کتابخانه React-Intl استفاده میکنیم.
+  
