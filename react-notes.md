@@ -380,8 +380,86 @@ const Page = (props, context) => {
 ```
 
 
+###  Shallow Renderer package
+برای نوشتن یونیت تست کاربرد دارد و تا عمق یک یک کامپوننت را میتونیم بررسی کنیم.
+```
+function MyComponent() {
+  return (
+    <div>
+      <span className={"heading"}>{"Title"}</span>
+    </div>
+  );
+}
+```
+```
+const renderer = new ShallowRenderer();
+renderer.render(<MyComponent />);
+
+const result = renderer.getRenderOutput();
+
+expect(result.type).toBe("div");
+expect(result.props.children).toEqual([
+  <span className={"heading"}>{"Title"}</span>
+]);
+```
+
+###  test Renderer package
+می‌تونیم ازش برای رندر کردن کامپوننت‌ها و تبدیل اونا به یه  pure JavaScript استفاده کنیم
+ این پکیج برای گرفتن snapshot از سلسله مرتب view(یه چیزی شبیه به درخت DOM) که توسط ReactDOM یا React Native درست میشه رو بدون نیاز به مرورگر یا jsdom فراهم می‌کنه.
+
+### Flux Architecture
+یک معماری که توسط فیسبوک مطرح شده است  شامل چندین قسمت اصلی است:
+1. Action
+2. Dispather
+3. Store
+4. View
+
+### Redux ( state managment )
+#### Three Principles
+1. Single source of truth
+2. State is read-only (only change by dispacher)
+3. Changes are made with pure functions
+#### Keyword
+1. store
+یک شی است که تمام وضعیت ها درون آن قرار دارد
+2. Action مشخص میکند که چه تغییری در وضعیت برنامه باید رخ بدهد
+3. Reducer استیت قبلی و اکشن فعلی را میگیرد و استیت جدید را می دهد
+4. Containers کامپوننت هایی که تمپلیت ندارند
+5. Components کامپوننت هایی که تمپلیت دارند
+6. Selector برای انتخاب بخشی از استیت
+
+#### redux-form
+اطلاعات فرم‌ها رو توی state ریداکس مدیریت کنیم. ReduxForm می‌تونه با inputهای خام HTML5 هم کار کنه، ولی با فریم‌ورک‌های معروف UI مثل Material، ReactWidgets و ReactBootstrap کار کنه.
+
+#### redux-thunk
+ اجازه میده بتونیم action‌های async داشته باشیم.
+بهمون این اجازه رو میده که actionهایی رو بسازیم که به‌جای action عادی تابع‌ برگردونن
+
+#### redux saga
+یک middleware برای مدیریت منطق جانب سرویس بصورت نخ های جداگانه (side effects) در اپلیکیشن‌های ریداکس است. 
+
+redux thunc vs redux-saga
+هر دوی ReduxThunk و ReduxSaga می‌تونن مدیریت ساید افکت‌ها رو به دست بگیرن. توی اکثر سناریوها، Thunk از Promise استفاده می‌کنه، درحالیکه Saga از Generatorها استفاده‌می‌کنه. Thunk تقریبا ساده‌تره و promise رو تقریبا همه دولوپرها باهاش آشنا هستن، در حالی‌که Sagas/Generatorها خیلی قوی‌تر هستن و می‌تونن کاربردی‌تر باشن ولی خب لازمه که یاد بگیرینش. هردوی میان‌افزارها می‌تونن خیلی مفید باشن و شما می‌تونین با Thunks شروع کنین و اگه جایی دیدین نیازمندی‌تون رو برآورده نمی‌کنه سراغ Sagas برید.
+
+##### put and call in react sega
+هر دوی افکت‌های call و put سازنده‌های افکت هستن. تابع call برای ایجاد توضیح افکت استفاده میشه که به میان‌افزار دستور میده منتظر call بمونه. تابع put یه افکت ایجاد می‌کنه، که به store میگه یه action خاص رو فقط اجرا کنه.
 
 
+
+#### mapStateToProps vs mapDispatchToProps 
+
+### FLux ( state managment )
+1. State can be changed
+2. use multiple Store
+
+
+### render hijacking
+به معنی توانایی کنترل اینکه چه کامپوننتی خروجی بقیه رندر شدن یه کامپوننت دیگه باشه هست. در واقع ما می‌تونیم با قرار دادن کامپوننت خودمون توی یه کامپوننت با اولویت بالا(HOC) یه تغییراتی بهش بدیم، مثلا یه سری prop بهش اضافه کنیم یا تغییرات دیگه‌ای که باعث تغییر منطق رندر بشه. HOC در واقع hijacking رو فعال نمیکنه اما با استفاده از HOC این امکان رو فراهم می‌کنیم که کامپوننت بتونه رفتار متفاوتی رو موقع رندر داشته باشه.
+
+# Hooks
+- هوک‌ها رو فقط در ابتدای کامپوننت‌ها صدا کنیم. یعنی نباید هوک‌ها رو توی حلقه‌ها، داخل یا بعد ازشرط‌ها یا توابع تودرتو استفاده کنیم. با این کار اطمینان حاصل میشه که هوک‌ها با هر بار رندر کامپوننت به همون ترتیب صدا زده میشن و state‌ هوک‌ها بین رندرهای مختلف از useState ،useEffect حفظ میشه.
+- هوک‌ها رو فقط داخل کامپوننت ری‌اکت می‌تونیم استفاده کنیم. توی توابع جاواسکریپت و خارج از درخت کامپوننت‌ها نباید هوک‌ها رو صدا بزنیم.
+- بوسیله کتابخانه  eslint-plugin-react-hooks میتوانیم اطمینان حاصل کنیم از این شرط در پروژه ما اجرا شده.
 
 # React Style (CSS)
 ```
