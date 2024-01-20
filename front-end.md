@@ -19,6 +19,34 @@
 - Nx
 
 
+### Front optimization technique List
+- bundlle optimization like Tree shaking, Compression, Minification
+- remove unusiblle Import
+- Code Splitting ( Dynamic Import )
+- Lazy Loading
+- Conditional components loading
+- Handle API requests ( AbortController )
+
+##### AbortController
+ یک ویژگی در وب API های مدرن است که به توسعه دهندگان وب این امکان را می دهد که درخواست های شبکه را لغو کنند. 
+```
+// ساخت یک نمونه از AbortController
+const controller = new AbortController();
+
+// ایجاد یک درخواست شبکه با استفاده از AbortController
+fetch('https://example.com/api/data', { signal: controller.signal })
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+
+// لغو درخواست با فراخوانی متد abort روی کنترلر
+controller.abort();
+
+```
+
+### Maintainable 
+برنامه‌ای هست که به راحتی و در هر زمانی می‌تونیم اون رو ویرایش کنیم، باگ‌های اون رو برطرف کنیم، توسعه بدیم و به اون توسعه‌دهنده‌های دیگه‌ای اضافه کنیم. 
+
 #### Non-null Assertion
 - این عملگر به تایپ‌اسکریپت میگه که ما مطمئن هستیم این عبارت Null نیست و لطفاً توی ادامه Null بودن اون رو بررسی نکن
 ```
