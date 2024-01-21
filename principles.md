@@ -50,3 +50,30 @@
 
 ### Parallelism vs Concurrency
 پارالل یعنی این زبان می‌تونه چندین کار رو به صورت هم‌زمان و مجزا شروع و پردازش کنه. ولی همزمانی 
+
+
+### Currying technique
+با این تکنیک می‌تونیم بجای داشتن یک تابع با چندین پارامتر، چند تابع (تو در تو) با یک پارامتر داشته باشیم.
+
+```
+function logger(level, message) {
+  console.log(`${level}: ${message}`);
+}
+
+logger('warning', 'This is a warning message');
+logger('warning', 'This is another warning message');
+
+```
+```
+function logger(level) {
+  return function (message) {
+    console.log(`${level}: ${message}`);
+  }
+}
+
+const infoLog = logger('info');
+
+infoLog('This is an info message #1');
+infoLog('This is an info message #2');
+
+```
