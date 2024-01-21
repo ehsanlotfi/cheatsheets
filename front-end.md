@@ -61,3 +61,67 @@ const test = model.user.name!;
 #### Polyfill 
 در جاوااسکریپت به یک کد یا تکنیک اشاره دارد که برای پشتیبانی از ویژگی‌های جدید جاوااسکریپت در مرورگرهایی که این ویژگی‌ها را پشتیبانی نمی‌کنند، استفاده می‌شود.
 مثل استفاده از `EcmaScript` در مروگرهای قدیمی
+
+#### Utility Types in TypeScript 
+- `Partial<Type>`
+  - همه اعضای تعریف شده را اختیاری میکند
+- `Required<Type>`
+  - همه اعضای تعریف شده را اجباری می کند
+- `Readonly<Type>`
+   -  از یک تایپ موجود یک تایپ جدید بسازیم که همهٔ پراپرتی‌های اون Readonly هستن.
+- `Record<Keys, Type>`
+   - اگه می‌خوایم تایپی داشته باشیم که با اون بتونیم نوع دقیق اسم و مقدار پراپرتی‌های آبجکت‌هامون رو مشخص کنیم، تایپ Record به کمکمون میاد:
+```
+type Names = 'John' | 'Mario' | 'Emily';
+type PersonInfo = { age: number, hobbies: string };
+
+type Persons = Record<Names, PersonInfo>;
+
+const persons: Persons = {
+  'Emily': { age: 4, hobbies: 'Sleep' },
+  'John':  { age: 5, hobbies: 'Video Games' },
+  'Mario': { age: 3, hobbies: 'Space' },
+};
+```
+- `Pick<Type, Keys>`
+   - اگه یک تایپ داریم و می‌خوایم از اون، یک تایپ جدید که شامل فقط پراپرتی‌های دلخواه ما باشه داشته باشیم، می‌تونیم از Pick استفاده کنیم:
+```
+type Person = {
+  name: string;
+  age: number;
+  hobbies: string;
+  status: string;
+  created_at: string;
+}
+
+type MiniPerson = Pick<Person, "name" | "age">;
+
+const john: MiniPerson = {
+    name: 'John',
+    age: 4,
+}
+```
+- `Omit<Type, Keys>`
+  - برعکس pick اون هایی که نمیخواهیم را وارد می کنیم
+
+
+#### RESTful API
+- HEAD Method  
+  وقتی توی یک درخواست HTTP از متد HEAD استفاده می‌کنیم، به معنی هست که از Response فقط به اطلاعات Header احتیاج داریم. بنابراین توی Response این درخواست، body وجود نخواهد داشت.
+
+
+- OPTION Method  
+اگه می‌خوایم اطلاعاتی کلی درباره قوانین و نحوهٔ تعامل با API مد نظر (مثل متدهای HTTP قابل استفاده و یا مجوز CORS) داشته باشیم، از این متد استفاده می‌کنیم. شاید دقت کرده باشین که مرورگر هنگام بررسی CORS، ابتدا یک درخواست با متد OPTION به آدرس مد نظر میزنه تا CORS رو بررسی کنه.
+
+#### picture Tag
+زمانی که میخواهیم در حالت رسپانسیو از سایز های مختلف عکس استفاده کنیم از این تگ استفاده میکنیم
+```
+<picture>
+  <source media="(min-width: 900px)" srcset="img-large.jpg">
+  <source media="(min-width: 600px)" srcset="img-medium.jpg">
+  <img src="img-small.jpg">
+</picture>
+```
+
+#### what is d.ts in TypeScript
+اگه تعداد Type Declaration ها زیاد بشه بهتره اونها رو منتقل کنیم به یک فایل مجزا. چنین کاری توی تایپ‌اسکریپت با ساختن فایل .d.ts انجام می‌گیره. توی این فایل فقط می‌تونیم Type Declaration بنویسیم و کدهای دیگه‌ای از تایپ‌اسکریپت معتبر نیستن.
