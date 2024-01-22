@@ -180,3 +180,108 @@ closure(5); // 15
   از فوت سایز والد خودش میخونه
 - rem  
   از فونت سایز root میخونه
+
+### Call Stack  
+یک ابزار هست که جاوااسکریپت با اون اجرای توابع توی برنامه رو مدیریت می‌کنه و مشخص می‌کنه برنامه توی چه مرحله‌ای هست و چه توابعی در صف اجرا هستن.
+
+### prototype
+هر مقداری که توی جاوااسکریپت تعریف می‌کنیم، یک سری از ویژگی‌هاش رو از یک نمونهٔ اولیه به ارث می‌بره
+مثل `length` در آرایه
+
+### Pseudo-elements vs Pseudo-classes
+```
+// Pseudo-elements در دام دیده می شوند
+a::after { }, a::before { }
+
+
+// Pseudo-classes در دام دیده نمی شوند
+a:hover { }, a:focus { } , ...
+```
+
+### for...in
+پیشمایش بروی یک آبجکت و بسیار هزینه بر است بخاطر وجود پروتوتایپ های آبجکت
+
+### Web Components
+- Advantages  
+  Reusable, Encapsulated
+- terms
+   1. Custom Elements
+   2. Shadow DOM
+   3. HTML Templates
+   4. HTML Imports 
+
+
+### gzip
+یک الگوریتم و قابلیت هست که باید توی سرور فعالسازی و کانفیگ بشه و هدف اون فشرده‌سازی و کاهش دادن اندازهٔ فایل‌هایی هست که از سرور به سمت کلاینت فرستاده میشن. یکی از تکنیک های افزایش سرعت در برنامه های وب است
+
+### void and never in typescript
+void یعنی تابع خروجی ندارد never یعنی تابع هیچ وقت به خروجی نمیرسد
+
+### JavaScript types  
+['null','undefined', 'string', 'number', 'boolean', 'object', 'symbol', 'bigint']
+
+### Event Propagation
+به معنا گسترش یا تکثیر یعنی با هر کلیک روی یک المنت همه پدر هایش هم کلیک می شود.
+
+### Event Bubbling  
+وقتی روی یک `DOM` فرزند کلیک میکنیم همه  پدرها تا ریشه کلیک می شوند.
+
+### Event Capturing
+دومین پارامتر `addEventListener` است که اگر `true` بشه مسیر صدا زدن ایونت ها برعکس میشه یعنی اول پدر اجرا میشه میاد به پایین
+
+### event.preventDefault()
+این متد وقتی روی یک المنت اعمال میشه، مانع عملکرد ذاتی اون المنت میشه. مثلا وقتی رو یک `form` اعمال بشه، مانع ثبت شدن فرم میشه. وقتی روی یک تگ `a` اعمال بشه، باعث میشه اون لینک کار نکنه.
+
+### event.stopPropagation()
+عملیات `Propagation` را متوقف می کند.
+
+### event.target vs event.currentTarget  
+به طور خلاصه، event.target به عنصری اشاره می‌کند که رویداد را فعال کرده است، در حالیکه event.currentTarget به عنصری اشاره دارد که هندلر رویداد به آن اتصال دارد. 
+
+### Double NOT !!
+وقتی پشت یک عملگر قرار میگیرد اون را بولین میکند
+
+### Hoisting 
+معنای تحت‌الفظی کلمه Hoisting "بالا بردن" هست. توی جاوااسکریپت قبل از اینکه کدهای ما به شکل واقعی اجرا بشن، همه‌ی توابع و متغیرها به اول حوزه‌ی خودشون جابجا میشن. به همین دلیل هست که کد زیر بدون خطا کار می‌کنه:
+```
+smile();
+
+function smile() {
+    return ":)";
+}
+```
+
+### IIFE (  Immediately Invoked Function Expression )
+ به تابعی گفته میشه که به محض اینکه تعریف شد، فراخوانی بشه.
+ ```
+ (function () { })();
+ ```
+
+### apply , call, bind
+ با متد  `call` , `apply` می‌تونیم یه کاری کنیم که this توی یک تابع به آبجکت دلخواه ما اشاره کنه.   
+ تفاوت اونها توی نحوه‌ی استفاده از اونهاست. توی متد apply ما آرگومان‌ها رو با یک آرایه پاس می‌دادیم. اما توی call باید بصورت جدا جدا پاس بدیم. مثال سوال قبل رو در نظر بگیرید:   
+ ```
+ add.call(item1, 3, 2, 1);
+ add.apply(item1, [3, 2, 1]);
+ ```
+
+### sum in reduce 
+ ```
+ [1, 2, 3, 4].reduce((total, currect) => total + currect);
+ ```
+
+### localStorage vs sessionStorage vs Cookies vs IndexedDB
+
+### arrow function vs traditional function
+
+### Rest vs Spread
+
+### Implicit Coercion vs Explicit Coercion
+این‌ها دو روش تبدیل نوع داده توی جاوااسکریپت هستن.
+- ‌‌Implicit Coercion یا ضمنی   
+``` console.log(1 + '6');  ```
+- Explicit Coercion یا صریح   
+```  console.log(1 + parseInt('6')); ```
+
+### freeze vs seal 
+این متدها برای آبجکت سراسری Object هستن. seal به معنی بستن و خاتمه‌دادن هست. متد seal مانع اضافه شدن پراپرتی جدید به آبجکت میشه. همچنین یک پراپرتی نمی‌تونه حذف بشه. فقط میشه مقدار یک پراپرتی رو ویرایش کرد. متد freeze شبیه به seal هست اما با این تفاوت که این متد اجازه ویرایش مقدار یک پراپرتی رو نمیده.
