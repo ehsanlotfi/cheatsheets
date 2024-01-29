@@ -125,3 +125,9 @@ dynamic متغیر ران تایم تعریف میکند
 وقتی یک مقدار value type را داخل refrence type میریزیم باکسینگ رخ میدهد و زمانی که تایپ کستینگ میکنم  unboxing رخ میدهد
 ## sring vs string builder
 برای الحاق رشته ها فضای جدید میگیرد ولی در string builder فضای جدید نمیگیرد.
+
+![1690059293383](https://github.com/ehsanlotfi/cheatsheets/assets/25532726/d45754fd-9071-4190-851c-fa53e8b39691)
+
+## Is vs As
+- As برای مشخص کردن تایپ یک مقدار 
+- Is برای چک کردن تایپ یک مقدار
