@@ -401,3 +401,54 @@ setState({ name: "John" }, () =>
   "start": "set HTTPS=true && react-scripts start"
 }
 ```
+
+## React Routing
+```
+function App() {
+  return (
+    <Router>
+      <Switch>
+        <Route path="/" exact component={HomePage} />
+        <Route path="/user/:userId" component={User} />
+      </Switch>
+    </Router>
+  );
+}
+
+```
+```
+function HomePage() {
+  const history = useHistory();
+  const handleClick = () => {
+    history.push('/about');
+  };
+  return (
+    <div>
+      <h1>صفحه اصلی</h1>
+      <button onClick={handleClick}>انتقال به صفحه About</button>
+    </div>
+  );
+}
+```
+```
+function HomePage() {
+  const history = useHistory();
+  const handleClick = (userId) => {
+    history.push(`/user/${userId}`);
+  };
+  return (
+    <div>
+      <button onClick={() => handleClick(123)}>انتقال به صفحه کاربر با شناسه 123</button>
+    </div>
+  );
+}
+
+function User({ match }) {
+  const { userId } = match.params;
+  return (
+    <div>
+      <h1>پروفایل کاربر با شناسه {userId}</h1>
+    </div>
+  );
+}
+```
