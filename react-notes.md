@@ -98,8 +98,44 @@ class MyComponent extends React.Component {
 ### HOC ( Hight Order Component )
 کامپوننت با مرتبه بالا
 در واقع یک تابع است که یک کامپوننت را به عنوان ورودی می‌گیرد و یک کامپوننت جدید با ویژگی‌ها یا عملکردهای جدید به عنوان خروجی برمی‌گرداند. برای مثال، فرض کنید شما یک کامپوننت دارید که اطلاعات  یک فرد را نمایش می‌دهد، و شما می‌خواهید این اطلاعات را بر اساس سن فرد تغییر دهید. می‌توانید یک `HOC` بنویسید که با توجه به سن افراد، ویژگی‌های مختلفی به کامپوننت اضافه کند.
+##### What are the limitations of HOCs?
+1. از HOC‌ها توی متد render استفاده نکنیم
+2. متد‌های static باید کپی بشن وقتی HOC رو روی یه کامپوننت اعمال می کنیم، کامپوننت جدید هیچ کدوم از متد‌های استاتیک کامپوننت اصلی رو نداره
+3. Ref‌ها رو نمیشه انتقال داد 
 
 
+- همین مفهوم را در جاوااسکریپت هم داریم بهش میگیم `HOF ( Higher-Order Function )`
+  که تابعی که یک تابع دیگه را به عنوان ورودی میگیره یا یک تابع را به عنوان خروجی return می کند
+
+### Throttling vs Debouncing
+در Throttling یک بازه زمانی وارد میکنیم در این بازه حداقل یکبار اجرا میشود
+دومی بعد از آخرین اجرا یک ایونت یک بازه زمانی منتظر بمون بعد اجرا کن
+
+
+### suspense component
+اگه یه ماژول شامل import داینامیک باشه و هنوز رندر نشده نباشه، توی کامپوننت والدش باید یه رابط کاربری loading براش نمایش داده بشه. این بخش می‌تونه با کامپوننت Suspense مدیریت بشه. برای مثال کامپوننت‌های پایین رو ببینید که از Suspense در طول مدت بارگذاری کامپوننت دوم استفاده می‌کنن:
+یک از جاهایی که میتونه استفاده بشه در routing است
+```
+const OtherComponent = React.lazy(() => import("./OtherComponent"));
+
+function MyComponent() {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <OtherComponent />
+      </Suspense>
+    </div>
+  );
+}
+```
+
+
+### formik Lib 
+ یه کتابخونه ری‌اکت هست که امکان حل سه مشکل اساسی رو فراهم می‌کنه:
+1. دریافت و مدیریت مقادیر از state
+2. اعتبارسنجی و مدیریت خطا‌ها
+3. مدیریت ثبت فرم‌ها
+   
 
 ### Handlle component Re render
 - PureComponent and shouldComponentUpdate in Class component
@@ -152,6 +188,7 @@ function HOC(WrappedComponent) {
 
 ### Fragment
 استفاده چندین المنت بدون افزودن نود اضافی
+key تنها اتریبیوتی هستش که میشه به Fragment پاس داد
 ```
 render() {
   return (
@@ -277,6 +314,17 @@ function ExampleApplication() {
   );
 }
 ```
+##### مزایای Strict mode
+1. شناسایی کامپوننت‌ها با متد unsafe lifecycle.
+2. هشدار در مورد استفاده از API مربوط به legacy string ref.
+3. تشخیص side effect ها‌ی غیرمنتظره.
+4. شناسایی API legacy context.
+5. هشدار در مورد استفاده منسوخ findDOMNode.
+
+
+
+
+
 
 ### constructor VS getInitialState 
 وقتی داریم از کلاس‌های `ES6` استفاده می‌کنیم باید `state‌` رو توی `constructor` مقداردهی اولیه کنیم و وقتی از `React.createClass` استفاده می‌کنیم باید از متد `getInitialState` استفاده کنیم.
@@ -341,12 +389,137 @@ render() {
 
 
 
+### animation package
+- React Transition Group
+- React Spring
+- React Motion
+
+
+### React router
+```
+const Page = (props, context) => {
+
+  // old version
+  const history = useHistory();
+  // new 
+  const navigate = useNavigate();
+
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { slug } = useParams();
+
+  return (
+    <button
+      type="button"
+      onClick={() => {
+
+        // old
+        history.push("/new-location");
+
+        // new 
+        navigate("/new-location");
+
+      }}
+    >
+      {"Click Me!"}
+    </button>
+  );
+};
+```
+
+
+###  Shallow Renderer package
+برای نوشتن یونیت تست کاربرد دارد و تا عمق یک یک کامپوننت را میتونیم بررسی کنیم.
+```
+function MyComponent() {
+  return (
+    <div>
+      <span className={"heading"}>{"Title"}</span>
+    </div>
+  );
+}
+```
+```
+const renderer = new ShallowRenderer();
+renderer.render(<MyComponent />);
+
+const result = renderer.getRenderOutput();
+
+expect(result.type).toBe("div");
+expect(result.props.children).toEqual([
+  <span className={"heading"}>{"Title"}</span>
+]);
+```
+
+###  test Renderer package
+می‌تونیم ازش برای رندر کردن کامپوننت‌ها و تبدیل اونا به یه  pure JavaScript استفاده کنیم
+ این پکیج برای گرفتن snapshot از سلسله مرتب view(یه چیزی شبیه به درخت DOM) که توسط ReactDOM یا React Native درست میشه رو بدون نیاز به مرورگر یا jsdom فراهم می‌کنه.
+
+### Flux Architecture
+یک معماری که توسط فیسبوک مطرح شده است  شامل چندین قسمت اصلی است:
+1. Action
+2. Dispather
+3. Store
+4. View
+
+### Redux ( state managment )
+#### Three Principles
+1. Single source of truth
+2. State is read-only (only change by dispacher)
+3. Changes are made with pure functions
+#### Keyword
+1. store
+یک شی است که تمام وضعیت ها درون آن قرار دارد
+2. Action مشخص میکند که چه تغییری در وضعیت برنامه باید رخ بدهد
+3. Reducer استیت قبلی و اکشن فعلی را میگیرد و استیت جدید را می دهد
+4. Containers کامپوننت هایی که تمپلیت ندارند
+5. Components کامپوننت هایی که تمپلیت دارند
+6. Selector برای انتخاب بخشی از استیت
+
+#### مهمترین middleware های redux
+- Redux Thunk
+- Redux Promise
+- Redux Saga.
+
+#### redux-form
+اطلاعات فرم‌ها رو توی state ریداکس مدیریت کنیم. ReduxForm می‌تونه با inputهای خام HTML5 هم کار کنه، ولی با فریم‌ورک‌های معروف UI مثل Material، ReactWidgets و ReactBootstrap کار کنه.
+
+#### redux-thunk
+ اجازه میده بتونیم action‌های async داشته باشیم.
+بهمون این اجازه رو میده که actionهایی رو بسازیم که به‌جای action عادی تابع‌ برگردونن
+
+#### redux saga
+یک middleware برای مدیریت منطق جانب سرویس بصورت نخ های جداگانه (side effects) در اپلیکیشن‌های ریداکس است. 
+
+redux thunc vs redux-saga
+هر دوی ReduxThunk و ReduxSaga می‌تونن مدیریت ساید افکت‌ها رو به دست بگیرن. توی اکثر سناریوها، Thunk از Promise استفاده می‌کنه، درحالیکه Saga از Generatorها استفاده‌می‌کنه. Thunk تقریبا ساده‌تره و promise رو تقریبا همه دولوپرها باهاش آشنا هستن، در حالی‌که Sagas/Generatorها خیلی قوی‌تر هستن و می‌تونن کاربردی‌تر باشن ولی خب لازمه که یاد بگیرینش. هردوی میان‌افزارها می‌تونن خیلی مفید باشن و شما می‌تونین با Thunks شروع کنین و اگه جایی دیدین نیازمندی‌تون رو برآورده نمی‌کنه سراغ Sagas برید.
+
+##### put and call in react sega
+هر دوی افکت‌های call و put سازنده‌های افکت هستن. تابع call برای ایجاد توضیح افکت استفاده میشه که به میان‌افزار دستور میده منتظر call بمونه. تابع put یه افکت ایجاد می‌کنه، که به store میگه یه action خاص رو فقط اجرا کنه.
 
 
 
+#### mapStateToProps vs mapDispatchToProps 
 
+### FLux ( state managment )
+1. State can be changed
+2. use multiple Store
 
+### code-splitting
+ویژگی پشتیبانی شده توسط باندلر‌هایی مثل webpack و browserify هستش که می‌تونه بسته‌های مختلفی ایجاد کنه که می‌تونه به صورت پویا در زمان اجرا بارگیری بشه.
 
+### render hijacking
+به معنی توانایی کنترل اینکه چه کامپوننتی خروجی بقیه رندر شدن یه کامپوننت دیگه باشه هست. در واقع ما می‌تونیم با قرار دادن کامپوننت خودمون توی یه کامپوننت با اولویت بالا(HOC) یه تغییراتی بهش بدیم، مثلا یه سری prop بهش اضافه کنیم یا تغییرات دیگه‌ای که باعث تغییر منطق رندر بشه. HOC در واقع hijacking رو فعال نمیکنه اما با استفاده از HOC این امکان رو فراهم می‌کنیم که کامپوننت بتونه رفتار متفاوتی رو موقع رندر داشته باشه.
+
+### Imperative vs Declarative
+یک دکمه لایک را در نظر بگیرید برای هندل کردن حالت های فعال و غیر فعال این دکمه دو تا راه حل وجود داره 
+1. استفاده از یک کامپوننت و هندل کردن رنگ با if
+2. استفاده از دو تا کامپوننت و هر رنگ جداگانه کامپوننت داشته باشد
+
+# Hooks
+- هوک‌ها رو فقط در ابتدای کامپوننت‌ها صدا کنیم. یعنی نباید هوک‌ها رو توی حلقه‌ها، داخل یا بعد ازشرط‌ها یا توابع تودرتو استفاده کنیم. با این کار اطمینان حاصل میشه که هوک‌ها با هر بار رندر کامپوننت به همون ترتیب صدا زده میشن و state‌ هوک‌ها بین رندرهای مختلف از useState ،useEffect حفظ میشه.
+- هوک‌ها رو فقط داخل کامپوننت ری‌اکت می‌تونیم استفاده کنیم. توی توابع جاواسکریپت و خارج از درخت کامپوننت‌ها نباید هوک‌ها رو صدا بزنیم.
+- بوسیله کتابخانه  eslint-plugin-react-hooks میتوانیم اطمینان حاصل کنیم از این شرط در پروژه ما اجرا شده.
 
 # React Style (CSS)
 ```
@@ -452,3 +625,8 @@ function User({ match }) {
   );
 }
 ```
+- بستر React Router یه wrapper روی کتابخونه history هست که اعمال اجرایی بر روی window.history رو با استفاده از ابجکت‌های hash و browser مدیریت می‌کنه.
+
+
+- برای چند زبانگی در React از کتابخانه React-Intl استفاده میکنیم.
+  

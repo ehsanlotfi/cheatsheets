@@ -54,7 +54,7 @@ public partial class MyClass {
 - در params از پشت ورودی یک تابع بیاید این ورودی تعداد نامشخص ورودی میگیرد
 - در out لازم نیست مقدار اولیه بگیرد ولی ref حتما باید مقدار اولیه بگیرد
 
-## Exteionshon method
+## Extension Methods
 زمانی که یک متد برای کلاسی که به آن دسترسی ندارم بخواهیم تعریف کنیم مثلا متدی برای کلاس string  در خود هسته #C بخواهیم تعریف کنیم.
 
 ## Encapsulation 
@@ -125,3 +125,9 @@ dynamic متغیر ران تایم تعریف میکند
 وقتی یک مقدار value type را داخل refrence type میریزیم باکسینگ رخ میدهد و زمانی که تایپ کستینگ میکنم  unboxing رخ میدهد
 ## sring vs string builder
 برای الحاق رشته ها فضای جدید میگیرد ولی در string builder فضای جدید نمیگیرد.
+
+![1690059293383](https://github.com/ehsanlotfi/cheatsheets/assets/25532726/d45754fd-9071-4190-851c-fa53e8b39691)
+
+## Is vs As
+- As برای مشخص کردن تایپ یک مقدار 
+- Is برای چک کردن تایپ یک مقدار

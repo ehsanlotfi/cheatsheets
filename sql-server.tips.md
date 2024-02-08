@@ -77,3 +77,27 @@ GO
 ```
 select top 10 id, Lag(id, 1) OVER(ORDER BY id ASC) AS beforeId from Clients
 ```
+
+### clear all data from database
+```
+DECLARE @tableName NVARCHAR(255);
+DECLARE deleteDataTables CURSOR FOR
+    SELECT table_name
+    FROM information_schema.tables
+    WHERE table_type = 'BASE TABLE';
+
+OPEN deleteDataTables;
+FETCH NEXT FROM deleteDataTables INTO @tableName;
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    DECLARE @sql NVARCHAR(MAX);
+    SET @sql = 'DELETE FROM ' + QUOTENAME(@tableName);
+    EXEC sp_executesql @sql;
+
+    FETCH NEXT FROM deleteDataTables INTO @tableName;
+END
+
+CLOSE deleteDataTables;
+DEALLOCATE deleteDataTables;
+```
