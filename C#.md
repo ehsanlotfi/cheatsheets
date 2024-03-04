@@ -102,6 +102,24 @@ throw اطلاعات بیشتری بر میگرداند
 
 ## Delegate VS Event 
 یک  پوینتر است که میتوان رفرنس یک یا چند متد را توی خودش نگه داره پارامتری که بهDelegate پاس داده میشه خودش یک متد است. از جمله پیاده سازی الگوهای طراحی Observer و Callback استفاده می‌شود.
+```
+// Delegate simple Example
+internal class Program
+{
+    public delegate int MyDelegate(params int[] numbers);
+    public static int Add(params int[] numbers) => numbers[0] + numbers[1];
+    public static int Square(params int[] numbers) => numbers[0] * numbers[0];
+
+    public static void Main(string[] args)
+    {
+        MyDelegate myDelegate = Add;
+        var add_res = myDelegate(5, 3); // Output: 8
+
+        myDelegate = Square; 
+        var square_res = myDelegate(5); // Output: 25
+    }
+}
+```
 ### Anonymous Delegate
 دلیگیتی که متد را داخلی خودش میسازه و نیاز به فراخوانی متد ثالث ندارد.
 ### Multicast Delegate
