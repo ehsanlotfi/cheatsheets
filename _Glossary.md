@@ -83,3 +83,15 @@ infoLog('This is an info message #1');
 infoLog('This is an info message #2');
 
 ```
+### Sharding techniques   
+شاردینگ یعنی تقسیم داده‌ها به قطعه‌های کوچک و ذخیره آنها در سرورهای مختلف برای بهبود عملکرد و ظرفیت سیستم.
+
+### Microservices vs Monolithic 
+##### Microservices Advantages
+##### Microservices Disadvantages
+- Developer Productivity
+- Complex Interactions
+- Deployment
+- Monitoring
+
+
