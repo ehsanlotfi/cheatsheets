@@ -151,3 +151,38 @@ dynamic متغیر ران تایم تعریف میکند
 ## Is vs As
 - As برای مشخص کردن تایپ یک مقدار 
 - Is برای چک کردن تایپ یک مقدار
+
+## Semaphore
+Semaphore برای کنترل دسترسی به منابع محدود در برنامه‌های همزمان استفاده می‌شود. در دات‌نت، از کلاس‌های Semaphore و SemaphoreSlim استفاده می‌کنیم، و در زبان‌های دیگر مانند Python از threading.Semaphore استفاده می‌شود. 
+
+```
+using System;
+using System.Threading;
+
+class Program
+{
+    static Semaphore semaphore = new Semaphore(2, 2); // حداکثر دو thread اجازه دسترسی دارند.
+
+    static void Main()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            new Thread(Worker).Start(i);
+        }
+    }
+
+    static void Worker(object id)
+    {
+        Console.WriteLine($"Thread {id} منتظر است");
+        semaphore.WaitOne(); // منتظر دسترسی به منبع می‌ماند.
+        Console.WriteLine($"Thread {id} وارد شد");
+
+        Thread.Sleep(2000); // شبیه‌سازی کار با منبع
+
+        Console.WriteLine($"Thread {id} خارج شد");
+        semaphore.Release(); // دسترسی به منبع آزاد می‌شود.
+    }
+}
+
+```
+در این مثال، حداکثر دو thread می‌توانند به‌طور همزمان به بخش محافظت شده دسترسی داشته باشند. بقیه thread ها باید منتظر بمانند تا یکی از thread های فعال منبع را آزاد کند.
