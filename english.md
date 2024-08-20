@@ -14,3 +14,8 @@
 - Ali has given me a ride.
 - Ali's gonna give me a ride.
 
+##### I'm out من ... ندارم
+- I'm out of luck.
+- I'm out of money.
+- I'm out of ideas.
+
