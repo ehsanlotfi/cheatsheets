@@ -23,3 +23,10 @@
 -  I no longer love you
 -  I no longer trust you
 -  I no longer smoke
+
+##### Me too, Me neither , منم همچنین
+وقتی در جمله طرف از not و never استفاده شده در جواب باید Me neither بگیم در غیر اینصورت Me too میگیم.
+- I like criket =  Me too.
+- I dislike milk =  Me too.
+- I'm not sure = Me neither.
+- I don't like milk = Me neither.
