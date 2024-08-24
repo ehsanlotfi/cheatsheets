@@ -32,3 +32,12 @@
 - I don't like milk = Me neither.
 
 ##### Are you kidding me? شوخی میکنی
+
+##### It's not that اونقدر ها هم تعریف نداره
+-  It's not that good
+-  It's not that bad
+-  It's not that heavy
+-  It's not that light
+-  It's not that simple
+
+
