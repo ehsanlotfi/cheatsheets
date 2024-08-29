@@ -40,4 +40,9 @@
 -  It's not that light
 -  It's not that simple
 
+##### I'm into + verb + ing علاقه داشتن به چیزی
+- I'm into reading book.
+- They're into playing footbal.
+
+
 
