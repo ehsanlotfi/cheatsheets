@@ -49,3 +49,13 @@
 - You make me cry.
 - You make me nervous.
 
+##### come into
+##### He rang the doorbell.
+##### she turned down my offer.
+##### The girl resembled her mother.
+##### I've lost a little weight.
+##### I've gained a little weight.
+##### look ... alike.
+##### please pass me the suger.
+##### Don't leave the window open.
+##### Whose book is this?
