@@ -4,7 +4,7 @@
 - I am busy eating
 
 
-###### It's getting
+###### It's getting + ( Comparative Adjective )
 - It's getting warmer
 - It's getting better
 
