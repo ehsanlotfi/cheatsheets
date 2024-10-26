@@ -1,61 +1,64 @@
-### Busy
-###### sub + tobe + busy + verb..ing
+###### 1- sub + tobe + busy + verb..ing
 - I am busy cooking
 - I am busy eating
 
 
-###### It's getting + ( Comparative Adjective )
+###### 2- It's getting + ( Comparative Adjective )
 - It's getting warmer
 - It's getting better
 
-###### Give me a ride برای سوار شدن از این ساختار استفاده میکنیم
+###### 3- Give me a ride برای سوار شدن از این ساختار استفاده میکنیم
 - Ali gives me a ride.
 - Ali gave me a ride yesterday.
 - Ali has given me a ride.
 - Ali's gonna give me a ride.
 
-##### I'm out من ... ندارم
+###### 4- I'm out من ... ندارم
 - I'm out of luck.
 - I'm out of money.
 - I'm out of ideas.
 
-##### I no longer دیگه نه
+###### 5- I no longer دیگه نه
 -  I no longer love you
 -  I no longer trust you
 -  I no longer smoke
 
-##### Me too, Me neither , منم همچنین
+###### 6- Me too, Me neither , منم همچنین
 وقتی در جمله طرف از not و never استفاده شده در جواب باید Me neither بگیم در غیر اینصورت Me too میگیم.
 - I like criket =  Me too.
 - I dislike milk =  Me too.
 - I'm not sure = Me neither.
 - I don't like milk = Me neither.
 
-##### Are you kidding me? شوخی میکنی
+###### 7- Are you kidding me? شوخی میکنی
 
-##### It's not that اونقدر ها هم تعریف نداره
+###### 8- It's not that اونقدر ها هم تعریف نداره
 -  It's not that good
 -  It's not that bad
 -  It's not that heavy
 -  It's not that light
 -  It's not that simple
 
-##### I'm into + verb + ing علاقه داشتن به چیزی
+###### 9- I'm into + verb + ing علاقه داشتن به چیزی
 - I'm into reading book.
 - They're into playing footbal.
 
-##### You make me تو باعث میشی که من
+###### 10- You make me تو باعث میشی که من
 - You make me smile.
 - You make me cry.
 - You make me nervous.
 
-##### come into
-##### He rang the doorbell.
-##### she turned down my offer.
-##### The girl resembled her mother.
-##### I've lost a little weight.
-##### I've gained a little weight.
-##### look ... alike.
-##### please pass me the suger.
-##### Don't leave the window open.
-##### Whose book is this?
+###### 11- come into
+###### 12- He rang the doorbell.
+###### 13- she turned down my offer.
+###### 14- The girl resembled her mother.
+###### 15- I've lost a little weight.
+###### 16- I've gained a little weight.
+###### 17- look ... alike.
+###### 18- please pass me the suger.
+###### 19- Don't leave the window open.
+###### 20- Whose book is this?
+
+###### 21- condolences ابزار همدردی برای فوت کسی
+- I’m so sorry to hear that. Please accept my deepest condolences.
+
