@@ -62,3 +62,8 @@
 ###### 21- condolences ابزار همدردی برای فوت کسی
 - I’m so sorry to hear that. Please accept my deepest condolences.
 
+###### 22- ... in charge of  ... مسئولیت چیزی
+- She is in charge of the marketing team.
+- I am in charge of organizing the event.
+- The manager put him in charge of the new project.
+- Who is in charge of handling customer complaints?
