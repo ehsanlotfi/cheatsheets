@@ -67,3 +67,6 @@
 - I am in charge of organizing the event.
 - The manager put him in charge of the new project.
 - Who is in charge of handling customer complaints?
+
+###### 22- In a way یکجورایی
+- In a way, learning English feels like solving a puzzle
