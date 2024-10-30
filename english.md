@@ -71,3 +71,6 @@
 ###### 22- In a way یکجورایی
 - In a way, learning English feels like solving a puzzle
 ###### 23- that's really sweet of you. لطف داری
+
+###### 24- as well as و همچنین
+- The main characters are introduced as well as some minor characters.
