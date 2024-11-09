@@ -74,3 +74,6 @@
 
 ###### 24- as well as و همچنین
 - The main characters are introduced as well as some minor characters.
+
+##### 25- stand for مخففِ
+- IT stands for Information Technology
