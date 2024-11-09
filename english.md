@@ -78,5 +78,10 @@
 ##### 25- stand for مخففِ
 - IT stands for Information Technology
 
-##### over the weekend vs the weekend
+##### 26- over the weekend vs the weekend
 اولی به معنای کل آخر هفته است یعنی شنبه و یکشنبه ولی دومی منظور فقط روز آخر هفته است
+
+##### 27- figure something out فهمیدن یا حل کردن چیزی
+- I'm sure you'll figure it out.
+- We need to figure out a way to save more money each month.
+- I can’t come up with an idea right now, but give me some time and I’ll figure it out.
