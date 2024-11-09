@@ -77,3 +77,6 @@
 
 ##### 25- stand for مخففِ
 - IT stands for Information Technology
+
+##### over the weekend vs the weekend
+اولی به معنای کل آخر هفته است یعنی شنبه و یکشنبه ولی دومی منظور فقط روز آخر هفته است
