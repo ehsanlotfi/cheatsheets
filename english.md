@@ -85,3 +85,6 @@
 - I'm sure you'll figure it out.
 - We need to figure out a way to save more money each month.
 - I can’t come up with an idea right now, but give me some time and I’ll figure it out.
+
+
+##### 28- to be honest with you اگر بخام باهات صادق باشم
