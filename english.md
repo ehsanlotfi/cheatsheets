@@ -88,3 +88,20 @@
 
 
 ##### 28- to be honest with you اگر بخام باهات صادق باشم
+
+##### 29- I'm having beef stew. ما آبگوشت داریم
+
+##### 30- Do you eat a big/light lunch?
+
+##### 31- take it easy. برای خداحافظی هم استفاده میشه
+
+##### 32- I'm off to برای ترک صحبت و رفتن به
+- I'm off to work.
+- I'm off to speak to Rob.
+
+##### So am I / Neither am I منم همینطور
+-  A: I’m a student.   B: So am I.
+-  A: I’m not a student.  B: Neither am I.
+
+
+
