@@ -599,6 +599,10 @@ const setCount = () => {
 ### useEffect
  هر بار که یک state تغییر کند، یک افکت ایجاد می‌کند.در چرخه حیات کامپوننت های تابعی توضیح دادم
  
+ - use  useEffect
+
+
+ما می توانیم از چرخه حیات mount, unmount هم استفاده کنیم
 ### useContext
 
 در مبحث context توضیح داده شد
@@ -809,20 +813,72 @@ useLayoutEffect runs
 
 اگر ما هم useEffect داشته باشیم و هم useLayoutEffect   اول useLayoutEffect اجرا می شود بعد useEffect
 ### useImperativeHandle 
+
 برای ویرایش یک Ref در کامپوننت پدر استفاده می شود.  در واقع برای شخصی سازی ref در کامپوننت پدر در فرزند استفاده می شود.
+
+علت استفاده این هست که کد زیر خطا تولید می کند و کار نمی کند :
+
+```
+import {useRef} from "react";
+
+
+let BootstrapInput = (props) => {
+    return <inpput  {... props} />;
+};
+
+const UseImperativeHandleExample = () => {
+
+    const inputRef= useRef(null);
+
+    const handleFocus = () => {
+        inputRef.current.focus();
+    };
+
+
+    return(
+
+        <div className="w-50 d-grid gap-3 mx-auto mt-5">
+            <h5 className="alert alert-success text-center">
+                آشنایی با هوک  useImperativeHandle
+            </h5>
+           <hr className="bg-danger"/>
+            <input 
+                ref={inputRef}
+                type="text"
+                className="form-control"
+               
+            />
+            <BootstrapInput  type="text" className="form-control" ref={inputRef} /> 
+            <button type="button" className="btn btn-success btn-block " onClick={handleFocus}>
+            تمرکز بنما
+            </button>
+        </div>
+    );
+}
+
+```
+
+خطایی که در مرورگر می دهد  و می گوید که حتما باید از forwardRef , useImperativeHandle استفاده کرد:
+
+```
+ Warning: Function components cannot be given refs. Attempts to access this ref will fail. Did you mean to use React.forwardRef()?
+
+Check the render method of `UseImperativeHandleExample.
+```
+استفاده تنهایی از forwardRef مشکل را حل نمی کند .بلکه باید ref ر ا به صوت آرگومان مجزا از props به CostomizedInput بدهیم . 
 
 کامپوننت فرزند:
 ```
-CostomizedInput = (probs,ref) => {
+let CostomizedInput = (probs,ref) => {
   // has it`s own ref`
-  cost inputRef= useRef();
+  cost ref2= useRef();
   useImperativeHandle(ref,() = > ({
     focus: () => {
-      inputRef.current.focus;
+      ref2.current.focus;
       alert('Hello');
     }
   }));
-  return <input ref={inputFer} {...probs}/>;
+  return <input ref={ref2} {...probs}/>;
 }
 
 // use forwardRef 
@@ -1149,6 +1205,11 @@ function HelloWorldComponent(){
 
 <h1 style={count===0 ? {color:'red'} : {color:'green'}}> 
 {count}</h1>
+
+
+
+
+
 ```
 
 
@@ -1409,10 +1470,7 @@ const  search=(query) => {
 }
 ```
 
-- use  useEffect
 
-
-ما می توانیم از چرخه حیات mount, unmount هم استفاده کنیم
 
 - use ready library in npmjs site :
   - react-debounce-inputs
@@ -1450,9 +1508,340 @@ const App = () =>{
 ### Lodash
 یک کتابخانه js حاوی توابع بسیار زیاد هست که کارهای مهمی را انجام می دهند. مثلا می خواهید آرایه ای از اعداد را با هم جمع کنید و خروجی بگیرید یا توی آرایه ای از اسامی ، اسامی منحصر بفرد را استخراج کنید. یا بخواهید یک رنج از اعداد را تولید کنید  یا بخواهید یک clone از یک object پیچیده بگیرید.
 
-### اعتبارسنجی فرم ها
+## اعتبارسنجی فرم ها
 برای اعتبارسنجی مقادیر input ها در فرم دو راه داریم :
 
 1- خودمان شرط بنوسیم که مثلا حتما فیلدهای اجباری پر شده باشد برای فیلدهای عددی حتما عدد وارد شده باشد.
 
+### YUP
 2- استفاده از کتابخانه Yup
+
+- ابتدا نصب با استفاده از npm
+- یک پوشه validation ایجاد می کنیم و کدهای schema را اون جا قرار می دهیم 
+
+- scheme :
+
+
+```
+// in src/validations/contactValidation.js :
+
+import * as Yup from 'yup';
+
+export const contactSchema = Yup.object().shape({
+
+  fullname:Yup.string().required('نام و نام  خانوادگی الزامی می باشد'),
+  photo:Yup.string().url('آدرس معتیر نیست').required('تصویر مخاطب الزامی می با شد'),
+  mobile:Yup.number().required('شماره موبایل الزامی می باشد'),
+  email:Yup.string().email('آدرس ایمیل معتبر نیست').required('آدرس ایمیل الزامی می باشد'),
+  job:Yup.string().nullable(),
+  group:Yup.string().required('انتخاب گروه الزامی می باشد'),
+});
+```
+- use in App.js in createContactForm :
+
+```
+import { contactSchema } from './validations/contactSchema'; 
+
+// add new state :
+const [errors,setErrors] = useState([]);
+
+
+
+  const createTaskFrom = async(event) => {
+    event.preventDefault();
+    try {
+      setLoading((prevLoading) => !prevLoading);
+     
+     //added
+      await contactSchema.validate(contact);
+    //
+
+      const {status,data} = await createContact(contact) ;
+      console.log(status);
+           
+      if(status ===201){
+        const allContacts= [... contacts,data];
+        setContacts(allContacts);
+        setFilteredContacts(allContacts);
+        setContact({});
+        setLoading((prevLoading) => !prevLoading);
+        navigate("/contacts");
+      }
+    } catch (error) {
+      console.log(error.message);
+      console.log(error);
+      setLoading((prevLoading) => !prevLoading);
+    }
+
+  }
+```
+the console will show only last eror :
+
+ValidationError: انتخاب گروه الزامی هست
+
+
+- the contactForm should not have any attribute required in form
+- for showing all Errors in console :
+
+```
+ await contactSchema.validate(contact , {abortEarly : false});
+```
+
+output : 
+4 errors occurred
+App.js:141 ValidationError: 4 errors occurred
+
+- if we want to show detail of error :
+```
+console.log(error.inner);
+```
+
+
+### formik
+ با استفاده از formik دیگر نیازی به Yup نداریم چون خودش اعتبارسنجی را انجام می ددهد.
+
+1- imports need in AddTask
+ ```
+import { useFormik } from "formik";
+import { taskSchema } from "../../validations/taskValidation";
+```
+
+2- build schema and validation
+
+```
+ const formik = useFormik({
+        initialValues : {
+            Title:"",
+            Category:"",
+            Priority:"",
+            Color:"",
+            Description:"",
+
+        },
+        // we can build our schema or use or pre-built schema
+        validationSchema:taskSchema,
+        onSubmit: (values) => {
+            console.log(values);
+        }
+    });
+
+```
+3- 
+     in return form : we use handleSubmit and we use formik.values and formik.handleChange in every input
+     also we should set id for each input
+```
+    <form onSubmit={formik.handleSubmit}>
+        <div className="mb-2">
+            <label for="Title" className="form-label col-form-labe">عنوان
+            </label>
+            <input
+                id="Title"
+                name="Title"
+                type="text"
+                id="Title"
+                className="form-control"
+                // value={task.Title}
+                value={formik.values.Title}
+                placeholder="عنوان"
+                  // required={true}
+                // onChange={onTaskChange}
+                onChange={formik.handleChange}
+                
+            />
+            
+        </div>
+
+
+ ```
+ 4- show ech errors below of input:
+
+```
+ <div className="mb-2">
+  <label for="Description" className="form-label col-form-labe">توضیحات 
+  </label>
+      <input
+          id="Description"
+          name="Description"
+          type="textarea"
+          className="form-control"
+          // onChange={onTaskChange}
+          // value={task.Description}
+          value={formik.values.Description}
+          onChange={formik.handleChange}
+          
+      />
+        {formik.errors.Description ? (<div className="text-danger">{formik.errors.Description}</div>): null}   
+  </div>
+
+```
+5- 
+با وارد کردن یک کارراکتر در اولین input همه خطاها نمایش داده می شود.
+اما ما می خواهیم که وقتی روی هر input هستیم خطای مربوط به ان input نمایش داده شود : از onBlur برای هرinput استفاده می کنیم :
+```
+  <div className="mb-2">
+                            <label for="Title" className="form-label col-form-labe">عنوان
+                            </label>
+                            <input
+                                id="Title"
+                                name="Title"
+                                type="text"
+                                className="form-control"
+                                // value={task.Title}
+                                value={formik.values.Title}
+                                placeholder="عنوان"
+                                  // required={true}
+                                // onChange={onTaskChange}
+                                onChange={formik.handleChange}
+                                onBlur={formik.handleBlur}
+                               
+                            />
+                           {formik.touched.Title && formik.errors.Title ? (<div className="text-danger">{formik.errors.Title}</div>): null}
+                        </div>
+```
+6 - 
+بعد از submit کردن باید createTask را هم فراخوانی کنیم :
+```
+    const formik = useFormik({
+        initialValues : {
+            Title:"",
+            Category:"",
+            Priority:"",
+            Color:"",
+            Description:"",
+
+        },
+        // we can build our schema or use or pre-built schema
+        validationSchema:taskSchema,
+        onSubmit: (values) => {
+             console.log(values);
+            createTask(values);
+        }
+    });
+```
+
+7- دیگر تابع createTaskForm ورودی event را نمی گیرد بلکه values را می گیرد :
+```
+const createTaskFrom = async(values) => {
+    // event.preventDefault();
+    try {
+      setLoading((prevLoading) => !prevLoading);
+     
+      // await taskSchema.validate(task,{abortEarly:false});
+
+
+      const {status,data} = await createTask(values) ;
+      console.log('data:');
+      console.log(data);
+      console.log(status);
+      if(status ===200){
+        const allTasks= [... tasks,data];
+        setTasks(allTasks);
+        setFilteredTasks(allTasks);
+        // setTask({});
+        // setErrors([]);
+        setLoading((prevLoading) => !prevLoading);
+        navigate("/tasks");
+      }
+    } catch (error) {
+      console.log(error.message);
+      console.log(error.inner);
+      // setErrors(error.inner);
+      setLoading((prevLoading) => !prevLoading);
+    }
+
+  }
+```
+
+8- به جای فیلدهای value,name,onBlur,onChange در فرم وقتی از formic استفاده می کنیم می توانیم فقط با یک خط کد انجام دهیم:
+
+```
+<div className="mb-2">
+    <label for="Title" className="form-label col-form-labe">عنوان
+    </label>
+    <input
+        id="Title"
+        type="text"
+        className="form-control"
+        placeholder="عنوان"
+        {... formik.getFieldProps("Title")}
+        
+    />
+```
+9- می توانیم از کامپوننتFormik به چای useFormik استفاده کنیم :
+
+کل تگ form داخل تگ های Formik می گذاریم :
+```
+  <Formik 
+                    
+      initialValues = {{
+          Title:"",
+          Category:"",
+          Priority:"",
+          Color:"",
+          Description:"",
+
+      }}
+      
+      validationSchema={taskSchema} 
+      onSubmit= {(values) => {
+          createTask(values);
+      }}
+   
+      >
+        {
+            (formik) => (
+            <form onSubmit={formik.handleSubmit}>
+            ...
+            </form>)
+        }
+  </Formik>
+```
+
+10 - برای ساده تر شدن حتی می توانیم از تگ Form خود Formik استفاده کنیم به شکل زیر :
+
+ابتدا باید import کنیم :
+
+```
+import { Formik ,Form,Field,ErrorMessage} from "formik";
+```
+
+تغییر فرم به شکل زییر :
+تبدیل id به name 
+```
+ <Form >
+    <div className="mb-2">
+        <label for="Title" 
+        className="form-label col-form-labe">
+        عنوان
+        </label>
+        <Field
+            name="Title"
+            type="text"
+            className="form-control"
+            placeholder="عنوان"
+          
+    
+        />
+         <ErrorMessage name="Title" render={(msg)=> (<div className="text-danger"> {msg}</div>)} />
+    </div>
+
+       <div className="mb-2">
+          <label for="Category" className="form-label col-form-labe">دسته بندی
+          </label>
+              <Field
+              
+              name="Category"
+              as="select"
+              className="form-control"
+              
+              
+              >
+              <option value="">انتخاب دسته بندی </option>
+              {categories.length > 0 &&
+              categories.map((c)=>(
+                  <option key={c.Id} value={c.Id}>{c.Title}</option>
+              ))}
+              </Field>
+              <ErrorMessage name="Category" render={(msg)=> (<div className="text-danger"> {msg}</div>)} />
+              </div>
+```
