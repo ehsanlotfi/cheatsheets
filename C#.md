@@ -58,6 +58,8 @@ public partial class MyClass {
 زمانی که یک متد برای کلاسی که به آن دسترسی ندارم بخواهیم تعریف کنیم مثلا متدی برای کلاس string  در خود هسته #C بخواهیم تعریف کنیم.
 
 ## Encapsulation 
+![image](https://github.com/ehsanlotfi/cheatsheets/assets/25532726/7b17b920-4f98-4c00-9630-ce8a8536ff69)
+
 اگر یک کلاسی سطح دسترسی آن مشخص نشود پیش فرض internal قرار میگرد.
 ### public
 دسترسی کامل در کلاس فعلی و همه کلاس ها و همه پروژه که اسمبلی شده از این کلاس
@@ -92,7 +94,7 @@ throw اطلاعات بیشتری بر میگرداند
 
 ## IEnumerable Vs IQueryable
 ### IEnumerable
-یک خصوصیتی که باعث می شود لیست ها قابل پیمایش باشد
+برای کار با مجموعه داده‌های در حافظه مانند لیست‌ها، آرایه‌ها و ... استفاده می‌شود.
 ### IQueryable
 برای لیست هایی که از سمت دیتابیس می آید و برای Linq کاربرد دارد.  و ممکن است در لحظه تغییر کند.  با استفاده از Expression Tree اجازه می‌دهد تا پرس و جوهای LINQ به صورت تاخیری (Deferred Execution) اجرا شوند،
 
@@ -100,6 +102,24 @@ throw اطلاعات بیشتری بر میگرداند
 
 ## Delegate VS Event 
 یک  پوینتر است که میتوان رفرنس یک یا چند متد را توی خودش نگه داره پارامتری که بهDelegate پاس داده میشه خودش یک متد است. از جمله پیاده سازی الگوهای طراحی Observer و Callback استفاده می‌شود.
+```
+// Delegate simple Example
+internal class Program
+{
+    public delegate int MyDelegate(params int[] numbers);
+    public static int Add(params int[] numbers) => numbers[0] + numbers[1];
+    public static int Square(params int[] numbers) => numbers[0] * numbers[0];
+
+    public static void Main(string[] args)
+    {
+        MyDelegate myDelegate = Add;
+        var add_res = myDelegate(5, 3); // Output: 8
+
+        myDelegate = Square; 
+        var square_res = myDelegate(5); // Output: 25
+    }
+}
+```
 ### Anonymous Delegate
 دلیگیتی که متد را داخلی خودش میسازه و نیاز به فراخوانی متد ثالث ندارد.
 ### Multicast Delegate
@@ -131,3 +151,38 @@ dynamic متغیر ران تایم تعریف میکند
 ## Is vs As
 - As برای مشخص کردن تایپ یک مقدار 
 - Is برای چک کردن تایپ یک مقدار
+
+## Semaphore
+Semaphore برای کنترل دسترسی به منابع محدود در برنامه‌های همزمان استفاده می‌شود. در دات‌نت، از کلاس‌های Semaphore و SemaphoreSlim استفاده می‌کنیم، و در زبان‌های دیگر مانند Python از threading.Semaphore استفاده می‌شود. 
+
+```
+using System;
+using System.Threading;
+
+class Program
+{
+    static Semaphore semaphore = new Semaphore(2, 2); // حداکثر دو thread اجازه دسترسی دارند.
+
+    static void Main()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            new Thread(Worker).Start(i);
+        }
+    }
+
+    static void Worker(object id)
+    {
+        Console.WriteLine($"Thread {id} منتظر است");
+        semaphore.WaitOne(); // منتظر دسترسی به منبع می‌ماند.
+        Console.WriteLine($"Thread {id} وارد شد");
+
+        Thread.Sleep(2000); // شبیه‌سازی کار با منبع
+
+        Console.WriteLine($"Thread {id} خارج شد");
+        semaphore.Release(); // دسترسی به منبع آزاد می‌شود.
+    }
+}
+
+```
+در این مثال، حداکثر دو thread می‌توانند به‌طور همزمان به بخش محافظت شده دسترسی داشته باشند. بقیه thread ها باید منتظر بمانند تا یکی از thread های فعال منبع را آزاد کند.

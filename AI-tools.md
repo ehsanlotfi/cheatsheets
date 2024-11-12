@@ -56,3 +56,12 @@
 
 
 
+
+
+### websites
+مقایسه مدل های زبانی با هم
+- [lmsys](https://arena.lmsys.org)
+
+### Iranian AI websites
+- [Aval AI](https://avalai.ir)
+- [Rakhsh AI](https://rakhshai.com)
