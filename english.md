@@ -2,7 +2,6 @@
 - I am busy cooking
 - I am busy eating
 
-
 ###### 2- It's getting + ( Comparative Adjective )
 - It's getting warmer
 - It's getting better
@@ -48,16 +47,26 @@
 - You make me cry.
 - You make me nervous.
 
-###### 11- come into
-###### 12- He rang the doorbell.
-###### 13- she turned down my offer.
-###### 14- The girl resembled her mother.
-###### 15- I've lost a little weight.
-###### 16- I've gained a little weight.
-###### 17- look ... alike.
-###### 18- please pass me the suger.
+###### 14- The girl resembled her mother. دختر به مادرش شباهت داشت
+
+###### 15- I've lost/gained a little weight. من کمی وزن کم/زیاد کردم
+
+###### 17- look ... alike. آن‌ها شبیه هم هستند
+- They look alike.
+- These two cars look very much alike.
+
+###### 18- pass me به من بده
+- please pass me the suger
+- Can you pass me the salt, please?
+- Please pass him the notebook.
+- 
+
 ###### 19- Don't leave the window open.
-###### 20- Whose book is this?
+
+###### 20- Whose مال چه کسی
+- Whose book is this?
+- Whose pen is that?
+- Whose car is parked outside?
 
 ###### 21- condolences ابزار همدردی برای فوت کسی
 - I’m so sorry to hear that. Please accept my deepest condolences.
@@ -86,7 +95,6 @@
 - We need to figure out a way to save more money each month.
 - I can’t come up with an idea right now, but give me some time and I’ll figure it out.
 
-
 ##### 28- to be honest with you اگر بخام باهات صادق باشم
 
 ##### 29- I'm having beef stew. ما آبگوشت داریم
@@ -102,6 +110,4 @@
 ##### So am I / Neither am I منم همینطور
 -  A: I’m a student.   B: So am I.
 -  A: I’m not a student.  B: Neither am I.
-
-
 
