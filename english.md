@@ -113,3 +113,12 @@
 
 ##### 34- count on me روی من حساب کنی
 - you can always count on me to get to office on time.
+
+##### 35- It depends on
+- It depends on the situation.
+- It depends on the subject.
+
+##### 36- How late are you open?
+##### 37- Do you have any promotion?
+##### 38- Take your time.
+##### 39- Can the price be negotiable?
