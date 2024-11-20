@@ -90,7 +90,7 @@
 ##### 26- over the weekend vs the weekend
 اولی به معنای کل آخر هفته است یعنی شنبه و یکشنبه ولی دومی منظور فقط روز آخر هفته است
 
-##### 27- figure something out فهمیدن یا حل کردن چیزی
+##### 27- figure st out فهمیدن یا حل کردن چیزی
 - I'm sure you'll figure it out.
 - We need to figure out a way to save more money each month.
 - I can’t come up with an idea right now, but give me some time and I’ll figure it out.
@@ -122,3 +122,12 @@
 ##### 37- Do you have any promotion?
 ##### 38- Take your time.
 ##### 39- Can the price be negotiable?
+
+##### 40- pose + (article/determiner) + [noun]  باعث .... می شود
+- Pose a risk / threat / challenge / Problem / question / concern.
+- Heavy traffic can pose a problem for emergency services.
+- This new policy poses serious concerns about privacy.
+
+##### 41-  On one hand ... on the other hand
+- On one hand, it’s convenient, but on the other hand, it’s time-consuming.
+- On one hand, Jason does everything in the office; on the other hand, he does nothing at home.
