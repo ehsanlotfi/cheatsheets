@@ -120,8 +120,11 @@
 - It depends on the subject.
 
 ##### 36- How late are you open?
+
 ##### 37- Do you have any promotion?
+
 ##### 38- Take your time.
+
 ##### 39- Can the price be negotiable?
 
 ##### 40- pose + (article/determiner) + [noun]  باعث .... می شود
