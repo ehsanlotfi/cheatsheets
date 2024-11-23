@@ -131,3 +131,8 @@
 ##### 41-  On one hand ... on the other hand
 - On one hand, it’s convenient, but on the other hand, it’s time-consuming.
 - On one hand, Jason does everything in the office; on the other hand, he does nothing at home.
+
+##### 42- make sense  منطقیه
+- It makes sense.
+- It doesn't make sense.
+- Does it make sense.
