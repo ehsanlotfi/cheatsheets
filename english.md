@@ -31,7 +31,7 @@
 
 ###### 7- Are you kidding me? شوخی میکنی
 
-###### 8- It's not that اونقدر ها هم تعریف نداره
+###### 8- It's not that اونقدر ها هم
 -  It's not that good
 -  It's not that bad
 -  It's not that heavy
@@ -61,7 +61,7 @@
 - Please pass him the notebook.
 - 
 
-###### 19- Don't leave the window open.
+###### 19- Don't leave the window open. باز نگذار
 
 ###### 20- Whose مال چه کسی
 - Whose book is this?
@@ -79,6 +79,7 @@
 
 ###### 22- In a way یکجورایی
 - In a way, learning English feels like solving a puzzle
+
 ###### 23- that's really sweet of you. لطف داری
 
 ###### 24- as well as و همچنین
