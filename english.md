@@ -1,3 +1,50 @@
+##### Simple Present حقایق، عادات، روزمرگی
+- I work every day.
+- She works every day.
+
+##### Present continuous اکنون در حال انجام، برنامه‌ها، تغییرات
+- I am working every day.
+- She is working every day.
+
+##### Present Perfect  اتفاقات گذشته با تاثیر حال، تجربه‌ها
+- I have worked every day.
+- She has worked every day.
+
+##### Present Perfect Continuous عملیات در گذشته که تا حال ادامه دارد
+- I have been working every day.
+- She has been working every day.
+
+##### Simple Past اتفاقات تمام شده در گذشته
+- I worked every day.
+- She worked every day.
+- 
+##### Past continuous عملی که در گذشته در حال انجام بود
+- I was working every day.
+- She was working every day.
+##### Past Perfect اتفاقات قبل از یک زمان مشخص در گذشته
+- I had worked every day.
+- She had worked every day.
+  
+##### Past Perfect Continuous عملی که در گذشته قبل از زمان خاصی در حال انجام بود
+- I had been working every day.
+- She had been working every day.
+  
+##### Simple Future پیش‌بینی‌ها، تصمیمات آینده
+- I will work every day.
+- She will work every day.
+- 
+##### Future  continuous عملی که در آینده در حال انجام خواهد بود
+- I will be working every day.
+- She will be working every day.
+  
+##### Future  Perfect عملی که در آینده قبل از زمان خاصی تمام خواهد شد
+- I will have worked every day.
+- She will have worked every day.
+  
+##### Future  Perfect Continuous  عملی که در آینده قبل از زمان مشخصی در حال انجام خواهد بود
+- I will have been working every day.
+- She will have been working every day.
+- 
 ###### 1- sub + tobe + busy + verb..ing
 - I am busy cooking
 - I am busy eating
