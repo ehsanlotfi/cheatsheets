@@ -44,7 +44,15 @@
 ##### Future  Perfect Continuous  عملی که در آینده قبل از زمان مشخصی در حال انجام خواهد بود
 - I will have been working every day.
 - She will have been working every day.
-- 
+
+##### Persent vs Past
+- Do, Does => Did
+- am, is => was
+- are => were
+- have, has => had
+- get => got
+###### Does, Has برای سوم شخص استفاده می شوند
+
 ###### 1- sub + tobe + busy + verb..ing
 - I am busy cooking
 - I am busy eating
