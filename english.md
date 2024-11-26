@@ -197,3 +197,7 @@
 - Does it make sense.
 
 ##### 43- could you explain that frtther.
+
+##### 44- As far as تا جایی که
+- As far as I can remember, he didn’t come home until midnight.
+- As far as I can see, he’s a big liar.
