@@ -55,19 +55,19 @@
 
 ##### Conditional Sentences
 
-###### 0- If + present simple, present simple
+###### 0- If + present simple, present simple ( Condition: real, Result: real )
 - If you heat water, it boils.
 - If you touch fire, you get burned.
 
-###### 1- If + present simple, will + base verb
+###### 1- If + present simple, will + base verb ( Condition: possible, Result: possible )
 - If it rains, I will stay home.
 - If you study hard, you will pass the exam.
 
-###### 2- If + past simple, would + base verb
+###### 2- If + past simple, would + base verb ( Condition: unreal, Result: impossible )
 - If I were rich, I would buy a big house.
 - If she studied more, she would get better grades.
 
-###### 3- If + past perfect, would have + past participle
+###### 3- If + past perfect, would have + past participle ( Condition: impossible, Result: unreal )
 - If I had studied, I would have passed the test.
 - If we had left earlier, we would have caught the train.
 
