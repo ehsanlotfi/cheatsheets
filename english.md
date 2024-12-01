@@ -53,6 +53,28 @@
 - get => got
 ###### Does, Has برای سوم شخص استفاده می شوند
 
+##### Conditional Sentences
+
+###### 0- If + present simple, present simple
+- If you heat water, it boils.
+- If you touch fire, you get burned.
+
+###### 1- If + present simple, will + base verb
+- If it rains, I will stay home.
+- If you study hard, you will pass the exam.
+
+###### 2- If + past simple, would + base verb
+- If I were rich, I would buy a big house.
+- If she studied more, she would get better grades.
+
+###### 3- If + past perfect, would have + past participle
+- If I had studied, I would have passed the test.
+- If we had left earlier, we would have caught the train.
+
+###### دو تا نکته مهم وجود دارد
+- If clause, Main clause را میشه جابجا کرد
+- همیشه از were استفاده میکنم نه از was
+- 
 ###### 1- sub + tobe + busy + verb..ing
 - I am busy cooking
 - I am busy eating
