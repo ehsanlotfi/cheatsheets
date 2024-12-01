@@ -202,3 +202,99 @@
 - As far as I can remember, he didn’t come home until midnight.
 - As far as I can see, he’s a big liar.
 - As far as I’m concerned, I don’t mind that you wear this mini-skirt.
+
+##### 45- Compared to ...  
+- Compared to other students, she is quite hard working.
+- Compared to city life, country life is quiet and peaceful.
+- Compared to fans, air-conditioners are more comfortable.
+
+##### 46- Don’t ever
+- Don’t ever lose these papers.
+- Don’t ever miss a good opportunity.
+- Don’t ever arrive late for an interview.
+
+##### 47- Do you carry this in — ? آیا برای فروش دارید؟
+- Do you carry this in size 10?
+- Do you carry this in beige?
+
+##### 48- Do you mind—? آیا مشکلی ندارید که ...
+- Would you mind if I smoke here?
+- Do you mind if I ask you a question?
+- Do you mind opening the window?
+
+##### 49- Shouldn’t we ... آیا لازم نیست که
+- Shouldn’t we ask for permission first?
+- Shouldn’t we read the directions before we install the air conditioner?
+- Shouldn’t we check the weather before we go out?
+
+##### 49- Have you ever—? تا حالا...
+- Have you ever been to New York?
+- Have you ever seen Ghost?
+- Have you ever heard of it?
+
+##### 50- either ... or  ... 
+- He is either drunk or mad.
+- It’s either your fault or her fault.
+
+##### 51- He is not only ... but also ...
+- He is not only humorous, but also patient.
+- He is not only a good leader, but also an eloquent speaker.
+
+##### 52-  Help yourself to ... از خودت پذیرایی کن
+- yourself to some fish.
+- Help yourself to the refrigerator.
+- Help yourself to some steak. 
+
+##### 53- How dare you—!
+- How dare you call me fat!
+- How dare you speak to me like that!
+- How dare he do that to me!
+- How dare you turn him down!
+- I dare say you will succeed in the election.
+- I dare say he won’t come.
+
+##### 54- How often—?
+- How often is there a leap year?
+- How often is there a flight to Shanghai?
+- How often do you write to your parents?
+
+##### - I bet ...
+- I bet we’re lost.
+- I bet he is home now.
+- I bet he will win the prize.
+
+##### - I’d like you to— از تو میخواهم
+- I’d like you to fetch some boiled water.
+- I’d like you to send for a doctor.
+- I’d like you to look after my baby for a while.
+
+##### - as— as possible تا حد امکان
+- I’ll be back as soon as possible.
+- I’ll work as hard as I can.
+- Try to be as careful as possible.
+
+##### - I’ll let you know خبرت میدم
+I’ll let you know when I’m leaving for Tehran.
+I’ll let you know if I can make it for dinner.
+I’ll let you know if I get bored.
+I’ll let you know when I get hungry.
+
+##### -  I’d be grateful ممنونتان خواهم شد
+- I’d be grateful for your help.
+- I’d be grateful if you’d be quiet.
+- I’d be grateful if you’d give me a hand.
+
+##### - I’m afraid ... میترسم
+- I’m afraid you didn’t quite get his meaning.
+- I’m afraid we are going to be late.
+- I’m afraid I can’t make it.
+
+##### - I’m looking forward to ... ّ بی صبرانه مشتاق هستم
+- I’m looking forward to working with you.
+- I’m looking forward to coming to Tehran again.
+- I’m really looking forward to the holidays.
+
+##### - I’m not really happy with
+- I’m not really happy with their performance.
+- I’m not really happy with your behavior.
+- I’m not really happy with your present situation.
