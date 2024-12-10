@@ -324,3 +324,43 @@ I’ll let you know when I get hungry.
 - I’m not really happy with their performance.
 - I’m not really happy with your behavior.
 - I’m not really happy with your present situation.
+
+##### -  I don’t care ... برام مهم نیست
+-  I don’t care what you had to do.
+-  I don’t care what they think about me.
+-  I don’t care what it costs.
+
+##### - Speaking of ...  حالا که صحبت از — شد
+- Speaking of the movies, have you seen “Lord of the ring”?
+- Speaking of honesty, I know a lot of people who don’t pay bus fares.
+- Speaking of Ben, have you seen him recently?
+
+##### - There is nothing as—as— هیچ چیز به اندازهٔ ... نیست
+- There is nothing as exciting as meeting an old friend unexpectedly.
+- For me, there is nothing as enjoyable as reading a novel on the grass.
+- There is nothing as pleasant as spending a weekend in the countryside.
+- There is nothing as refreshing as having a good rest.
+
+##### - There is nothing I like better than— هیچ چیزی نیست که بیشتر از ... دوستش داشته باشم
+- There is nothing I like better than listening to the radio.
+- There is nothing women like better than shopping.
+- There is nothing she likes better than chatting with friends.
+
+##### - What’s the matter  چه مشکلی برای — پیش آمده است؟
+- What’s the matter with him?
+- What’s the matter with your finger? It’s bleeding.
+- What’s wrong with this machine?
+- What’s wrong with you, Mum? You look so pale.
+- What’s wrong with your car?
+
+##### - What’s the use of—? چه فایده‌ای دارد؟
+- What’s the use of talking about it?
+- What’s the use of crying over spilt milk?
+- What’s the point of arguing with her?
+- What’s the point of worrying about it?
+
+##### - whether ... or not چه بشود یا نه
+- Whether it rains or not, we’ll hold the sports meet.
+- They’ll find out the truth, whether or not you tell it to them.
+- Whether or not we like it, we have to accept it.
+- Whether you are willing or not, you have to do it.
