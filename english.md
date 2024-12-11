@@ -222,7 +222,7 @@
 - It doesn't make sense.
 - Does it make sense.
 
-##### 43- could you explain that frtther.
+##### 43- could you explain that further.
 
 ##### 44- As far as تا جایی که
 - As far as I can remember, he didn’t come home until midnight.
@@ -284,82 +284,82 @@
 - How often is there a flight to Shanghai?
 - How often do you write to your parents?
 
-##### - I bet ...
+##### 55- I bet ...
 - I bet we’re lost.
 - I bet he is home now.
 - I bet he will win the prize.
 
-##### - I’d like you to— از تو میخواهم
+##### 56- I’d like you to— از تو میخواهم
 - I’d like you to fetch some boiled water.
 - I’d like you to send for a doctor.
 - I’d like you to look after my baby for a while.
 
-##### - as— as possible تا حد امکان
+##### 57- as— as possible تا حد امکان
 - I’ll be back as soon as possible.
 - I’ll work as hard as I can.
 - Try to be as careful as possible.
 
-##### - I’ll let you know خبرت میدم
-I’ll let you know when I’m leaving for Tehran.
-I’ll let you know if I can make it for dinner.
-I’ll let you know if I get bored.
-I’ll let you know when I get hungry.
+##### 58- I’ll let you know خبرت میدم
+- I’ll let you know when I’m leaving for Tehran.
+- I’ll let you know if I can make it for dinner.
+- I’ll let you know if I get bored.
+- I’ll let you know when I get hungry.
 
-##### -  I’d be grateful ممنونتان خواهم شد
+##### 59-  I’d be grateful ممنونتان خواهم شد
 - I’d be grateful for your help.
 - I’d be grateful if you’d be quiet.
 - I’d be grateful if you’d give me a hand.
 
-##### - I’m afraid ... میترسم
+##### 60- I’m afraid ... میترسم
 - I’m afraid you didn’t quite get his meaning.
 - I’m afraid we are going to be late.
 - I’m afraid I can’t make it.
 
-##### - I’m looking forward to ... ّ بی صبرانه مشتاق هستم
+##### 61- I’m looking forward to ... ّ بی صبرانه مشتاق هستم
 - I’m looking forward to working with you.
 - I’m looking forward to coming to Tehran again.
 - I’m really looking forward to the holidays.
 
-##### - I’m not really happy with
+##### 62- I’m not really happy with
 - I’m not really happy with their performance.
 - I’m not really happy with your behavior.
 - I’m not really happy with your present situation.
 
-##### -  I don’t care ... برام مهم نیست
+##### 63-  I don’t care ... برام مهم نیست
 -  I don’t care what you had to do.
 -  I don’t care what they think about me.
 -  I don’t care what it costs.
 
-##### - Speaking of ...  حالا که صحبت از — شد
+##### 64- Speaking of ...  حالا که صحبت از — شد
 - Speaking of the movies, have you seen “Lord of the ring”?
 - Speaking of honesty, I know a lot of people who don’t pay bus fares.
 - Speaking of Ben, have you seen him recently?
 
-##### - There is nothing as—as— هیچ چیز به اندازهٔ ... نیست
+##### 65- There is nothing as—as— هیچ چیز به اندازهٔ ... نیست
 - There is nothing as exciting as meeting an old friend unexpectedly.
 - For me, there is nothing as enjoyable as reading a novel on the grass.
 - There is nothing as pleasant as spending a weekend in the countryside.
 - There is nothing as refreshing as having a good rest.
 
-##### - There is nothing I like better than— هیچ چیزی نیست که بیشتر از ... دوستش داشته باشم
+##### 66- There is nothing I like better than— هیچ چیزی نیست که بیشتر از ... دوستش داشته باشم
 - There is nothing I like better than listening to the radio.
 - There is nothing women like better than shopping.
 - There is nothing she likes better than chatting with friends.
 
-##### - What’s the matter  چه مشکلی برای — پیش آمده است؟
+##### 67- What’s the matter  چه مشکلی برای — پیش آمده است؟
 - What’s the matter with him?
 - What’s the matter with your finger? It’s bleeding.
 - What’s wrong with this machine?
 - What’s wrong with you, Mum? You look so pale.
 - What’s wrong with your car?
 
-##### - What’s the use of—? چه فایده‌ای دارد؟
+##### 68- What’s the use of—? چه فایده‌ای دارد؟
 - What’s the use of talking about it?
 - What’s the use of crying over spilt milk?
 - What’s the point of arguing with her?
 - What’s the point of worrying about it?
 
-##### - whether ... or not چه بشود یا نه
+##### 69- whether ... or not چه بشود یا نه
 - Whether it rains or not, we’ll hold the sports meet.
 - They’ll find out the truth, whether or not you tell it to them.
 - Whether or not we like it, we have to accept it.
