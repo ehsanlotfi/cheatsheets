@@ -363,3 +363,29 @@
 - They’ll find out the truth, whether or not you tell it to them.
 - Whether or not we like it, we have to accept it.
 - Whether you are willing or not, you have to do it.
+
+##### It was one of the giggest challenges H've ever faced.
+
+##### You'll never believe what happened.
+
+##### You look familiar.
+
+##### So what's your one of your biggest pet peeves? 
+- I hate it when people are rude / arrogant.
+- I can't stand it when people are rude.
+- It's bugs me when people are rude.
+- It's gets on my nerves when people are rude.
+
+##### Have you thought about confronting him?
+- Do you really think that's a good idea?
+- That might work.
+- H'm not really sure that would work.
+- That's not a bad idea.
+
+##### Are you up for going out tonight?
+- I really wish I could, but I'm afraid I have other plans.
+
+##### I had thought he was standoffish, but it turns out that he is actually just introverted, It sounds like everyone had misjudged his.
+
+##### My short-term goal is to work for a renowned company, while my long-term dream is to establish and run my own business.
+
