@@ -17,7 +17,7 @@
 ##### Simple Past اتفاقات تمام شده در گذشته
 - I worked every day.
 - She worked every day.
-- 
+
 ##### Past continuous عملی که در گذشته در حال انجام بود
 - I was working every day.
 - She was working every day.
@@ -32,7 +32,7 @@
 ##### Simple Future پیش‌بینی‌ها، تصمیمات آینده
 - I will work every day.
 - She will work every day.
-- 
+
 ##### Future  continuous عملی که در آینده در حال انجام خواهد بود
 - I will be working every day.
 - She will be working every day.
@@ -78,7 +78,7 @@
 ###### دو تا نکته مهم وجود دارد
 - If clause, Main clause را میشه جابجا کرد
 - همیشه از were استفاده میکنم نه از was
-- 
+
 ###### 1- sub + tobe + busy + verb..ing
 - I am busy cooking
 - I am busy eating
@@ -140,7 +140,6 @@
 - please pass me the suger
 - Can you pass me the salt, please?
 - Please pass him the notebook.
-- 
 
 ###### 19- Don't leave the window open. باز نگذار
 
