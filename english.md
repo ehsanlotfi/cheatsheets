@@ -364,28 +364,39 @@
 - Whether or not we like it, we have to accept it.
 - Whether you are willing or not, you have to do it.
 
-##### It was one of the giggest challenges H've ever faced.
+##### 70- It was one of the giggest challenges H've ever faced.
 
-##### You'll never believe what happened.
+##### 71- You'll never believe what happened.
 
-##### You look familiar.
+##### 72- You look familiar.
 
-##### So what's your one of your biggest pet peeves? 
+##### 73- So what's your one of your biggest pet peeves? 
 - I hate it when people are rude / arrogant.
 - I can't stand it when people are rude.
 - It's bugs me when people are rude.
 - It's gets on my nerves when people are rude.
 
-##### Have you thought about confronting him?
+##### 74- Have you thought about confronting him?
 - Do you really think that's a good idea?
 - That might work.
 - H'm not really sure that would work.
 - That's not a bad idea.
 
-##### Are you up for going out tonight?
+##### 75- Are you up for going out tonight?
 - I really wish I could, but I'm afraid I have other plans.
 
-##### I had thought he was standoffish, but it turns out that he is actually just introverted, It sounds like everyone had misjudged his.
+##### 76- I had thought he was standoffish, but it turns out that he is actually just introverted, It sounds like everyone had misjudged his.
 
-##### My short-term goal is to work for a renowned company, while my long-term dream is to establish and run my own business.
+##### 77- My short-term goal is to work for a renowned company, while my long-term dream is to establish and run my own business.
 
+##### 78- Actually
+- Actually, I don't think that's a good idea.
+- Actually, I've never tried sushi before.
+- Actually, I was planning to call you later today.
+- Actually, I came to meet a friend.
+
+##### 79- I would say  بنظرم
+- I would say it's better to leave early to avoid traffic.
+- I would say she's one of the best players on the team.
+- I would say this restaurant serves excellent Italian food.
+- I would say you're an introvert or an extrovert?
