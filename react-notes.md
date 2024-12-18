@@ -1,3 +1,120 @@
+### React Hooks
+###### 1- useState
+مدیریت استیت ها مثال شمارنده 
+```
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+    </div>
+  );
+}
+```
+###### 2- useEffect
+برای اجرای کد خاص در چرخه حیات کامپوننت، مثال فچ کردن داده ها هنگام بارگزاری کامپوننت
+```
+function FetchData() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((response) => response.json())
+      .then((data) => setData(data));
+  }, []); // اجرا فقط یکبار هنگام mount شدن
+
+  return (
+    <ul>
+      {data.map((item) => (
+        <li key={item.id}>{item.title}</li>
+      ))}
+    </ul>
+  );
+}
+```
+###### 3- useContext
+برای استفاده از استیت های گلوبال مثال زیر پاس داده رنگ تم
+```
+import React, { useContext, createContext } from "react";
+
+const ThemeContext = createContext("light");
+
+function DisplayTheme() {
+  const theme = useContext(ThemeContext);
+  return <p>Current theme: {theme}</p>;
+}
+```
+###### 4- useRef
+دسترسی به عناصر دام مثال فوکوس روی تکس باکس
+```
+function FocusInput() {
+  const inputRef = useRef(null);
+
+  const focusInput = () => {
+    inputRef.current.focus();
+  };
+
+  return (
+    <div>
+      <input ref={inputRef} type="text" />
+      <button onClick={focusInput}>Focus</button>
+    </div>
+  );
+}
+
+```
+###### 5- useReducer
+شبیه useState است
+برای مدیریت استیت ها در حالت پیچیده تر
+توسط یک تابع ریدوسر میتونی مقدار استیت را عوض کنید
+ ```
+ const [state, dispatch] = useReducer(reducer, initialState)
+ ```
+ ```
+ import React, { useReducer } from "react";
+
+const initialState = { count: 0 };
+
+function reducer(state, action) {
+  switch (action.type) {
+    case "increment":
+      return { count: state.count + 1 };
+    case "decrement":
+      return { count: state.count - 1 };
+    default:
+      return state;
+  }
+}
+
+function Counter() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  return (
+    <div>
+      <p>Count: {state.count}</p>
+      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+    </div>
+  );
+}
+ ```
+###### 6- useMemo 
+یک مقدار را کش میکند
+کش کردن دیتا و جلوگیری از محاسبه دوباره در ری رندر
+مثلا در فیلتر کردن محصولات هزینه ری رندر کردن زیاد است فقط میتونیم بگیم زمانی رندر شود که گزینه فیلتر تغییر کند
+```
+const cachedValue = useMemo(calculateValue, dependencies)
+```
+کش کردن یک کامپوننت
+```
+  const memoChild = useMemo(() => <Child />, []);
+```
+
+###### 6- useCallback 
+ یک تابع را کش میکند
+ 
 ### Virtual DOM
 هر زمان داده های اصلی تغییر میکند دام مجازی با دام واقعی مقایسه می شود و تغییرات را اعمال میکند
 
