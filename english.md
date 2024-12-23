@@ -273,8 +273,6 @@
 ##### 53- How dare you—!
 - How dare you call me fat!
 - How dare you speak to me like that!
-- How dare he do that to me!
-- How dare you turn him down!
 - I dare say you will succeed in the election.
 - I dare say he won’t come.
 
@@ -338,7 +336,6 @@
 - There is nothing as exciting as meeting an old friend unexpectedly.
 - For me, there is nothing as enjoyable as reading a novel on the grass.
 - There is nothing as pleasant as spending a weekend in the countryside.
-- There is nothing as refreshing as having a good rest.
 
 ##### 66- There is nothing I like better than— هیچ چیزی نیست که بیشتر از ... دوستش داشته باشم
 - There is nothing I like better than listening to the radio.
@@ -348,23 +345,19 @@
 ##### 67- What’s the matter  چه مشکلی برای — پیش آمده است؟
 - What’s the matter with him?
 - What’s the matter with your finger? It’s bleeding.
-- What’s wrong with this machine?
 - What’s wrong with you, Mum? You look so pale.
-- What’s wrong with your car?
 
 ##### 68- What’s the use of—? چه فایده‌ای دارد؟
 - What’s the use of talking about it?
 - What’s the use of crying over spilt milk?
 - What’s the point of arguing with her?
-- What’s the point of worrying about it?
 
 ##### 69- whether ... or not چه بشود یا نه
 - Whether it rains or not, we’ll hold the sports meet.
 - They’ll find out the truth, whether or not you tell it to them.
 - Whether or not we like it, we have to accept it.
-- Whether you are willing or not, you have to do it.
 
-##### 70- It was one of the giggest challenges H've ever faced.
+##### 70- It was one of the biggest challenges H've ever faced.
 
 ##### 71- You'll never believe what happened.
 
