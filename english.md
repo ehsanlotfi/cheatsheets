@@ -149,6 +149,7 @@
 - Whose car is parked outside?
 
 ###### 21- condolences ابزار همدردی برای فوت کسی
+- rest in peace
 - I’m so sorry to hear that. Please accept my deepest condolences.
 
 ###### 22- ... in charge of  ... مسئولیت چیزی
@@ -393,3 +394,26 @@
 - I would say she's one of the best players on the team.
 - I would say this restaurant serves excellent Italian food.
 - I would say you're an introvert or an extrovert?
+
+##### 80- چه چیزی در حال حاضر مده؟
+- what's currently in style?
+- what's considered trendy right now?
+
+##### 81- Nowadays, these days
+- Nowadays, people prefer working from home.
+- Cars are much safer and more efficient nowadays.
+- These days, everyone uses smartphones for almost everything.
+- People are more focused on health and fitness these days.
+
+##### 82- sharing surprising news and expressing surprise
+- Did you know that ... the second season of Squid Game series has been released?
+- Guess what!
+- No way! is that for real?
+- You cant't be serious!
+- That's amazing.
+- You've got to be kidding.
+
+##### 83- In Taxi
+- Can you take me to the airport?
+- I'm on my way to the airport.
+- Can you drop me off at the airport?
