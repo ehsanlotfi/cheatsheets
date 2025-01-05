@@ -417,3 +417,8 @@
 - Can you take me to the airport?
 - I'm on my way to the airport.
 - Can you drop me off at the airport?
+
+##### 84- Unfortunately
+- I hate to tell you this,
+- I'm sorry to inform you that
+- I'm afraid
