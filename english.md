@@ -422,3 +422,15 @@
 - I hate to tell you this,
 - I'm sorry to inform you that
 - I'm afraid
+
+##### 85- I regret
+- I regret calling him.
+- I regret telling her the truth.
+- I regret not studying harder for the exam.
+- I regret leaving early.
+
+##### 86- Don't ... me
+- Don't cheat on me.  بهم خیانت نکن
+- Don't betray me. بهم خیانت نکن
+- Don't bully me. تحت فشار قرارم نده
+- Don't distract me. حواسمو پرت نکن
