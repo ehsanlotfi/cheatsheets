@@ -358,7 +358,7 @@
 - They’ll find out the truth, whether or not you tell it to them.
 - Whether or not we like it, we have to accept it.
 
-##### 70- It was one of the biggest challenges H've ever faced.
+##### 70- It was one of the biggest challenges I've ever faced.
 
 ##### 71- You'll never believe what happened.
 
@@ -373,7 +373,7 @@
 ##### 74- Have you thought about confronting him?
 - Do you really think that's a good idea?
 - That might work.
-- H'm not really sure that would work.
+- I'm not really sure that would work.
 - That's not a bad idea.
 
 ##### 75- Are you up for going out tonight?
