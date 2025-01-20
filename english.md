@@ -15,35 +15,36 @@
 - She has been working every day.
 
 ##### Simple Past اتفاقات تمام شده در گذشته
-- I worked every day.
-- She worked every day.
+- I worked.
+- She worked.
 
 ##### Past continuous عملی که در گذشته در حال انجام بود
 - I was working every day.
 - She was working every day.
+- 
 ##### Past Perfect اتفاقات قبل از یک زمان مشخص در گذشته
-- I had worked every day.
-- She had worked every day.
+- I had worked before I moved to another city.
+- She had worked on the project before her boss assigned her a new task.
   
 ##### Past Perfect Continuous عملی که در گذشته قبل از زمان خاصی در حال انجام بود
-- I had been working every day.
-- She had been working every day.
+- I had been working at the company for three years before I decided to quit.
+- She had been working hard all morning, so she was exhausted by lunchtime.
   
 ##### Simple Future پیش‌بینی‌ها، تصمیمات آینده
-- I will work every day.
-- She will work every day.
+- I will work.
+- She will work.
 
 ##### Future  continuous عملی که در آینده در حال انجام خواهد بود
 - I will be working every day.
 - She will be working every day.
   
 ##### Future  Perfect عملی که در آینده قبل از زمان خاصی تمام خواهد شد
-- I will have worked every day.
-- She will have worked every day.
+- I will have worked at the company for five years by next January.
+- She will have worked on the report before the deadline arrives.
   
 ##### Future  Perfect Continuous  عملی که در آینده قبل از زمان مشخصی در حال انجام خواهد بود
-- I will have been working every day.
-- She will have been working every day.
+- I will have been working on this project for six months by the time it is completed.
+- She will have been working at the new job for a year by next summer.
 
 ##### Persent vs Past
 - Do, Does => Did
