@@ -18,3 +18,6 @@
 
 ### Unit Test ( Jasmine , Karma  )
 در آنگولار، تست واحد با استفاده از فریمورک Jasmine برای نوشتن ادعای تست (test assertions) و ابزار Karma برای اجرای تست‌ها انجام می‌شود.
+
+### HMR (Hot Module Replacement ) vs Hot reload
+قسمتی از صفحه بروز می شود و استیت ها تغییر نمیکند 

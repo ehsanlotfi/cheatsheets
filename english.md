@@ -21,7 +21,7 @@
 ##### Past continuous عملی که در گذشته در حال انجام بود
 - I was working every day.
 - She was working every day.
-- 
+
 ##### Past Perfect اتفاقات قبل از یک زمان مشخص در گذشته
 - I had worked before I moved to another city.
 - She had worked on the project before her boss assigned her a new task.
