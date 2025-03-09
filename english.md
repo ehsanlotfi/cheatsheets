@@ -435,3 +435,4 @@
 - Don't betray me. بهم خیانت نکن
 - Don't bully me. تحت فشار قرارم نده
 - Don't distract me. حواسمو پرت نکن
+- Don't mock me. مسخرم نکن
