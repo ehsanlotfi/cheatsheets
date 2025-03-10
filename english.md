@@ -436,3 +436,5 @@
 - Don't bully me. تحت فشار قرارم نده
 - Don't distract me. حواسمو پرت نکن
 - Don't mock me. مسخرم نکن
+- don't beat yourself up. خودخوری نکن
+
