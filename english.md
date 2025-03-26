@@ -436,5 +436,27 @@
 - Don't bully me. تحت فشار قرارم نده
 - Don't distract me. حواسمو پرت نکن
 - Don't mock me. مسخرم نکن
-- don't beat yourself up. خودخوری نکن
+- Don't beat yourself up. خودخوری نکن
+- Don't let me down. نا امیدم نکن.
 
+##### 87- up to ...
+- up to me. به من بستگی داره
+- up to him. به خودش بستگی داره
+
+#### Idioms
+- play the victim. نقش قربانی را بازی کردن
+- honk the horn. بوق زدن
+- make any sense. منطقی است
+- your wish is my command. فرمان شما اطلاعت می شود
+- kudos to you. آفرین بر تو
+- make ends meet. از پس مخارج زندگی بر اومدن
+- things went downhill. اوضاع بدتر شد
+- vanish into thin air. دود شد رفت هوا
+- this is a bunch of baloney. یک مشت خزعبلات است
+- you are skating on thin ice. لبه تیغ راه رفتن
+- let's turn that frown upside down. بیا خوشحال باش یا بیخیال
+- reserve the right. حق برای خود محفوظ دانستن
+- to unwind. آرامش یافتن
+- get back on your feet. دوباره روی پای خودت واستادن
+- billable hours. صورتحساب بابت هر ساعت مشاوره وکیل و ...
+- rack my brains. خیلی فکر کردن
