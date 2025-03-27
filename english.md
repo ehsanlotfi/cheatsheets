@@ -443,6 +443,9 @@
 - up to me. به من بستگی داره
 - up to him. به خودش بستگی داره
 
+##### 88- spare
+- i will not spare that person. به اون شخص رحم نمیکنم
+
 #### Idioms
 - play the victim. نقش قربانی را بازی کردن
 - honk the horn. بوق زدن
