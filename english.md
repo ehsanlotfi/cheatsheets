@@ -446,6 +446,12 @@
 ##### 88- spare
 - i will not spare that person. به اون شخص رحم نمیکنم
 
+##### 89- may you live ... خدا عمرت بده برای جشن تولد استفاده میشه
+- may you live many more years
+- may you live until old age
+- may you live long
+- god bless you خدا بهت برکت بده
+
 #### Idioms
 - play the victim. نقش قربانی را بازی کردن
 - honk the horn. بوق زدن
@@ -463,3 +469,4 @@
 - get back on your feet. دوباره روی پای خودت واستادن
 - billable hours. صورتحساب بابت هر ساعت مشاوره وکیل و ...
 - rack my brains. خیلی فکر کردن
+- I'm on cloud nine -> to be extremely happy and excited. 
