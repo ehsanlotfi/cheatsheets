@@ -444,7 +444,7 @@
 - up to him. به خودش بستگی داره
 
 ##### 88- spare
-- i will not spare that person. به اون شخص رحم نمیکنم
+- i will not spare her. بهش رحم نمیکنم
 
 ##### 89- may you live ... خدا عمرت بده برای جشن تولد استفاده میشه
 - may you live many more years
