@@ -1,69 +1,158 @@
- #### 𝐓𝐨𝐩 𝐌𝐚𝐜𝐡𝐢𝐧𝐞 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐀𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦𝐬:
- ##### 1- K-Means Clustering
-ابتدا تعداد خوشه‌ها (K) را مشخص می‌کنیم. سپس، K نقطه را به‌عنوان مراکز اولیه انتخاب کرده و هر داده را به نزدیک‌ترین مرکز نسبت می‌دهیم. بعد از آن، میانگین نقاط هر گروه را محاسبه کرده و مرکز خوشه را به‌روزرسانی می‌کنیم. این مراحل را تکرار می‌کنیم تا دیگر تغییری در مراکز خوشه‌ها ایجاد نشود. در نهایت، داده‌ها در K گروه مشابه دسته‌بندی می‌شوند.
-##### 2- Linear Regression
-خود رگرسیون به معنای پیش بینی تغییرات یک متغیر به توجه به تغییرات متغیر دیگر است. فرمول رگرسیون خطی به شرح زیر است.
-###### `y = ( m × x ) + b`
-- y → مقدار پیش‌بینی‌شده
-- x → متغیر مستقل (ورودی)
-- m → شیب خط (میزان تأثیر x بر y)
-- b → عرض از مبدأ (مقدار y وقتی x صفر است)
 
-##### 3- Decision Tree
-درخت تصمیم یک مدل یادگیری ماشین است که با استفاده از یک سری پرسش‌های بله/خیر یا مقایسه‌ای، داده‌ها را دسته‌بندی یا پیش‌بینی می‌کند.
+## Supervised Learning vs Unsupervised Learning
+1. Supervised Learning
+    - In this type of learning, the data is labeled, and the goal is to predict new labels (such as classification and regression)
+    - Logistic and Linear Regression, SVM, Naive Bayes, KNN, Random Forest
 
-![1733588394092](https://github.com/user-attachments/assets/6f50b4a7-74b3-49b7-b6b1-d9982cc79b6b)
+2. Unsupervised Learning
+    - In this type of learning, the data is unlabeled, and the goal is to identify patterns and hidden structures within the data (such as clustering and dimensionality reduction).
+    - K-Means, PCA, t-SNE, Hierarchical Clustering
 
-#### Digital twin
-دوقلو دیجیتال، نسخه‌ای دیجیتال از یک شیء یا سیستم فیزیکی یا یک ساختار فیزیکی (کارخانه، دیتاسنتر، کره زمین، حرم) است که به ما امکان مشاهده و تحلیل آن در زمان واقعی را می‌دهد. پروژه Earth 2
-#### Unconditional Image Generation
-توضیح: مدل‌هایی که بدون نیاز به ورودی مشخص، تصاویر جدیدی تولید می‌کنند.
-مثال: مدلی مثل GAN که تصاویر جدید از چهره‌های انسان‌ها تولید می‌کند بدون اینکه ورودی خاصی دریافت کند.
-#### Depth Estimation
-توضیح: مدل‌هایی که از تصاویر دو بعدی، اطلاعات عمق (سه بعدی) تخمین می‌زنند.
-مثال: فرض کنید تصویری از یک جاده دارید، مدل عمق اشیاء مختلف مثل ماشین‌ها و درختان را تخمین می‌زند.
-#### Zero-Shot Image Classification
-توضیح: مدل‌هایی که می‌توانند تصاویر را بدون آموزش مستقیم روی آن دسته‌ها، دسته‌بندی کنند.
-مثال: اگر مدل روی دسته‌های "سگ" و "گربه" آموزش دیده باشد، ولی تصویر "فیل" را دسته‌بندی کند بدون اینکه قبلا آموزشی درباره "فیل" دیده باشد.
-#### Zero-Shot Object Detection
-توضیح: مدل‌هایی که بدون دیدن نمونه‌های خاص از یک شیء، قادر به تشخیص آن در تصاویر هستند.
-مثال: مدل قبلا روی شناسایی "ماشین" و "دوچرخه" آموزش دیده ولی حالا می‌تواند "اتوبوس" را بدون آموزش مستقیم تشخیص دهد.
+## Steps in the Machine Learning Process
+1. Define the Problem
+    - Determine the problem you are trying to solve (e.g., classification, regression).
 
-#### Token Classification
-توضیح: مدل‌هایی که هر کلمه یا توکن در یک جمله را به یک دسته خاص نسبت می‌دهند.
-مثال: در یک جمله مثل "علی به مدرسه رفت"، مدل می‌تواند "علی" را به عنوان "اسم" و "مدرسه" را به عنوان "مکان" دسته‌بندی کند.
-#### Table Question Answering
-توضیح: مدل‌هایی که به سوالات درباره داده‌های جدول‌ها پاسخ می‌دهند.
-مثال: شما یک جدول از فروش محصولات دارید و سوال می‌پرسید "چه محصولی بیشترین فروش را داشت؟" و مدل پاسخ می‌دهد.
+2. Collect Data
+    - Gather relevant data from various sources (e.g., CSV files, databases, APIs).
 
-#### Fill-Mask
-توضیح: مدل‌هایی که کلمات گمشده در یک جمله را پر می‌کنند.
-مثال: جمله "هوا [MASK] است" را به مدل می‌دهید و مدل آن را به "هوا آفتابی است" تکمیل می‌کند.
-#### Voice Activity Detection
-توضیح: مدل‌هایی که تشخیص می‌دهند در چه بخش‌هایی از یک فایل صوتی، گفتار وجود دارد.
-مثال: مدلی که در یک فایل صوتی بلند، بخش‌هایی که شامل صحبت‌های یک فرد است را شناسایی می‌کند.
-#### Tabular Classification
-توضیح: مدل‌هایی که داده‌های جدولی را بر اساس دسته‌های مختلف دسته‌بندی می‌کنند.
-مثال: مدلی که داده‌های مشتریان را به دسته‌های "خریدار وفادار" و "خریدار معمولی" دسته‌بندی می‌کند.
-#### Tabular Regression
-توضیح: مدل‌هایی که پیش‌بینی مقدارهای پیوسته بر اساس داده‌های جدولی انجام می‌دهند.
-مثال: مدلی که بر اساس ویژگی‌های خانه مثل اندازه و موقعیت، قیمت آن را پیش‌بینی می‌کند.
-#### Time Series Forecasting
-توضیح: مدل‌هایی که روندهای آینده را بر اساس داده‌های زمانی پیش‌بینی می‌کنند.
-مثال: مدلی که پیش‌بینی می‌کند قیمت سهام در ماه آینده چگونه تغییر خواهد کرد.
+3. Data Preprocessing
+    - Clean the data (e.g., handle missing values, correct errors).
+    - Scale/normalize the data if necessary.
+    - Encode categorical features.
+    - Feature engineering (select/create useful features).
 
-#### Reinforcement Learning
-توضیح: مدل‌هایی که از طریق پاداش و تنبیه یاد می‌گیرند که چگونه وظایف را بهتر انجام دهند.
-مثال: مدلی که یک ربات را آموزش می‌دهد که چگونه در یک ماز حرکت کند تا به هدف برسد.
+4. Select the Model
+    - Choose the appropriate algorithm for your problem (e.g., Logistic Regression, SVM, Random Forest).
 
-#### Model Distillation 
-یک تکنیک در یادگیری ماشین است که برای فشرده‌سازی مدل‌های بزرگتر (معمولاً پیچیده و سنگین) به مدل‌های کوچکتر (ساده‌تر و سبک‌تر) استفاده می‌شود، بدون اینکه دقت زیادی از دست برود. در این فرآیند، یک مدل بزرگ (که به آن "مدل معلم" گفته می‌شود) ابتدا آموزش داده می‌شود، سپس اطلاعات آن مدل به یک مدل کوچکتر (مدل "دانش‌آموز") منتقل می‌شود. هدف این است که مدل دانش‌آموز از خروجی‌های مدل معلم یاد بگیرد و بتواند عملکرد مشابهی با آن ارائه دهد، اما با منابع محاسباتی کمتر و سرعت بالاتر.
+5. Split the Data
+    - Divide the data into training and testing sets (e.g., 70%-30%, 80%-20%).
 
-#### Model Collapse
-فروپاشی مدل پدیده‌ای است که در مدل‌های مولد مانند GANها رخ می‌دهد و باعث می‌شود مدل به جای تولید خروجی‌های متنوع، به تولید نمونه‌های مشابه یا یکسان محدود شود. این اتفاق زمانی می‌افتد که مدل نتواند توزیع گسترده داده‌های ورودی را به‌درستی یاد بگیرد و فقط به تولید یک بخش کوچک و محدود از آن توزیع بپردازد، که منجر به کاهش کیفیت و تنوع خروجی‌های تولید شده می‌شود. و مدل خروجی ها مشابه دارد.
+6. Train the Model
+    - Train the model using the training data.
 
-#### Mixture of Experts (MoE)
-سوال وارد مدل زبانی میشه و در گام اول تخصیص داده میشه به واحد پردازشی متخصص مورد نظرش
+7. Evaluate the Model
+    - Evaluate the model's performance using the test data.
+    - Use metrics like accuracy, precision, recall, or MSE.
 
-#### Fine-Tune
-فاین‌تیونینگ  به معنای تنظیم دقیق یا تربیت مجدد مدل روی یک مجموعه داده خاص است.
+8. Tune Hyperparameters
+    - Fine-tune the hyperparameters to improve model performance (e.g., Grid Search, Random Search).
+
+9. Test and Optimize the Model
+    - Test the model with new data and adjust as needed to improve performance.
+    - Use techniques like cross-validation to prevent overfitting/underfitting.
+
+10. Deploy the Model
+    - Deploy the model into production to make real-time predictions.
+
+11. Model Maintenance and Updates
+    - Update and retrain the model regularly with new data to maintain its accuracy.
+
+## 𝐓𝐨𝐩 𝐌𝐚𝐜𝐡𝐢𝐧𝐞 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐀𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦𝐬:
+
+0. K-Means
+
+    - First, we specify the number of clusters (K).
+    - Then, we select K points as the initial centers and assign each data point to the nearest center.
+    - After that, we calculate the mean of the points in each group and update the cluster center.
+    - We repeat these steps until no further changes occur in the cluster centers.
+    - Finally, the data is categorized into K similar groups.
+
+0. Linear Regression vs Logistic Regression
+    - Regression itself means predicting the changes in one variable based on the changes in another variable.
+    - The `sigmoid` function is a mathematical function that takes any input and keeps its output between 0 and 1.
+
+    - Linear Regression
+        - It is used for predicting a numerical (continuous) value.
+        - For example: predicting house prices, temperature, employee salary.
+        - The output is a real number (e.g., 73.5).
+    - Logistic Regression
+        - It is used for predicting a category (class).
+        - For example: Is the email spam or not? Is the person sick or healthy?
+        - The output is a probability between 0 and 1.
+
+
+0. Decision Tree
+    - A decision tree is a machine learning model that classifies or predicts data by using a series of yes/no questions or comparisons.
+
+0. Random Forest
+    - It creates a set of decision trees (each making a prediction). By taking a vote from all the trees, it makes the final decision.
+
+0. Naive Bayes
+    - We calculate the probability of a data point belonging to each class and select the one with the highest probability.
+
+0. KNN
+    - It looks at the K nearest neighbors and makes a decision based on their votes regarding similarity.
+
+0. SVM (Support Vector Machine)
+    - SVM is a classification algorithm that finds the best line or hyperplane that separates data from different classes and tries to maximize the distance between the data points and the separating boundary.
+
+0. Dimensionality Reduction
+    - When the data has many features, these algorithms help keep only the most important ones. This makes the model faster, simpler, and more accurate.
+
+## Kaywords
+0. Digital twin
+    - A digital twin is a digital replica of a physical object, system, or structure (such as a factory, data center, the Earth, or a shrine), which allows us to observe and analyze it in real time.  
+
+
+0. Unconditional Image Generation
+    - These are models that generate new images without requiring specific input. A model like GAN.
+
+0. Depth Estimation
+    - These are models that estimate depth (3D information) from 2D images.  
+    - Example: Imagine you have an image of a road—the model estimates the depth of different objects like cars and trees.
+
+0. Zero-Shot Image Classification
+    - These are models that can classify images without being directly trained on those specific categories.
+    - Example: If a model has been trained on categories like "dog" and "cat," but is able to classify an image of an "elephant" without having seen any training data for "elephant."
+
+0. Zero-Shot Object Detection
+    - These are models that can recognize an object in images without having seen specific examples of that object before.
+    - Example: The model has been trained to identify "cars" and "bicycles," but is now able to recognize a "bus" without direct training on it.
+
+0. Token Classification
+    - These are models that assign each word or token in a sentence to a specific category.
+    - Example: In a sentence like "Ali went to school," the model can classify "Ali" as a name and "school" as a location.
+
+
+0. Table Question Answering
+    - These are models that answer questions about data in tables.
+    - Example: You have a table of product sales and ask, "Which product had the highest sales?"—the model provides the answer.
+
+0. Fill-Mask
+    - These are models that fill in missing words in a sentence.
+    - Example: You give the model a sentence like "The weather is [MASK]," and the model completes it as "The weather is sunny."
+
+0. Voice Activity Detection
+    - These are models that detect which parts of an audio file contain speech.
+    - Example: A model that identifies segments with human speech in a long audio recording.
+
+0. Tabular Classification
+    - These are models that classify tabular data based on different categories.
+    - Example: A model that classifies customer data into categories like "loyal buyer" and "regular buyer."
+
+0. Tabular Regression
+    - These are models that predict continuous values based on tabular data.
+    - Example: A model that predicts the price of a house based on features like size and location.
+
+0. Time Series Forecasting
+    - These are models that predict future trends based on time series data.
+    - Example: A model that forecasts how stock prices will change in the next month.
+
+0. Reinforcement Learning
+- These are models that learn how to perform tasks better through rewards and penalties.
+- A model that learns to play a video game by trying different moves. When it wins or scores points, it gets a reward, and when it loses, it gets a penalty. Over time, it learns which actions lead to better results and plays the game more skillfully.
+
+0. Model Distillation 
+    - is a technique where a small, simple model learns to copy the behavior of a larger, more complex model.
+    The goal is to keep the accuracy but make the model faster and lighter.
+
+0. Model Collapse
+    - is a problem where a model starts giving very limited or repetitive outputs.
+    - a generative model might start producing almost the same image or sentence every time, no matter the input.
+
+0. Mixture of Experts (MoE)
+    - is a machine learning approach where multiple specialized models (called "experts") are trained to handle different tasks. A gating model decides which expert to use for a given input.
+    - The idea is to combine the strengths of different models, making the system more efficient and powerful by using the right expert for each task.
+
+0. Fine-Tune
+ is the process of taking a pre-trained model and making small adjustments to it using a new, often smaller, dataset. The goal is to adapt the model to a specific task or improve its performance on a related task without training it from scratch.
