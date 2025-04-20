@@ -48,6 +48,8 @@
 9. Test and Optimize the Model
     - Test the model with new data and adjust as needed to improve performance.
     - Use techniques like cross-validation to prevent overfitting/underfitting.
+        - `Overfitting` means the model learned too much, including unimportant details.
+        - `Underfitting` means the model didn’t learn enough and is too simple.
 
 10. Deploy the Model
     - Deploy the model into production to make real-time predictions.
@@ -147,8 +149,8 @@
     - Example: A model that forecasts how stock prices will change in the next month.
 
 0. Reinforcement Learning
-- These are models that learn how to perform tasks better through rewards and penalties.
-- A model that learns to play a video game by trying different moves. When it wins or scores points, it gets a reward, and when it loses, it gets a penalty. Over time, it learns which actions lead to better results and plays the game more skillfully.
+    - These are models that learn how to perform tasks better through rewards and penalties.
+    - A model that learns to play a video game by trying different moves. When it wins or scores points, it gets a reward, and when it loses, it gets a penalty. Over time, it learns which actions lead to better results and plays the game more skillfully.
 
 0. Model Distillation 
     - is a technique where a small, simple model learns to copy the behavior of a larger, more complex model.
@@ -161,6 +163,3 @@
 0. Mixture of Experts (MoE)
     - is a machine learning approach where multiple specialized models (called "experts") are trained to handle different tasks. A gating model decides which expert to use for a given input.
     - The idea is to combine the strengths of different models, making the system more efficient and powerful by using the right expert for each task.
-
-0. Fine-Tune
- is the process of taking a pre-trained model and making small adjustments to it using a new, often smaller, dataset. The goal is to adapt the model to a specific task or improve its performance on a related task without training it from scratch.
