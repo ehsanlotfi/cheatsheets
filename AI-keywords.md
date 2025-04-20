@@ -26,20 +26,24 @@
 
 5. Split the Data
     - Divide the data into training and testing sets (e.g., 70%-30%, 80%-20%).
+    - `Training Data` This is the data we give to the model so it can learn.
+    - `Test Data` This is the data we give to the model to see how well it learned. It’s like an exam to check its knowledge.
 
 6. Train the Model
     - Train the model using the training data.
 
 7. Evaluate the Model
     - Evaluate the model's performance using the test data.
-    - Use metrics like accuracy, precision, recall, or MSE.
+    - Use metrics like accuracy, precision, recall, or MSE ( Mean Squared Error ).
          #### Imagine you are trying to catch thieves.
         - `Accuracy`: Out of all the people you saw (thieves and good people), how many did you guess correctly?
         - `Precision`: Out of all the people you said are thieves, how many were actually thieves?
         - `Recall`: Out of all the real thieves, how many did you catch and not miss?
 
 8. Tune Hyperparameters
-    - Fine-tune the hyperparameters to improve model performance (e.g., Grid Search, Random Search).
+    - `Hyperparameters` are the settings you choose before training a machine learning model.
+      They help control how the model learns (e.g., Learning rate, Number of layers, Number of trees in a forest in Random Forest).
+    - `Fine-tune` Trying different values for the hyperparameters to find the best combination that makes the model as accurate as possible and with the least amount of error.
 
 9. Test and Optimize the Model
     - Test the model with new data and adjust as needed to improve performance.
