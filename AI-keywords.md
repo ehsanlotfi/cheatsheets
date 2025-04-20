@@ -33,7 +33,7 @@
 7. Evaluate the Model
     - Evaluate the model's performance using the test data.
     - Use metrics like accuracy, precision, recall, or MSE.
-        - ###### Imagine you are trying to catch thieves.
+         #### Imagine you are trying to catch thieves.
         - `Accuracy`: Out of all the people you saw (thieves and good people), how many did you guess correctly?
         - `Precision`: Out of all the people you said are thieves, how many were actually thieves?
         - `Recall`: Out of all the real thieves, how many did you catch and not miss?
