@@ -148,9 +148,10 @@
     - These are models that predict future trends based on time series data.
     - Example: A model that forecasts how stock prices will change in the next month.
 
-0. Reinforcement Learning
+0. Reinforcement Learning (RL)
     - These are models that learn how to perform tasks better through rewards and penalties.
     - A model that learns to play a video game by trying different moves. When it wins or scores points, it gets a reward, and when it loses, it gets a penalty. Over time, it learns which actions lead to better results and plays the game more skillfully.
+    - Reinforcement Learning from Human Feedback (RLHF)
 
 0. Model Distillation 
     - is a technique where a small, simple model learns to copy the behavior of a larger, more complex model.
@@ -163,3 +164,40 @@
 0. Mixture of Experts (MoE)
     - is a machine learning approach where multiple specialized models (called "experts") are trained to handle different tasks. A gating model decides which expert to use for a given input.
     - The idea is to combine the strengths of different models, making the system more efficient and powerful by using the right expert for each task.
+
+## Recommendation Systems (RS)
+0. Recommendation Systems
+    -  A system that suggests items (like movies, products, or songs) to users based on their preferences and behavior.
+
+## Tools
+0. Machin Learning
+    - Numpy
+    - Pandas
+    - Matplotlib
+    - Seaborn
+    - Scikit-learn
+    - TensorFlow
+    - Keras
+    - PyTorch
+    - HuggingFace
+    - OpenCV
+    - Transformers
+
+0. Deep learning And Anylyse data
+    - Jupyter Notebook, Polar, PySpark, Plotly
+
+0. Vector Databases
+    - Pinecone 
+    - Weaviate
+
+0. crypto currency
+    - `Pine Script` Is a lightweight programming language created by `TradingView` for writing custom indicators, strategies, and alerts on     financial charts. It's easy to learn and allows traders to automate technical analysis directly within the TradingView platform.
+
+0. Image Processing
+    - YOLO, Detectron2, MediaPipe, OCR
+
+0. Video Processing
+
+0. Voice Processing
+
+0. Text Processing
