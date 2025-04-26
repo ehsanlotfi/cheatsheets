@@ -35,7 +35,6 @@
 - [taskade](https://www.taskade.com)
 - [mixo](https://www.mixo.io)
 
-
 ### Presentations
 
 - [gamma](https://gamma.ai)
@@ -43,20 +42,14 @@
 - [slidesai](https://www.slidesai.io)
   ایجاد اسلایدر خودکار که به گوگل اسلایدر متصل میشه و پولی است
 
-
 ### Research
 
 - [consensus](https://consensus.app)
 - [chatpdf](https://www.chatpdf.com)
 
-
 ### Programming
 - [text2sql](https://www.text2sql.ai/app)
   تبدیل متن به کوئری sql 
-
-
-
-
 
 ### websites
 مقایسه مدل های زبانی با هم
@@ -65,3 +58,16 @@
 ### Iranian AI websites
 - [Aval AI](https://avalai.ir)
 - [Rakhsh AI](https://rakhshai.com)
+
+
+### create private chat bot
+1. The First method
+[poe.com](https://poe.com/create_bot)
+
+2. The Second method
+[private-gpt](https://github.com/zylon-ai/private-gpt)
+[privategpt](https://docs.privategpt.dev/installation/getting-started/main-concepts)
+[chocolatey](https://chocolatey.org/install)
+
+2. The Third method
+[alejandro-ao](https://github.com/alejandro-ao/ask-multiple-pdfs)
