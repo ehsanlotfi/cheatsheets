@@ -182,8 +182,6 @@
 
 ##### 29- I'm having beef stew. ما آبگوشت داریم
 
-##### 30- Do you eat a big/light lunch?
-
 ##### 31- take it easy. برای خداحافظی هم استفاده میشه
 
 ##### 32- I'm off to برای ترک صحبت و رفتن به
@@ -444,7 +442,7 @@
 - up to him. به خودش بستگی داره
 
 ##### 88- spare
-- i will not spare her. بهش رحم نمیکنم
+- I will not spare her. بهش رحم نمیکنم
 
 ##### 89- may you live ... خدا عمرت بده برای جشن تولد استفاده میشه
 - may you live many more years
