@@ -1,6 +1,5 @@
 ### React Hooks
-###### 1- useState
-مدیریت استیت ها مثال شمارنده 
+###### 0- useState
 ```
 function Counter() {
   const [count, setCount] = useState(0);
@@ -13,7 +12,8 @@ function Counter() {
   );
 }
 ```
-###### 2- useEffect
+
+###### 0- useEffect
 برای اجرای کد خاص در چرخه حیات کامپوننت، مثال فچ کردن داده ها هنگام بارگزاری کامپوننت
 ```
 function FetchData() {
