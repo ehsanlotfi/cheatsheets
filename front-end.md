@@ -7,24 +7,24 @@
   - Web Workers run code in the background for heavy tasks, while Service Workers handle network requests, caching, and push notifications. Both cannot directly access the DOM.
 
 1. build tools
-- webpack
-- gulp 
-- grunt
+  - webpack
+  - gulp 
+  - grunt
 
 1. MonoRepo (Microfrontend) vs MultiRepo
-- Nx
+  - Nx
 
 
 1. Front optimization technique List
-- bundlle optimization like Tree shaking, Compression, Minification
-- remove unusiblle Import
-- Code Splitting ( Dynamic Import )
-- Lazy Loading
-- Conditional components loading
-- Handle API requests ( AbortController )
+  - bundlle optimization like Tree shaking, Compression, Minification
+  - remove unusiblle Import
+  - Code Splitting ( Dynamic Import )
+  - Lazy Loading
+  - Conditional components loading
+  - Handle API requests ( AbortController )
 
 1. AbortController
- یک ویژگی در وب API های مدرن است که به توسعه دهندگان وب این امکان را می دهد که درخواست های شبکه را لغو کنند. 
+  - یک ویژگی در وب API های مدرن است که به توسعه دهندگان وب این امکان را می دهد که درخواست های شبکه را لغو کنند. 
 ```
 // ساخت یک نمونه از AbortController
 const controller = new AbortController();
