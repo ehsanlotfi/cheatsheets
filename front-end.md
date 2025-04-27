@@ -1,6 +1,5 @@
 1. Service Worker
   - A Service Worker is a special script that runs in the background of a web app. It helps with `offline access`, `caching`, `faster loading`, sending `push notifications` and `PWA`.
-
 1. Web Workers
   - Web Workers let you run JavaScript code in `parallel`, even though JavaScript is normally single-threaded. They are great for background tasks like processing GPS data, handling sensor inputs, and monitoring real-time events without slowing down the main page
 
