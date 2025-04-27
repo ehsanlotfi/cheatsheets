@@ -1,19 +1,19 @@
-1. Service Worker
+1. ### Service Worker
      - A Service Worker is a special script that runs in the background of a web app. It helps with `offline access`, `caching`, `faster loading`, sending `push notifications` and `PWA`.
 
-1. Web Workers
+1. ### Web Workers
      - Web Workers let you run JavaScript code in `parallel`, even though JavaScript is normally single-threaded. They are great for background tasks like processing GPS data, handling sensor inputs, and monitoring real-time events without slowing down the main page
 
-1. Service Worker VS Web Workers
-  - Web Workers run code in the background for heavy tasks, while Service Workers handle network requests, caching, and push notifications. Both cannot directly access the DOM.
+1. ### Service Worker VS Web Workers
+      - Web Workers run code in the background for heavy tasks, while Service Workers handle network requests, caching, and push notifications. Both cannot directly access the DOM.
 
-1. build tools
-  - webpack
-  - gulp 
-  - grunt
+1. ### build tools
+      - webpack
+      - gulp 
+      - grunt
 
 1. MonoRepo (Microfrontend) vs MultiRepo
-  - Nx
+      - Nx
 
 
 1. Front optimization technique List
