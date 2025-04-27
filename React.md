@@ -1,5 +1,5 @@
 ### React Hooks
-###### 0- useState
+###### 1- useState
 ```
 function Counter() {
   const [count, setCount] = useState(0);
@@ -13,8 +13,8 @@ function Counter() {
 }
 ```
 
-###### 0- useEffect
-برای اجرای کد خاص در چرخه حیات کامپوننت، مثال فچ کردن داده ها هنگام بارگزاری کامپوننت
+###### 2- useEffect
+- It's used to run special code during a component's lifecycle, like when the component mounts.
 ```
 function FetchData() {
   const [data, setData] = useState([]);
@@ -23,7 +23,7 @@ function FetchData() {
     fetch("https://jsonplaceholder.typicode.com/posts")
       .then((response) => response.json())
       .then((data) => setData(data));
-  }, []); // اجرا فقط یکبار هنگام mount شدن
+  }, []); // It runs just once when the component is mounted.
 
   return (
     <ul>
@@ -35,7 +35,7 @@ function FetchData() {
 }
 ```
 ###### 3- useContext
-برای استفاده از استیت های گلوبال مثال زیر پاس داده رنگ تم
+- It’s used to manage global states, such as dark mode.
 ```
 import React, { useContext, createContext } from "react";
 
@@ -47,7 +47,7 @@ function DisplayTheme() {
 }
 ```
 ###### 4- useRef
-دسترسی به عناصر دام مثال فوکوس روی تکس باکس
+- It's used for accessing DOM elements.
 ```
 function FocusInput() {
   const inputRef = useRef(null);
@@ -66,9 +66,7 @@ function FocusInput() {
 
 ```
 ###### 5- useReducer
-شبیه useState است
-برای مدیریت استیت ها در حالت پیچیده تر
-توسط یک تابع ریدوسر میتونی مقدار استیت را عوض کنید
+- It works like useState but is better for complex states, and it changes the state through a `reducer` function.
  ```
  const [state, dispatch] = useReducer(reducer, initialState)
  ```
@@ -100,51 +98,48 @@ function Counter() {
   );
 }
  ```
-###### 6- useMemo 
-یک مقدار را کش میکند
-کش کردن دیتا و جلوگیری از محاسبه دوباره در ری رندر
-مثلا در فیلتر کردن محصولات هزینه ری رندر کردن زیاد است فقط میتونیم بگیم زمانی رندر شود که گزینه فیلتر تغییر کند
+###### 6- useMemo And useCallback
+- They are used for caching and preventing unnecessary renders.
+- useMemo is used to remember a calculated value so it only re-computes when certain dependencies change.
+- in the below example will only recalculate number * 2 when number changes.
 ```
-const cachedValue = useMemo(calculateValue, dependencies)
+const result = useMemo(() => number * 2, [number]);
 ```
-کش کردن یک کامپوننت
+- useCallback is used to remember a function so it doesn’t get recreated on every render.
 ```
-  const memoChild = useMemo(() => <Child />, []);
+const handleClick = useCallback(() => { console.log('Clicked!'); }, []);
 ```
-
-###### 7- useCallback 
- یک تابع را کش میکند
  
 ###### 8- useSearchParam
-برای کار با پارامترهای آدرس URL.
+- It’s used to get URL parameters.
 ```
 const [query, setQuery] = useSearchParam();
 setQuery('page', 2);
 ```
 
 ###### 9- useLocation
-دسترسی به مسیر فعلی در برنامه.
+- It’s used to access the current location.
 ```
 const location = useLocation();
 console.log(location.pathname); // "/home"
 ```
 
 ###### 10- useNavigate
-تغییر روت در برنامه
+- It’s used to route to another page.
 ```
 const navigate = useNavigate();
 navigate('/profile');
 ```
 
 ###### 11- useId
-ایحاد یک شناسه یکتا
+- create a uniqId.
 ```
-const id = useId();
+const id = useId(); // :r1
 return <label htmlFor={id}>Name</label>;
 ```
 
 ###### 12- useLayoutEffect
-مشابه useEffect اما قبل از رندر شدن DOM اعمال می‌شود.
+- It works like useEffect, but happens before the DOM renders.
 ```
 useLayoutEffect(() => {
   console.log('DOM is ready');
@@ -152,7 +147,7 @@ useLayoutEffect(() => {
 ```
 
 ###### 13- useInsertionEffect
-افزودن استایل قبل از رندر.
+- It applies styles before the render.
 ```
 useInsertionEffect(() => {
   document.body.style.backgroundColor = 'blue';
@@ -160,7 +155,7 @@ useInsertionEffect(() => {
 ```
 
 ###### 14- useImperativeHandle
-برای کنترل رفرنس‌های فرزند از والد.
+- It’s used to handle a child reference from the parent component.
 ```
 useImperativeHandle(ref, () => ({
   focus() {
