@@ -7,7 +7,7 @@
 1. #### Service Worker VS Web Workers
       - Web Workers run code in the background for heavy tasks, while Service Workers handle network requests, caching, and push notifications. Both cannot directly access the DOM.
 
-1. #### #### build tools
+1. #### build tools
       - webpack
       - gulp 
       - grunt
