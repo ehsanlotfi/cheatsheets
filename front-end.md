@@ -166,11 +166,11 @@
 
 1. #### Core Web Vitals 
       - A set of performance metrics used by Google to measure the user experience of a website
-        . Largest Contentful Paint (LCP)  
+        - Largest Contentful Paint (LCP)  
           - It tracks the time it takes for the largest content element (image, text, etc.) to be visible to the user.
-        . First Input Delay (FID)  
+        - First Input Delay (FID)  
           - It tracks the time from when a user first interacts with a page (like clicking a button) to when the browser starts processing that interaction.
-        .  Cumulative Layout Shift (CLS)  
+        -  Cumulative Layout Shift (CLS)  
           -  It tracks how much the page layout shifts during loading, causing unexpected movement of content.
 
 1. #### CORS ( Cross-Origin Resource Sharing )
@@ -216,7 +216,7 @@ a:hover { }, a:focus { } , ...
             function logMessage(message: string): void {
               console.log(message);
             }
-            
+
             function throwError(message: string): never {
               throw new Error(message);
             }
