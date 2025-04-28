@@ -26,193 +26,201 @@
 
 1. #### AbortController
      - Means you can start a request and cancel it if needed
-```
-// ساخت یک نمونه از AbortController
-const controller = new AbortController();
-
-// ایجاد یک درخواست شبکه با استفاده از AbortController
-fetch('https://example.com/api/data', { signal: controller.signal })
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error(error));
-
-// لغو درخواست با فراخوانی متد abort روی کنترلر
-controller.abort();
-
-```
-
-1. #### Maintainable 
-برنامه‌ای هست که به راحتی و در هر زمانی می‌تونیم اون رو ویرایش کنیم، باگ‌های اون رو برطرف کنیم، توسعه بدیم و به اون توسعه‌دهنده‌های دیگه‌ای اضافه کنیم. 
+      ```
+      const controller = new AbortController();
+      fetch('https://example.com/api/data', { signal: controller.signal })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error));
+      controller.abort();
+      ```
 
 1. #### Non-null Assertion
-- این عملگر به تایپ‌اسکریپت میگه که ما مطمئن هستیم این عبارت Null نیست و لطفاً توی ادامه Null بودن اون رو بررسی نکن
-```
-// use the '!' character   at the end of the phrase
-const test = model.user.name!;
-```
+       - This operator tells TypeScript that the value is definitely not null, even without a check.
+      ```
+        // use the '!' character   at the end of the phrase
+        const test = model.user.name!;
+      ```
 
 1. #### Shallow Rendering
-یک تکنیک تست‌نویسی هست که بیشتر توی فریم‌ورک‌های Component-Based مثل ویو و ری‌اکت دیده میشه
-وقتی می‌خوایم یک کامپوننت رو با تکنیک Shallow Rendering تست کنیم، هنگام تست فقط خود کامپوننت رندر میشه و کامپوننت‌های داخلی اون کامپوننت رندر نمیشن تا توجه و تمرکز روی خود کامپوننت والد باشه
+      -  it's a test technique that tests a component without rendering its child components.
 
 1. #### Polyfill 
-در جاوااسکریپت به یک کد یا تکنیک اشاره دارد که برای پشتیبانی از ویژگی‌های جدید جاوااسکریپت در مرورگرهایی که این ویژگی‌ها را پشتیبانی نمی‌کنند، استفاده می‌شود.
-مثل استفاده از `EcmaScript` در مروگرهای قدیمی
+      -  A piece of code that adds missing javascript new features (like Ecmascript new features) to older browsers.
 
 1. #### Utility Types in TypeScript 
-- `Partial<Type>`
-  - همه اعضای تعریف شده را اختیاری میکند
-- `Required<Type>`
-  - همه اعضای تعریف شده را اجباری می کند
-- `Readonly<Type>`
-   -  از یک تایپ موجود یک تایپ جدید بسازیم که همهٔ پراپرتی‌های اون Readonly هستن.
-- `Record<Keys, Type>`
-   - اگه می‌خوایم تایپی داشته باشیم که با اون بتونیم نوع دقیق اسم و مقدار پراپرتی‌های آبجکت‌هامون رو مشخص کنیم، تایپ Record به کمکمون میاد:
-```
-type Names = 'John' | 'Mario' | 'Emily';
-type PersonInfo = { age: number, hobbies: string };
+      - `Partial<Type>`
+        -  Makes all properties of a type optional.
+      - `Required<Type>`
+        -  Makes all properties of a type required.
+      - `Readonly<Type>`
+        -  Makes all properties of a type readonly.
+      - `Record<Keys, Type>`
+        -  Creates an object type with specific keys and all values of a specific type.
+          ```
+          type Names = 'John' | 'Mario' | 'Emily';
+          type PersonInfo = { age: number, hobbies: string };
 
-type Persons = Record<Names, PersonInfo>;
+          type Persons = Record<Names, PersonInfo>;
 
-const persons: Persons = {
-  'Emily': { age: 4, hobbies: 'Sleep' },
-  'John':  { age: 5, hobbies: 'Video Games' },
-  'Mario': { age: 3, hobbies: 'Space' },
-};
-```
-- `Pick<Type, Keys>`
-   - اگه یک تایپ داریم و می‌خوایم از اون، یک تایپ جدید که شامل فقط پراپرتی‌های دلخواه ما باشه داشته باشیم، می‌تونیم از Pick استفاده کنیم:
-```
-type Person = {
-  name: string;
-  age: number;
-  hobbies: string;
-  status: string;
-  created_at: string;
-}
+          const persons: Persons = {
+            'Emily': { age: 4, hobbies: 'Sleep' },
+            'John':  { age: 5, hobbies: 'Video Games' },
+            'Mario': { age: 3, hobbies: 'Space' },
+          };
+          ```
+      - `Pick<Type, Keys>`
+        -  Creates a new type by selecting specific properties from another type. 
+          ```
+          type Person = {
+            name: string;
+            age: number;
+            hobbies: string;
+            status: string;
+            created_at: string;
+          }
 
-type MiniPerson = Pick<Person, "name" | "age">;
+          type MiniPerson = Pick<Person, "name" | "age">;
 
-const john: MiniPerson = {
-    name: 'John',
-    age: 4,
-}
-```
-- `Omit<Type, Keys>`
-  - برعکس pick اون هایی که نمیخواهیم را وارد می کنیم
+          const john: MiniPerson = {
+              name: 'John',
+              age: 4,
+          }
+          ```
+      - `Omit<Type, Keys>`
+        -  Creates a new type by removing specific properties from another type.
 
 
 1. #### RESTful API
-- HEAD Method  
-  وقتی توی یک درخواست HTTP از متد HEAD استفاده می‌کنیم، به معنی هست که از Response فقط به اطلاعات Header احتیاج داریم. بنابراین توی Response این درخواست، body وجود نخواهد داشت.
+      - HEAD Method  
+        -  Sends a request to fetch only the headers of a resource, without the body.
 
-
-- OPTION Method  
-اگه می‌خوایم اطلاعاتی کلی درباره قوانین و نحوهٔ تعامل با API مد نظر (مثل متدهای HTTP قابل استفاده و یا مجوز CORS) داشته باشیم، از این متد استفاده می‌کنیم. شاید دقت کرده باشین که مرورگر هنگام بررسی CORS، ابتدا یک درخواست با متد OPTION به آدرس مد نظر میزنه تا CORS رو بررسی کنه.
+      - OPTION Method  
+        -  Used to describe the communication options for a resource, like allowed methods (GET, POST, etc.).
 
 1. #### picture Tag
-زمانی که میخواهیم در حالت رسپانسیو از سایز های مختلف عکس استفاده کنیم از این تگ استفاده میکنیم
-```
-<picture>
-  <source media="(min-width: 900px)" srcset="img-large.jpg">
-  <source media="(min-width: 600px)" srcset="img-medium.jpg">
-  <img src="img-small.jpg">
-</picture>
-```
+      -  Used to specify multiple image sources for different screen sizes or resolutions. It allows responsive images.
+        ```
+        <picture>
+          <source media="(min-width: 900px)" srcset="img-large.jpg">
+          <source media="(min-width: 600px)" srcset="img-medium.jpg">
+          <img src="img-small.jpg">
+        </picture>
+        ```
 
 1. #### what is d.ts in TypeScript
-اگه تعداد Type Declaration ها زیاد بشه بهتره اونها رو منتقل کنیم به یک فایل مجزا. چنین کاری توی تایپ‌اسکریپت با ساختن فایل .d.ts انجام می‌گیره. توی این فایل فقط می‌تونیم Type Declaration بنویسیم و کدهای دیگه‌ای از تایپ‌اسکریپت معتبر نیستن.
+      - A declaration file that defines types, interfaces, and modules for external libraries, allowing TypeScript to understand their structure without the actual implementation.
 
 
 1. #### Map vs WeakMap
-      - هر دو توی جاوااسکریپت Data Structure اختصاصی هستن که برای نگهداری مجموعه‌ای از اطلاعات به صورت Key/value استفاده میشن. مجموعهٔ WeakMap بیشتر به منظور مصرف بهینهٔ حافظه معرفی شده و تفاوت های زیر را با MAP دارد
-        1. #### کلیدهاش حتما باید آبجکت یا symbol باشد
-        1. #### قابل پیشمایش نیستن
-        1. #### پراپرتی هایی مثل `size` , `clear`, `forEach` , `entries` ندارند.
+      - Map:
+          Stores key-value pairs where both keys and values can be any type. Keys are kept in memory, even if they are no longer used.
 
+      - WeakMap:
+          Stores key-value pairs where keys must be objects. The keys are garbage collected when there are no other references to them, preventing memory leaks.
+      ```
+        let map = new Map();
+        let weakMap = new WeakMap();
 
-1. #### Closure  (کلوژرها)
-- یک مفهوم در جاوا اسکریپت است که از تکنیک Currying برنامه نویسی استفاده می کند یعنی استفاده از پارامترهای فانکشن پدر در فرزند بعد از فراخوانی
+        let objKey = {name: 'John'};
 
-```
-function outerFunction(x) {
-  return function innerFunction(y) {
-    console.log(x + y);
-  }
-}
+        map.set(objKey, 'Map Value');
+        weakMap.set(objKey, 'WeakMap Value');
 
-let closure = outerFunction(10);
+        console.log(map.get(objKey));  // Output: 'Map Value'
+        console.log(weakMap.get(objKey));  // Output: 'WeakMap Value'
 
-closure(5); // 15
+        // Dereference the object
+        objKey = null;
 
-```
+        console.log(map.get(objKey));  // Output: 'Map Value' (Map still holds the key)
+        console.log(weakMap.get(objKey));  // Output: undefined (WeakMap removes the key)
+
+      ```
+
+1. #### Closure
+      - A closure is a function that retains access to variables from its lexical scope, even after the outer function has finished executing. This means that the inner function "remembers" the environment in which it was created,  including any variables from the outer function.
+        ```
+        function outer() {
+            let counter = 0;  // `counter` is in the outer function's scope
+            
+            return function inner() {  
+              counter++;  // The `inner` function still has access to `counter`
+              console.log(counter);
+            };
+          }
+
+          const increment = outer();  // `increment` is a closure
+          increment();  // Output: 1
+          increment();  // Output: 2
+        ```
 
 1. #### preload vs prefetch
-هر دو برای دانلود ریسورس ها هست اولی اولویت را به بالاترین حد میبره دومی اولیتش پایین میاد
-```
-<link rel="preload" href="/font.woff" as="font" />
-<link rel="prefetch" href="/prism.js" as="script" />
-```
-
-1. #### Type vs Interface
-برای داشتن یک تایپ برای یک مقدار Primitive (مثل رشته و عدد) فقط می‌تونیم از Type استفاده کنیم. به عبارت دیگه، از Interface فقط می‌تونیم برای مقادیر آبجکتی استفاده کنیم
-
-در `Implement` شدن هم تفاوت دارند تایپ ها با `|` پیاده سازی می شوند ولی اینترفیس ها یا کلمه کلیدی `Implement`
+        - Both of them are for downloading resources before they are needed.
+        - Preload is for resources needed right away, while Prefetch is for resources that will be used later.
+        - Preload blocks the page rendering to fetch the resource, while Prefetch works in the background to optimize future page loads.
+          ```
+          <link rel="preload" href="/font.woff" as="font" />
+          <link rel="prefetch" href="/prism.js" as="script" />
+          ```
 
 1. #### Core Web Vitals 
-  - به ۳ معیار مهم گفته میشه که توسط گوگل برای بررسی عملکرد یک وبسایت معرفی شده.
-    1. #### Largest Contentful Paint (LCP)  
-      زمانی که بزرگترین محتوای قابل نمایش یک صفحه وب بارگذاری می‌شود
-    1. #### First Input Delay (FID)  
-      زمان تأخیر اولین ورودی کاربر (مثلاً کلیک یا تپ) تا زمانی که مرورگر به درخواست واکنش می‌دهد
-    1. #### Cumulative Layout Shift (CLS)  
-      مجموع تغییرات چیدمان صفحه به میزان کلیک‌ها یا تغییرات محتوا، که بر تجربه کاربری ناشی از جابه‌جایی ناگهانی و آزاد اجزای صفحه تأثیر می‌گذارد
+      - A set of performance metrics used by Google to measure the user experience of a website
+        . Largest Contentful Paint (LCP)  
+          - It tracks the time it takes for the largest content element (image, text, etc.) to be visible to the user.
+        . First Input Delay (FID)  
+          - It tracks the time from when a user first interacts with a page (like clicking a button) to when the browser starts processing that interaction.
+        .  Cumulative Layout Shift (CLS)  
+          -  It tracks how much the page layout shifts during loading, causing unexpected movement of content.
 
 1. #### CORS ( Cross-Origin Resource Sharing )
-    به یعنی به اشتراک‌گذاری منابع برای درخواست‌هایی از منابعی غیر از سرور خودی هست.
+      - A security feature implemented by web browsers to restrict how web pages can request resources from domains other than their own.
 
-
-1. #### em vs rem
-- em  
-  از فوت سایز والد خودش میخونه
-- rem  
-  از فونت سایز root میخونه
 
 1. #### Call Stack  
-یک ابزار هست که جاوااسکریپت با اون اجرای توابع توی برنامه رو مدیریت می‌کنه و مشخص می‌کنه برنامه توی چه مرحله‌ای هست و چه توابعی در صف اجرا هستن.
+      - A tool in the browser or JavaScript that helps us track function calls.
 
 1. #### prototype
-هر مقداری که توی جاوااسکریپت تعریف می‌کنیم، یک سری از ویژگی‌هاش رو از یک نمونهٔ اولیه به ارث می‌بره
-مثل `length` در آرایه
+      - A prototype is an object that provides shared properties and methods for other objects, enabling inheritance. like `length`
 
 1. #### Pseudo-elements vs Pseudo-classes
 ```
-// Pseudo-elements در دام دیده می شوند
+// Pseudo-elements show in DOM
 a::after { }, a::before { }
 
 
-// Pseudo-classes در دام دیده نمی شوند
+// Pseudo-classes not showing in DOM
 a:hover { }, a:focus { } , ...
 ```
 
 1. #### for...in
-پیشمایش بروی یک آبجکت و بسیار هزینه بر است بخاطر وجود پروتوتایپ های آبجکت
+      - It iterates over object and have high order time due to prototypes.
 
 1. #### Web Components
-  - Advantages  
-    Reusable, Encapsulated
-  - terms
-    1. #### Custom Elements
-    2. Shadow DOM
-    3. HTML Templates
-    4. HTML Imports 
+      - Advantages  
+        Reusable, Encapsulated
+      - terms
+        . Custom Elements
+        . Shadow DOM
+        . HTML Templates
+        . HTML Imports 
 
 
 1. #### gzip
-یک الگوریتم و قابلیت هست که باید توی سرور فعالسازی و کانفیگ بشه و هدف اون فشرده‌سازی و کاهش دادن اندازهٔ فایل‌هایی هست که از سرور به سمت کلاینت فرستاده میشن. یکی از تکنیک های افزایش سرعت در برنامه های وب است
+      - Gzip is a file compression format and utility used to reduce the size of files (such as text, HTML, JavaScript, and CSS) for faster transmission over the internet. It is widely used in web servers (like Apache or Nginx) to compress HTTP responses. and useful for Faster Load Times and Reduced Bandwidth.
 
-1. #### void and never in typescript
-void یعنی تابع خروجی ندارد never یعنی تابع هیچ وقت به خروجی نمیرسد
+1. #### void vs never in typescript
+        - `void` used for functions that don’t return anything.
+        - `never` used for functions that never return (for example, they throw an error or enter an infinite loop).
+        ```
+            function logMessage(message: string): void {
+              console.log(message);
+            }
+            
+            function throwError(message: string): never {
+              throw new Error(message);
+            }
+        ```
 
 1. #### JavaScript types  
 ['null','undefined', 'string', 'number', 'boolean', 'object', 'symbol', 'bigint']
