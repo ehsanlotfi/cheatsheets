@@ -200,18 +200,19 @@
       - Advantages  
         Reusable, Encapsulated
       - terms
-        . Custom Elements
-        . Shadow DOM
-        . HTML Templates
-        . HTML Imports 
+        - Custom Elements
+        - Shadow DOM
+        - HTML Templates
+        - HTML Imports 
 
 
 1. #### gzip
-      - Gzip is a file compression format and utility used to reduce the size of files (such as text, HTML, JavaScript, and CSS) for faster transmission over the internet. It is widely used in web servers (like Apache or Nginx) to compress HTTP responses. and useful for Faster Load Times and Reduced Bandwidth.
+      - `Gzip` is a file compression format and utility used to reduce the size of files (such as text, HTML, JavaScript, and CSS) for faster transmission over the internet. It is widely used in web servers (like Apache or Nginx) to compress HTTP responses. and useful for Faster Load Times and Reduced Bandwidth.
 
 1. #### void vs never in typescript
         - `void` used for functions that don’t return anything.
         - `never` used for functions that never return (for example, they throw an error or enter an infinite loop).
+
         ```
             function logMessage(message: string): void {
               console.log(message);
@@ -223,7 +224,7 @@
         ```
 
 1. #### JavaScript types  
-      - ['null','undefined', 'string', 'number', 'boolean', 'object', 'symbol', 'bigint']
+      - 'null', 'undefined', 'string', 'number', 'boolean', 'object', 'symbol', 'bigint'
 
 1. #### Event Propagation (Capturing, Bubbling)
       - Event Propagation is the process of an event traveling through the DOM, including both capturing (top to target) and bubbling (target to top); you choose the phase using addEventListener's third argument (true for capture,  false for bubble).
@@ -267,7 +268,7 @@
           greetAlice();
         ```
 
-1. #### sum in reduce 
+1. #### Reduce 
         ```
         [1, 2, 3, 4].reduce((total, currect) => total + currect);
         ```
