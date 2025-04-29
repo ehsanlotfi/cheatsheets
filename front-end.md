@@ -184,14 +184,14 @@
       - A prototype is an object that provides shared properties and methods for other objects, enabling inheritance. like `length`
 
 1. #### Pseudo-elements vs Pseudo-classes
-```
-// Pseudo-elements show in DOM
-a::after { }, a::before { }
+      ```
+      // Pseudo-elements show in DOM
+      a::after { }, a::before { }
 
 
-// Pseudo-classes not showing in DOM
-a:hover { }, a:focus { } , ...
-```
+      // Pseudo-classes not showing in DOM
+      a:hover { }, a:focus { } , ...
+      ```
 
 1. #### for...in
       - It iterates over object and have high order time due to prototypes.
@@ -223,70 +223,91 @@ a:hover { }, a:focus { } , ...
         ```
 
 1. #### JavaScript types  
-['null','undefined', 'string', 'number', 'boolean', 'object', 'symbol', 'bigint']
+      - ['null','undefined', 'string', 'number', 'boolean', 'object', 'symbol', 'bigint']
 
-1. #### Event Propagation
-به معنا گسترش یا تکثیر یعنی با هر کلیک روی یک المنت همه پدر هایش هم کلیک می شود.
-
-1. #### Event Bubbling  
-وقتی روی یک `DOM` فرزند کلیک میکنیم همه  پدرها تا ریشه کلیک می شوند.
-
-1. #### Event Capturing
-دومین پارامتر `addEventListener` است که اگر `true` بشه مسیر صدا زدن ایونت ها برعکس میشه یعنی اول پدر اجرا میشه میاد به پایین
+1. #### Event Propagation (Capturing, Bubbling)
+      - Event Propagation is the process of an event traveling through the DOM, including both capturing (top to target) and bubbling (target to top); you choose the phase using addEventListener's third argument (true for capture,  false for bubble).
+      - `event.stopPropagation()`
+        - prevents the event from bubbling up or capturing down the DOM tree.
 
 1. #### event.preventDefault()
-این متد وقتی روی یک المنت اعمال میشه، مانع عملکرد ذاتی اون المنت میشه. مثلا وقتی رو یک `form` اعمال بشه، مانع ثبت شدن فرم میشه. وقتی روی یک تگ `a` اعمال بشه، باعث میشه اون لینک کار نکنه.
-
-1. #### event.stopPropagation()
-عملیات `Propagation` را متوقف می کند.
+      - event.preventDefault() stops the default action of an element, often used with forms and links (<a> tags).
 
 1. #### event.target vs event.currentTarget  
-به طور خلاصه، event.target به عنصری اشاره می‌کند که رویداد را فعال کرده است، در حالیکه event.currentTarget به عنصری اشاره دارد که هندلر رویداد به آن اتصال دارد. 
+      - `event.target` is the element that actually triggered the event.
+      - `event.currentTarget` is the element that the event listener is attached to.
+      ```
+        parent.addEventListener('click', function(event) {
+          console.log('target:', event.target);
+          console.log('currentTarget:', event.currentTarget);
+        });
+      ```
+      - If you click a child inside parent, event.target will be the child, and event.currentTarget will be parent. Want a visual or analogy to better understand the difference?
 
 1. #### Double NOT !!
-وقتی پشت یک عملگر قرار میگیرد اون را بولین میکند
+      - is a common trick to convert any value to a boolean.
 
 1. #### Hoisting 
-معنای تحت‌الفظی کلمه Hoisting "بالا بردن" هست. توی جاوااسکریپت قبل از اینکه کدهای ما به شکل واقعی اجرا بشن، همه‌ی توابع و متغیرها به اول حوزه‌ی خودشون جابجا میشن. به همین دلیل هست که کد زیر بدون خطا کار می‌کنه:
-```
-smile();
+      - Hoisting is JavaScript's behavior of moving declarations (not initializations) to the top of their scope before code execution.
+        ```
+          smile();
 
-function smile() {
-    return ":)";
-}
-```
-
-1. #### IIFE (  Immediately Invoked Function Expression )
- به تابعی گفته میشه که به محض اینکه تعریف شد، فراخوانی بشه.
- ```
- (function () { })();
- ```
+          function smile() {
+              return ":)";
+          }
+        ```
 
 1. #### apply , call, bind
- با متد  `call` , `apply` می‌تونیم یه کاری کنیم که this توی یک تابع به آبجکت دلخواه ما اشاره کنه.   
- تفاوت اونها توی نحوه‌ی استفاده از اونهاست. توی متد apply ما آرگومان‌ها رو با یک آرایه پاس می‌دادیم. اما توی call باید بصورت جدا جدا پاس بدیم. مثال سوال قبل رو در نظر بگیرید:   
- ```
- add.call(item1, 3, 2, 1);
- add.apply(item1, [3, 2, 1]);
- ```
+      - `call()` and `apply()` invoke the function immediately but differ in how arguments are passed.
+         ``` func.call(thisArg, arg1, arg2, ...) ```
+         ``` func.apply(thisArg, [arg1, arg2, ...]) ```
+      - `bind()` creates a new function with a bound this, and you call it later.
+        ```
+          const greetAlice = greet.bind(null, "Alice");
+          greetAlice();
+        ```
 
 1. #### sum in reduce 
- ```
- [1, 2, 3, 4].reduce((total, currect) => total + currect);
- ```
+        ```
+        [1, 2, 3, 4].reduce((total, currect) => total + currect);
+        ```
 
-1. #### localStorage vs sessionStorage vs Cookies vs IndexedDB
+1. #### localStorage, sessionStorage, Cookies, IndexedDB, webSQL
+    - They differ in data size and lifetime and data type.
 
-1. #### arrow function vs traditional function
+1. #### Types of Functions
+      - Regular Functions.
+        - ``` function greet() { console.log("Hello!"); } ```
+      - Arrow Functions.
+        - ``` const greet = () => { console.log("Hello!"); } ```
+      - Anonymous Functions
+        - Functions without a name, often used in callbacks or as arguments to other functions.
+        ``` setTimeout(function() { console.log("Hello!"); }, 1000); ```
+      - IIFE (Immediately Invoked Function Expressions)
+        -  is a function that runs immediately after it's defined.
+        ``` (function () { })(); ```
 
 1. #### Rest vs Spread
-
+      - `rest` Collects multiple elements into one array or object.
+      ```
+        function sum(...numbers) {
+          return numbers.reduce((a, b) => a + b, 0);
+        }
+      ```
+      - `Spread` Expands (spreads out) an array or object into individual elements.
+      ```
+        const arr = [1, 2, 3];
+        console.log(...arr); // 1 2 3
+      ```
 1. #### Implicit Coercion vs Explicit Coercion
-این‌ها دو روش تبدیل نوع داده توی جاوااسکریپت هستن.
-- ‌‌Implicit Coercion یا ضمنی   
-``` console.log(1 + '6');  ```
-- Explicit Coercion یا صریح   
-```  console.log(1 + parseInt('6')); ```
+      - two ways of typecasting in JavaScript.
+      - ‌‌Implicit Coercion
+      ``` console.log(1 + '6');  ```
+      - Explicit Coercion
+      ```  console.log(1 + parseInt('6')); ```
 
 1. #### freeze vs seal 
-این متدها برای آبجکت سراسری Object هستن. seal به معنی بستن و خاتمه‌دادن هست. متد seal مانع اضافه شدن پراپرتی جدید به آبجکت میشه. همچنین یک پراپرتی نمی‌تونه حذف بشه. فقط میشه مقدار یک پراپرتی رو ویرایش کرد. متد freeze شبیه به seal هست اما با این تفاوت که این متد اجازه ویرایش مقدار یک پراپرتی رو نمیده.
+      - `Object.seal()`
+        - Prevents adding or removing properties, but you can still modify existing ones.
+      - `Object.freeze()`
+        - Prevents adding, removing, and modifying properties.
