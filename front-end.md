@@ -12,9 +12,24 @@
       - gulp 
       - grunt
 
+1. #### Event Loop
+      - The Event Loop in JavaScript is a mechanism that allows `asynchronous` code—like `setTimeout` or `fetch` run without blocking the main thread. Since JavaScript is `single-threaded`, the Event Loop waits until the `call stack` is empty, then takes functions from the `task queue` and pushes them to the stack for execution. This makes it possible to handle multiple tasks seemingly at the same time
+
+1. #### Web APIs
+      - Web APIs are built-in browser interfaces that allow JavaScript to interact with the browser, system, or external services.
+          - `DOM API` – Interact with HTML elements (document.querySelector, element.innerText).
+          - `BOM API` – Control browser window and environment (window, navigator).
+          - `Fetch &` Network API – Handle HTTP requests (fetch, XMLHttpRequest, WebSocket).
+          - `Storage API` – Store data in browser (localStorage, sessionStorage, IndexedDB).
+          - `Multimedia API` – Work with audio/video (MediaDevices, AudioContext).
+          - `Graphics API` – Draw graphics and animations (Canvas, WebGL).
+          - `Device & Sensor API` – Access hardware features (Geolocation, DeviceOrientation).
+          - `Clipboard & Drag-and-Drop API` – Handle user copy-paste and drag actions.
+          - `Notifications & Background API` – Show notifications, sync in background (Notification, Service Worker).
+          - `Performance & Timing API` – Measure performance and handle animation frames.
+
 1. #### MonoRepo (Microfrontend) vs MultiRepo
       - Nx
-
 
 1. #### Front optimization technique List
       - bundlle optimization like Tree shaking, Compression, Minification
@@ -257,6 +272,16 @@
               return ":)";
           }
         ```
+1. #### TDZ (Temporal Dead Zone)
+        - `TDZ` is the time before a `let` or `const` variable is declared, where trying to use it gives a `ReferenceError`. With `var`, this doesn't happen because it's `hoisted` and set to `undefined`.
+        ```
+          console.log(x); // ❌ ReferenceError: Cannot access 'x' before initialization
+          let x = 5;
+        ```
+
+1. #### Debounce vs Throttle
+      - `Debounce` waits for a specific time after the last event, and only runs if no new event happens during that time (e.g., during search typing).
+      - `Throttle` ensures a function runs once during a fixed time period, no matter how many times the event occurs (e.g., scroll, resize, Mousemove).
 
 1. #### apply , call, bind
       - `call()` and `apply()` invoke the function immediately but differ in how arguments are passed.
