@@ -69,34 +69,35 @@
 
 1. #### useReducer
         - It works like useState but is better for complex states, and it changes the state through a `reducer` function.
-        ```
-        import React, { useReducer } from "react";
 
-            const initialState = { count: 0 };
+            ```
+            import React, { useReducer } from "react";
 
-            function reducer(state, action) {
-              switch (action.type) {
-                case "increment":
-                  return { count: state.count + 1 };
-                case "decrement":
-                  return { count: state.count - 1 };
-                default:
-                  return state;
-              }
-            }
+                const initialState = { count: 0 };
 
-            function Counter() {
-              const [state, dispatch] = useReducer(reducer, initialState);
+                function reducer(state, action) {
+                  switch (action.type) {
+                    case "increment":
+                      return { count: state.count + 1 };
+                    case "decrement":
+                      return { count: state.count - 1 };
+                    default:
+                      return state;
+                  }
+                }
 
-              return (
-                <div>
-                  <p>Count: {state.count}</p>
-                  <button onClick={() => dispatch({ type: "increment" })}>+</button>
-                  <button onClick={() => dispatch({ type: "decrement" })}>-</button>
-                </div>
-              );
-            }
-        ```
+                function Counter() {
+                  const [state, dispatch] = useReducer(reducer, initialState);
+
+                  return (
+                    <div>
+                      <p>Count: {state.count}</p>
+                      <button onClick={() => dispatch({ type: "increment" })}>+</button>
+                      <button onClick={() => dispatch({ type: "decrement" })}>-</button>
+                    </div>
+                  );
+                }
+            ```
 1. #### useMemo And useCallback
       - They are used for caching and preventing unnecessary renders.
       - useMemo is used to remember a calculated value so it only re-computes when certain dependencies change.
