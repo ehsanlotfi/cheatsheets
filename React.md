@@ -70,9 +70,6 @@
 1. #### useReducer
         - It works like useState but is better for complex states, and it changes the state through a `reducer` function.
             ```
-            const [state, dispatch] = useReducer(reducer, initialState)
-            ```
-            ```
             import React, { useReducer } from "react";
 
             const initialState = { count: 0 };
