@@ -69,8 +69,8 @@
 
 1. #### useReducer
         - It works like useState but is better for complex states, and it changes the state through a `reducer` function.
-            ```
-            import React, { useReducer } from "react";
+        ```
+        import React, { useReducer } from "react";
 
             const initialState = { count: 0 };
 
@@ -96,8 +96,7 @@
                 </div>
               );
             }
-            ```
-
+        ```
 1. #### useMemo And useCallback
       - They are used for caching and preventing unnecessary renders.
       - useMemo is used to remember a calculated value so it only re-computes when certain dependencies change.
