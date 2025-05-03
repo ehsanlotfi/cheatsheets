@@ -35,6 +35,7 @@
       - bundlle optimization like Tree shaking, Compression, Minification
       - remove unusiblle Import
       - Code Splitting ( Dynamic Import )
+        - It is a feature supported by bundlers like webpack and browserify, which can create different bundles that can be dynamically   loaded at runtime.
       - Lazy Loading
       - Conditional components loading
       - Handle API requests ( AbortController )

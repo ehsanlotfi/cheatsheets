@@ -195,581 +195,547 @@
       }
       ```
 1. #### useDeferredValue
-برای به‌تأخیر انداختن بروزرسانی مقادیر سنگین.
+      - It's used to delay updating a heavy value.
 
 1. #### useDebugValue
-برای دیباگ کردن هوک‌های سفارشی.
+     -  It helps developers understand what a custom hook is returning when debugging.
 
 1. #### useSyncExternalStore
-همگام‌سازی با داده‌های خارجی.
+     - Sync with external data.
 
 1. #### Virtual DOM
-هر زمان داده های اصلی تغییر میکند دام مجازی با دام واقعی مقایسه می شود و تغییرات را اعمال میکند
+      - Whenever the main data changes, the virtual DOM is compared with the real DOM, and the changes are applied.
 
 1. #### Props vs State
-اولی ورودی های یک کامپوننت دومی متغیر های داخل یک کامپوننت
+      - The first refers to the inputs of a component, while the second refers to the variables inside a component.
 
 1. #### Events in React and HTML
-- تعریف ایونت در HTML بصورت loverCase است و در `react` بصورت `camelCase`
-- توی `HTML` برای جلوگیری از رفتار پیش فرض می تونیم return کنیم ولی در `react` حتما باید `PreventDefault` استفاده بشه
-- در `HTML` حتما باید پرانتز ها گذاشته شود در `React` اجباری نیست.
-```
-// HTML
-<button onclick="activateLasers()"></button>
-<a href="#" onclick='console.log("The link was clicked."); return false;' />
+      - In HTML, event names are in lowercase, while in React they are in camelCase.
+      - In HTML, to prevent the default behavior, we can use return, but in React, we must use preventDefault().
+      - In HTML, parentheses are required, while in React, they are not mandatory.
+      ```
+        // HTML
+        <button onclick="activateLasers()"></button>
+        <a href="#" onclick='console.log("The link was clicked."); return false;' />
 
-// React
-<button onClick={activateLasers}>Test</button>
-function activateLasers(event) {
-  event.preventDefault();
-}
-```
+        // React
+        <button onClick={activateLasers}>Test</button>
+        function activateLasers(event) {
+          event.preventDefault();
+        }
+      ```
 
-1. #### Reconciliation  (اصلاح ، آشتی)
-به معنای لغوی اصلاح وقتی `state‌` یا `props` یه کامپوننت تغییر‌می‌کنه، ری‌اکت با مقایسه عنصر تازه return شده و نمونه `render` شده قبلی تصمیم میگیره که به روزرسانی `DOM` واقعا ضروریه یا نه. وقتی این دو مقدار با هم برابر نباشه، ری‌اکت به روزرسانی `DOM` رو انجام میده. به این فرایند `reconciliation` گفته میشه.
+1. #### Reconciliation
+      - The literal meaning of `reconciliation` is when the state or props of a component change, React compares the newly returned element with the previously rendered one to decide whether a DOM update is really necessary. When these two values are not equal, React performs a DOM update. This process is called "reconciliation.
 
 1. #### React Fiber
-موتور جدید برای عملیات `reconciliation` هست یا میشه گفت که پیاده‌سازی مجدد الگوریتم هسته ری‌اکت نسخه ۱۶ هست. هدف پیاده‌سازی `ReactFiber` برای بهبود کارکرد توی جاهایی مثل ایجاد انیمیشن، کار روی `layout،` کار با gestureها و قابلیت اینکه عملیات در حال اجرا رو متوقف، قطع یا مجددا فعال کنیم ساخته شده. البته می‌تونه برای اولویت‌بندی بروزسانی‌های لازم توی DOM رو هم مدیریت کنه. مهم‌ترین ویژگی `incremental-rendering` بوده که قابلیت بخش‌بندی(chunk کردن) عملیات اجرایی و متوقف و اجرا کردن اون توی فریم‌های مختلف هست.
+      - The new engine for reconciliation is essentially a reimplementation of the core React algorithm in version 16. The purpose of implementing React Fiber was to improve performance in areas like animations, working with layout, handling gestures, and providing the ability to pause, interrupt, or resume operations. It can also manage prioritization of necessary updates to the DOM. The most important feature of React Fiber is incremental rendering, which allows for chunking the execution process and pausing or resuming it across different frames.
 
 1. #### set state for dynamic Model
-```
-const [myState, setMyState] = useState();
-const handleInputChange = (event) => {
-  setMyState({ [event.target.id]: event.target.value });
-}
-```
+      ```
+      const [myState, setMyState] = useState();
+      const handleInputChange = (event) => {
+        setMyState({ [event.target.id]: event.target.value });
+      }
+      ```
 
 1. #### lifecycle Class Component
-- Mounting `constructor,  getDerivedStateFromProps,  render,  componentDidMount`
-- Updating `getDerivedStateFromProps, shouldComponentUpdate,  render,  getDerivedStateFromProps,  componentDidUpdate`
-- Unmounting `componentWillUnmount`
+      - Mounting `constructor,  getDerivedStateFromProps,  render,  componentDidMount`
+      - Updating `getDerivedStateFromProps, shouldComponentUpdate,  render,  getDerivedStateFromProps,  componentDidUpdate`
+      - Unmounting `componentWillUnmount`
 
 1. #### lifecycle phases
-- Render
-- Pre-commit
-- Commit
+      - Render
+      - Pre-commit
+      - Commit
 
 1. #### getDerivedStateFromProps
-بعد از اینکه یه کامپوننت بلافاصله بدون خطا و مثل قبل `rerender` شد، متد استاتیک `getDerivedStateFromProps` صدا زده میشه.
-این متد یا `state` آپدیت شده رو به صورت یه آبجکت برمی گردونه یا `null` رو برمی گردونه که معنیش اینه `prop` ‌های جدید به آپدیت شدن `state` نیازی ندارن.
-```
-class MyComponent extends React.Component {
-  static getDerivedStateFromProps(props, state) {
-    //...
-  }
-}
-```
+      - After a component re-renders immediately without errors, the static method getDerivedStateFromProps is called. This method either returns an updated state as an object or returns null, which means that the new props do not require any state update.
+
+      ```
+      class MyComponent extends React.Component {
+        static getDerivedStateFromProps(props, state) {
+          //...
+        }
+      }
+      ```
 
 1. #### getSnapshotBeforeUpdate
-بعد از آپدیت‌های `DOM` صدا زده میشه.
-مقدار برگشتی این متد به عنوان پارامتر سوم به متد `componentDidUpdate` پاس داده میشه.
-```
-class MyComponent extends React.Component {
-  getSnapshotBeforeUpdate(prevProps, prevState) {
-    //...
-  }
-}
-```
-متد `componentDidUpdate` تمام مواردی که توی متد `componentWillUpdate`, `componentWillReceiveProps` استفاده میشه رو پوشش میده.
+      - After the DOM updates, this method is called. The returned value of this method is passed as the third parameter to the componentDidUpdate method.
+      - The componentDidUpdate method covers everything that is used in the componentWillUpdate and componentWillReceiveProps methods.
+      ```
+      class MyComponent extends React.Component {
+        getSnapshotBeforeUpdate(prevProps, prevState) {
+          //...
+        }
+      }
+      ```
 
 1. #### HOC ( Hight Order Component )
-کامپوننت با مرتبه بالا
-در واقع یک تابع است که یک کامپوننت را به عنوان ورودی می‌گیرد و یک کامپوننت جدید با ویژگی‌ها یا عملکردهای جدید به عنوان خروجی برمی‌گرداند. برای مثال، فرض کنید شما یک کامپوننت دارید که اطلاعات  یک فرد را نمایش می‌دهد، و شما می‌خواهید این اطلاعات را بر اساس سن فرد تغییر دهید. می‌توانید یک `HOC` بنویسید که با توجه به سن افراد، ویژگی‌های مختلفی به کامپوننت اضافه کند.
-- تغییر رفتار رندر یک کامپوننت را میتوانیم مشروط کنیم بوسیله HOC که اصطلاحا بهش Render Hijacking میگویند.
+      - A higher-order component (HOC) is essentially a function that takes a component as input and returns a new component with additional props or behaviors as output. For example, imagine you have a component that displays information about a person, and you want to modify this information based on the person's age. You could write an HOC that adds different features to the component depending on the person's age.
+      - We can conditionally change the render behavior of a component using an HOC, a concept often referred to as "Render Hijacking.
 
 1. #### What are the limitations of HOCs?
-1. از HOC‌ها توی متد render استفاده نکنیم
-2. متد‌های static باید کپی بشن وقتی HOC رو روی یه کامپوننت اعمال می کنیم، کامپوننت جدید هیچ کدوم از متد‌های استاتیک کامپوننت اصلی رو نداره
-3. Ref‌ها رو نمیشه انتقال داد 
+      - Don’t use HOCs inside the render method: Higher-order components (HOCs) should not be used inside the render method. Using HOCs in the render method can lead to unnecessary re-renders, which can hurt performance. It's better to apply them outside of the render flow.
+      - Static methods need to be copied: When applying an HOC to a component, the new component doesn't inherit the static methods from the original component. If you want the static methods to be available on the new component, you need to manually copy them.
+      - Refs cannot be passed down: Refs cannot be passed automatically through HOCs. If you need to forward a ref, you must use React.forwardRef in combination with your HOC.
+      - We have the same concept in JavaScript, and it's called HOF (Higher-Order Function), which is a function that either takes another function as an input or returns a function as output.
 
-- همین مفهوم را در جاوااسکریپت هم داریم بهش میگیم `HOF ( Higher-Order Function )`
-  که تابعی که یک تابع دیگه را به عنوان ورودی میگیره یا یک تابع را به عنوان خروجی return می کند
-```
-// simple example of a Higher-Order Function in JavaScript
+      ```
+      function applyOperation(a, b, operation) {
+        return operation(a, b);
+      }
 
-function applyOperation(a, b, operation) {
-  return operation(a, b);
-}
+      const add = (x, y) => x + y;
+      const multiply = (x, y) => x * y;
 
-const add = (x, y) => x + y;
-const multiply = (x, y) => x * y;
-
-console.log(applyOperation(3, 5, add));        // Output: 8
-console.log(applyOperation(3, 5, multiply));  // Output: 15
-```
+      console.log(applyOperation(3, 5, add));        // Output: 8
+      console.log(applyOperation(3, 5, multiply));  // Output: 15
+      ```
 
 1. #### Headless Component
-کامپوننت Headless در برنامه‌نویسی (مخصوصاً در React) کامپوننتی است که فقط منطق را مدیریت می‌کند و هیچ رندر خاصی ندارد.
+      - A Headless component in programming (especially in React) is a component that only manages logic and has no specific rendering.
 
 1. #### suspense component
-وقتی بخواهی داده‌ها یا کامپوننت‌ها به صورت پویا (Lazy) بارگذاری شوند و در این مدت چیزی مثل یک متن "در حال بارگذاری..." نشان دهی.
-```
-const OtherComponent = React.lazy(() => import("./OtherComponent"));
+      - When you want data or components to be loaded dynamically (Lazy), and during this time, show something like a "Loading..." text.
+      ```
+      const OtherComponent = React.lazy(() => import("./OtherComponent"));
 
-function MyComponent() {
-  return (
-    <div>
-      <Suspense fallback={<div>در حال بارگذاری...</div>}>
-        <OtherComponent />
-      </Suspense>
-    </div>
-  );
-}
-```
+      function MyComponent() {
+        return (
+          <div>
+            <Suspense fallback={<div>در حال بارگذاری...</div>}>
+              <OtherComponent />
+            </Suspense>
+          </div>
+        );
+      }
+      ```
 
-1. #### shallow comparison  ( مقایسه سطحی )
-وقتی که `props` یا `state` در کامپوننت تغییر‌می‌کنه، `PureComponent` یه مقایسه سطحی روی `props` و `state` انجام میده به این عمل `shallow comparison`  میگن.
+1. #### shallow comparison
+      - When props or state in a component changes, PureComponent performs a shallow comparison on props and state. This action is called shallow comparison.
 
 ### Synthetic events
-وقتی شما در React یک رویداد مثل onClick تعریف می‌کنید، React به جای استفاده‌ی مستقیم از رویدادهای مرورگر، از چیزی به نام Synthetic Event استفاده می‌کند تا عملکرد یکسانی در تمام مرورگرها ارائه دهد.
+      - When you define an event like onClick in React, React uses something called a Synthetic Event instead of directly using browser events to provide consistent behavior across all browsers.
 
 1. #### Ref and ForwardRef
-در کلاس کامپوننت از `React.createRef` استفاده میکنیم و در فانکشن کامپوننت از هوکس `userRef` 
-مفهوم `Ref forwarding` ویژگی‌ایه که به بعضی از کامپوننت‌ها این اجازه رو میده ref دریافت شده رو به کامپوننت فرزند انتقال بدن.
+      - In class components, we use React.createRef, and in function components, we use the useRef hook.
+    
 
 1. #### props proxy in HOC
-می‌تونیم prop‌های انتقال داده شده به کامپوننت رو با استفاده از الگوی `props proxy` اضافه یا ویرایش کنیم:
-```
-function HOC(WrappedComponent) {
-  return class Test extends Component {
-    render() {
-      const newProps = {
-        title: "New Header",
-        footer: false,
-        showFeatureX: false,
-        showFeatureY: true,
-      };
+      - We can add or modify the props passed to a component using the props proxy pattern.
+      ```
+      function HOC(WrappedComponent) {
+        return class Test extends Component {
+          render() {
+            const newProps = {
+              title: "New Header",
+              footer: false,
+              showFeatureX: false,
+              showFeatureY: true,
+            };
 
-      return <WrappedComponent {...this.props} {...newProps} />;
-    }
-  };
-}
-```
+            return <WrappedComponent {...this.props} {...newProps} />;
+          }
+        };
+      }
+      ```
 
 1. #### Fragment
-- استفاده چندین المنت بدون افزودن نود اضافی
-- key تنها اتریبیوتی هستش که میشه به Fragment پاس داد
-```
-render() {
-  return (
-    
-    // First type
-    <React.Fragment>
-      <ChildA />
-      <ChildB />
-    </React.Fragment>
+      - Using multiple elements without adding extra nodes.
+      - key is the only attribute that can be passed to a Fragment.
+      ```
+      render() {
+        return (
+          
+          // First type
+          <React.Fragment>
+            <ChildA />
+            <ChildB />
+          </React.Fragment>
 
-   // Second type
-    <>
-        <ChildA />
-        <ChildB />
-    </>
-  )
-}
-```
+        // Second type
+          <>
+              <ChildA />
+              <ChildB />
+          </>
+        )
+      }
+      ```
 
 1. #### portal in React
-گاهی اوقات نیاز دارید چیزی مثل مدال (Modal) یا نوتیفیکیشن (Notification) را بسازید که از نظر بصری و عملکردی خارج از بخش اصلی اپلیکیشن باشد. با استفاده از پرتال می‌توانید این کامپوننت‌ها را مستقیماً به یک بخش خاص در DOM (مثل <div id="modal-root">) اضافه کنید.
-```
-ReactDOM.createPortal(child, container);
-```
-- child: محتوایی که می‌خواهید نمایش دهید (مثلاً یک مدال).
-- container: جایی در DOM که می‌خواهید محتوا آنجا رندر شود (مثل #modal-root).
+      - Sometimes, you need to create something like a modal or notification that visually and functionally exists outside the main part of the application. With portals, you can directly add these components to a specific part of the DOM (like <div id="modal-root">).
+        ```
+        ReactDOM.createPortal(child, container);
+        ```
+       - child: The content you want to display (e.g., a modal).
+       - container: The location in the DOM where you want the content to be rendered (e.g., #modal-root).
 
 1. #### PropType
-در محیط توسعه کاربرد دارد برای مشخص کردن نوع ووردی یک کامپوننت
-با استفاده از typescript هم میتوان `type checking` داشت
-```
-import React from "react";
-import PropTypes from "prop-types";
+        - In development environments, it's useful for specifying the input type of a component. With TypeScript, you can also perform type checking to ensure that the correct types are passed to components.
 
-const User = (props) => {
-  return (
-    <>
-      <h1>{`Welcome, ${props.name}`}</h1>
-      <h2>{`Age, ${props.age}`}</h2>
-    </>
-  );
-}
+        ```
+        import React from "react";
+        import PropTypes from "prop-types";
 
-User.propTypes = {
-  name: PropTypes.string.isRequired,
-  age: PropTypes.number.isRequired,
-};
-```
+        const User = (props) => {
+          return (
+            <>
+              <h1>{`Welcome, ${props.name}`}</h1>
+              <h2>{`Age, ${props.age}`}</h2>
+            </>
+          );
+        }
+
+        User.propTypes = {
+          name: PropTypes.string.isRequired,
+          age: PropTypes.number.isRequired,
+        };
+        ```
 
 1. #### error boundary
-در کلاس کامپوننت کارایی دارد و با متد هایی مانند `componentDidCatch(error, info)`  و `static getDerivedStateFromError` . پیاده سازی می شود.
-از این در فانکشن کامپوننت نمیشه استفاده کرد و نیازی هم بهش نداریم چون اکثر مواقع برای کل برنامه یه `error boundary` تعریف می‌کنیم که می‌تونه `try..catch` باشه.
+      - In class components, error boundaries are used and implemented with methods like componentDidCatch(error, info) and static getDerivedStateFromError.
+      - In function components, error boundaries can't be used directly, and they are usually not needed. Instead, for most cases, an error boundary is defined for the entire application, which can be implemented with try...catch.
 
 1. #### SSR in pure React
-```
-import ReactDOMServer from "react-dom/server";
-import App from "./App";
+        ```
+        import ReactDOMServer from "react-dom/server";
+        import App from "./App";
 
-ReactDOMServer.renderToString(<App />);
-```
+        ReactDOMServer.renderToString(<App />);
+        ```
 
 1. #### Switcher Component
-کامپوننتی که توسط شروطی چند تا کامپوننت را میتواند رندر کند
-```
-import HomePage from "./HomePage";
-import AboutPage from "./AboutPage";
+      - A component that can conditionally render multiple components based on certain conditions
+        ```
+        import HomePage from "./HomePage";
+        import AboutPage from "./AboutPage";
 
-const PAGES = {
-  home: HomePage,
-  about: AboutPage
-};
+        const PAGES = {
+          home: HomePage,
+          about: AboutPage
+        };
 
-const Page = (props) => {
-  const Handler = PAGES[props.page] || ContactPage;
+        const Page = (props) => {
+          const Handler = PAGES[props.page] || ContactPage;
 
-  return <Handler {...props} />;
-};
+          return <Handler {...props} />;
+        };
 ```
 
 1. #### StrictMode Tag
- هیچ المان `DOM` اضافه‌ای رو رندر نمی‌کنه، بلکه `warning` ‌ها و `additional checks` رو برای فرزندان اون کامپوننت فعال‌می‌کنه. این کار فقط در حالت `development` فعال میشه.
-```
-function ExampleApplication() {
-  return (
-    <div>
-      <Header />
-      <React.StrictMode>
-        <div>
-          <ComponentOne />
-          <ComponentTwo />
-        </div>
-      </React.StrictMode>
-      <Footer />
-    </div>
-  );
-}
-```
+      - It doesn’t render any extra DOM element, but it enables warnings and extra checks for its child components. This only works in development mode.
+      ```
+      function ExampleApplication() {
+        return (
+          <div>
+            <Header />
+            <React.StrictMode>
+              <div>
+                <ComponentOne />
+                <ComponentTwo />
+              </div>
+            </React.StrictMode>
+            <Footer />
+          </div>
+        );
+      }
+      ```
 
 1. #### constructor VS getInitialState 
-وقتی داریم از کلاس‌های `ES6` استفاده می‌کنیم باید `state‌` رو توی `constructor` مقداردهی اولیه کنیم و وقتی از `React.createClass` استفاده می‌کنیم باید از متد `getInitialState` استفاده کنیم.
+      - When we use ES6 classes, we need to initialize the state inside the constructor. But when using React.createClass, we should use the getInitialState method.
 
 1. #### super() VS super(props)
-بیرون `constractor` فرقی نمیکند ولی اگر بخوان داخل کانستراکتور `props` را داشته باشه از `super(props)` باید استفاده کنیم
+      - Outside the constructor, it doesn't matter. But if we want to access props inside the constructor, we must use super(props).
 
 1. #### Loop in JSX
-only Array.prototype.map OR for statement
+      - only Array.prototype.map OR for statement
 
 1. #### setState Vs replaceState
-هر دو روی کلاس کامپوننت ها هستند setState مقادیر فعلی و قبلی با هم ترکیب میکنه. replaceState حالت فعلی رو با stateای که می‌خواییم جایگزینش می‌کنه 
+      - Both are used in class components.
+      - setState merges the current state with the new one.
+      - replaceState completely replaces the current state with the new state.
 
 1. #### State change Detection
-```
-// class component
-componentWillUpdate(object nextProps, object nextState)
-componentDidUpdate(object prevProps, object prevState)
+        ```
+        // class component
+        componentWillUpdate(object nextProps, object nextState)
+        componentDidUpdate(object prevProps, object prevState)
 
-// function component
-const [someState, setSomeState] = useState();
-useEffect(() => {
-  // code
-}, [someState]);
-```
+        // function component
+        const [someState, setSomeState] = useState();
+        useEffect(() => {
+          // code
+        }, [someState]);
+        ```
 
 1. #### component without HTML rendering
-```
-render() {
-  return false
-}
+        ```
+        render() {
+          return false
+        }
 
-render() {
-  return null
-}
+        render() {
+          return null
+        }
 
-render() {
-  return []
-}
+        render() {
+          return []
+        }
 
-render() {
-  return <React.Fragment></React.Fragment>
-}
+        render() {
+          return <React.Fragment></React.Fragment>
+        }
 
-render() {
-  return <></>
-}
-```
-توجه با مقدار undifined نمیشه کار کرد
+        render() {
+          return <></>
+        }
+        ```
+      - You can't work with a value that is undefined.
 
 1. #### React router
-```
-const Page = (props, context) => {
+      ```
+      const Page = (props, context) => {
 
-  // old version
-  const history = useHistory();
-  // new 
-  const navigate = useNavigate();
-
-  const navigate = useNavigate();
-  const location = useLocation();
-  const { slug } = useParams();
-
-  return (
-    <button
-      type="button"
-      onClick={() => {
-
-        // old
-        history.push("/new-location");
-
+        // old version
+        const history = useHistory();
         // new 
-        navigate("/new-location");
+        const navigate = useNavigate();
 
-      }}
-    >
-      {"Click Me!"}
-    </button>
-  );
-};
-```
+        const navigate = useNavigate();
+        const location = useLocation();
+        const { slug } = useParams();
+
+        return (
+          <button
+            type="button"
+            onClick={() => {
+
+              // old
+              history.push("/new-location");
+
+              // new 
+              navigate("/new-location");
+
+            }}
+          >
+            {"Click Me!"}
+          </button>
+        );
+      };
+      ```
 
 1. #### Shallow Renderer package
-برای نوشتن یونیت تست کاربرد دارد و تا عمق یک یک کامپوننت را میتونیم بررسی کنیم.
-```
-function MyComponent() {
-  return (
-    <div>
-      <span className={"heading"}>{"Title"}</span>
-    </div>
-  );
-}
-```
-```
-const renderer = new ShallowRenderer();
-renderer.render(<MyComponent />);
+      - It is used for writing unit tests, and allows you to deeply inspect a component one level at a time.
+        ```
+        function MyComponent() {
+          return (
+            <div>
+              <span className={"heading"}>{"Title"}</span>
+            </div>
+          );
+        }
+        ```
+        ```
+        const renderer = new ShallowRenderer();
+        renderer.render(<MyComponent />);
 
-const result = renderer.getRenderOutput();
+        const result = renderer.getRenderOutput();
 
-expect(result.type).toBe("div");
-expect(result.props.children).toEqual([
-  <span className={"heading"}>{"Title"}</span>
-]);
-```
+        expect(result.type).toBe("div");
+        expect(result.props.children).toEqual([
+          <span className={"heading"}>{"Title"}</span>
+        ]);
+        ```
 
 1. #### test Renderer package
-می‌تونیم ازش برای رندر کردن کامپوننت‌ها و تبدیل اونا به یه  pure JavaScript استفاده کنیم
- این پکیج برای گرفتن snapshot از سلسله مرتب view(یه چیزی شبیه به درخت DOM) که توسط ReactDOM یا React Native درست میشه رو بدون نیاز به مرورگر یا jsdom فراهم می‌کنه.
+      - We can use it to render components and turn them into pure JavaScript.
+        This package lets us take a snapshot of the view hierarchy (similar to the DOM tree) created by ReactDOM or React Native, without needing a browser or jsdom.
 
 1. #### Flux Architecture
-یک معماری که توسط فیسبوک مطرح شده است  شامل چندین قسمت اصلی است:
-1. Action
-2. Dispather
-3. Store
-4. View
+      - An architecture proposed by Facebook that includes several main parts.
+        - Action
+        - Dispather
+        - Store
+        - View
 
 1. #### Redux ( state managment )
-###### Three Principles
-1. Single source of truth
-2. State is read-only (only change by dispacher)
-3. Changes are made with pure functions
-1. #### Keyword
-store
-یک شی است که تمام وضعیت ها درون آن قرار دارد
-2. Action مشخص میکند که چه تغییری در وضعیت برنامه باید رخ بدهد
-3. Reducer استیت قبلی و اکشن فعلی را میگیرد و استیت جدید را می دهد
-4. Containers کامپوننت هایی که تمپلیت ندارند
-5. Components کامپوننت هایی که تمپلیت دارند
-6. Selector برای انتخاب بخشی از استیت
+      - Three Principles
+        1.  Single source
+        1.  State is read-only (only change by dispacher)
+        1.  Changes are made with pure functions
+      - Keyword
+          - `store` is an object that holds all the states inside it.
+          - `action` specifies what change should occur in the application state.
+          - `reducer` takes the previous state and the current action and returns the new state.
+          - `Containers` are components that don't have templates.
+          - `Components` are components that have templates.
+          - `selector` is used to select a part of the state.
+      - Middleware 
+          - Redux Thunk
+            - It allows us to have async actions.
+            - It allows us to create actions that return functions instead of normal actions.
+          - Redux Promise
+          - Redux Saga.
+            - A middleware for managing side effects logic in Redux applications as separate threads.
 
-#### مهمترین middleware های redux
-- Redux Thunk
-- Redux Promise
-- Redux Saga.
+1. #### put and call in react sega
+      - Both call and put effects are effect creators. The call function is used to create an effect that instructs the middleware to wait for the call. The put function creates an effect that tells the store to execute a specific action.
 
-#### redux-thunk
--  اجازه میده بتونیم action‌های async داشته باشیم.
--  اجازه میده که actionهایی رو بسازیم که به‌جای action عادی تابع‌ برگردونن
+1. #### React Style (CSS)
+        ```
+        const divStyle = {
+          color: "blue",
+          backgroundImage: "url(" + imgUrl + ")",
+        };
 
-#### redux saga
-یک middleware برای مدیریت منطق جانب سرویس بصورت نخ های جداگانه (side effects) در اپلیکیشن‌های ریداکس است. 
+        function HelloWorldComponent() {
+          return <div style={divStyle}>Hello World!</div>;
+        }
 
-##### put and call in react sega
-هر دوی افکت‌های call و put سازنده‌های افکت هستن. تابع call برای ایجاد توضیح افکت استفاده میشه که به میان‌افزار دستور میده منتظر call بمونه. تابع put یه افکت ایجاد می‌کنه، که به store میگه یه action خاص رو فقط اجرا کنه.
+        <div
+          style={{
+            transform: "rotate(90deg)",
+            WebkitTransform: "rotate(90deg)", // note the capital 'W' here
+            msTransform: "rotate(90deg)", // 'ms' is the only lowercase vendor prefix
+          }}
+        />
+        ```
 
-### code-splitting
-ویژگی پشتیبانی شده توسط باندلر‌هایی مثل webpack و browserify هستش که می‌تونه بسته‌های مختلفی ایجاد کنه که می‌تونه به صورت پویا در زمان اجرا بارگیری بشه.
+1. #### NOTES
+      - If we update the state directly, our component will not re-render.
+      - Callback methods in React are usually passed as the second parameter of hooks and can be executed after the hook operation is done.
+      ```
+      setState({ name: "John" }, () =>
+        console.log("The name has updated and component re-rendered")
+      )
+      ```
+      - The dangerouslySetInnerHTML feature is React's alternative to using innerHTML in the browser's DOM. Its functionality is similar to innerHTML, but using it carries a high risk of cross-site-scripting (XSS) attacks.
 
-### Imperative vs Declarative
-- Imperative (دستوری): تمرکز روی چگونه انجام دادن (جزئیات).
-- Declarative (بیانی): تمرکز روی چه چیزی انجام دادن (نتیجه).
+      - The CLI environment in React is called CRA, which stands for create-react-app.
 
-یک دکمه لایک را در نظر بگیرید برای هندل کردن حالت های فعال و غیر فعال این دکمه دو تا راه حل وجود داره 
-1. استفاده از یک کامپوننت و هندل کردن رنگ با if
-2. استفاده از دو تا کامپوننت و هر رنگ جداگانه کامپوننت داشته باشد
+      - If we use Template strings in the template, we must include the this keyword. If we use it normally, there is no need for it.
+      ```
+      <img className="image" src={"images/" + props.image} />
 
-# Hooks
-- هوک ها فقط در ریاکت کامپوننت استفاده می شوند
-- هوک‌ها رو فقط در ابتدای کامپوننت‌ها صدا کنیم.
-- بوسیله کتابخانه eslint-plugin-react-hooks میتوانیم اطمینان حاصل کنیم از این شروط در پروژه ما اجرا شده.
+      <img className="image" src={`images/${this.props.image}`} />
+      ```
 
-# React Style (CSS)
-```
-const divStyle = {
-  color: "blue",
-  backgroundImage: "url(" + imgUrl + ")",
-};
+      - To run the application with SSL, we use the following command.
+      ```
+      "scripts": {
+        "start": "set HTTPS=true && react-scripts start"
+      }
+      ```
 
-function HelloWorldComponent() {
-  return <div style={divStyle}>Hello World!</div>;
-}
+1. #### React Routing
+        ```
+        function App() {
+          return (
+            <Router>
+              <Switch>
+                <Route path="/" exact component={HomePage} />
+                <Route path="/user/:userId" component={User} />
+              </Switch>
+            </Router>
+          );
+        }
+        ```
+        ```
+        function HomePage() {
+          const history = useHistory();
+          const handleClick = () => {
+            history.push('/about');
+          };
+          return (
+            <div>
+              <h1>Main Page</h1>
+              <button onClick={handleClick}>go to About</button>
+            </div>
+          );
+        }
+        ```
+        ```
+        function HomePage() {
+          const history = useHistory();
+          const handleClick = (userId) => {
+            history.push(`/user/${userId}`);
+          };
+          return (
+            <div>
+              <button onClick={() => handleClick(123)}> go to page with id 123</button>
+            </div>
+          );
+        }
 
-<div
-  style={{
-    transform: "rotate(90deg)",
-    WebkitTransform: "rotate(90deg)", // note the capital 'W' here
-    msTransform: "rotate(90deg)", // 'ms' is the only lowercase vendor prefix
-  }}
-/>
-```
+        function User({ match }) {
+          const { userId } = match.params;
+          return (
+            <div>
+              <h1>User profile with ID {userId}</h1>
+            </div>
+          );
+        }
+        ```
+        - The React Router framework is a wrapper around the history library, which manages actions on window.history using the hash and browser objects.
 
-# NOTES
-- اگر `state` را مستقیم آپدیت کنیم کامپوننت ما ری رندر نمی شود.
+        - For multilingual support in React, we use the React-Intl library.
   
-- متدهای `Callback` در ریاکت معمولا به عنوان پارمترهای دوم هوکس ها می آیند و بعد از عملیات هوکس می شود کاری انجام داد.
-```
-setState({ name: "John" }, () =>
-  console.log("The name has updated and component re-rendered")
-)
-```
+1. #### basic rules in JSX
+        - If we want to use a CSS tag, we use className instead of class because class is a reserved word in JavaScript.
+        - We must have a single root element. All the code should be inside one element, like the App element in React.
+        - Comments cannot be placed like in HTML, instead, they must be written like JavaScript comments.
 
-- ویژگی `dangerouslySetInnerHTML` جایگزین ری‌اکت واسه استفاده از `innerHTML` توی `DOM` مرورگره و کارکردش درست مثل `innerHTML` هستش، استفاده از این ویژگی به خاطر حملات `cross-site-scripting(XSS)` ریسک بالایی داره.
-  
-- محیط `CLI` در ریاکت را اصطلاحا `CRA` میگویند که مخفف `create-react-app`
-
-- اگر در تمپلیت از روش  Template strings استفاده کنیم باید کلمه کلیدی this را بزاریم اگر عادی استفاده کنیم نیازی نیست
-```
-<img className="image" src={"images/" + props.image} />
-
-<img className="image" src={`images/${this.props.image}`} />
-```
-
-- برای اجرای برنامه بصورت SSL از دستور زیر استفاده می کنیم
-```
-"scripts": {
-  "start": "set HTTPS=true && react-scripts start"
-}
-```
-
-## React Routing
-```
-function App() {
-  return (
-    <Router>
-      <Switch>
-        <Route path="/" exact component={HomePage} />
-        <Route path="/user/:userId" component={User} />
-      </Switch>
-    </Router>
-  );
-}
-
-```
-```
-function HomePage() {
-  const history = useHistory();
-  const handleClick = () => {
-    history.push('/about');
-  };
-  return (
-    <div>
-      <h1>صفحه اصلی</h1>
-      <button onClick={handleClick}>انتقال به صفحه About</button>
-    </div>
-  );
-}
-```
-```
-function HomePage() {
-  const history = useHistory();
-  const handleClick = (userId) => {
-    history.push(`/user/${userId}`);
-  };
-  return (
-    <div>
-      <button onClick={() => handleClick(123)}>انتقال به صفحه کاربر با شناسه 123</button>
-    </div>
-  );
-}
-
-function User({ match }) {
-  const { userId } = match.params;
-  return (
-    <div>
-      <h1>پروفایل کاربر با شناسه {userId}</h1>
-    </div>
-  );
-}
-```
-- بستر React Router یه wrapper روی کتابخونه history هست که اعمال اجرایی بر روی window.history رو با استفاده از ابجکت‌های hash و browser مدیریت می‌کنه.
-
-- برای چند زبانگی در React از کتابخانه React-Intl استفاده میکنیم.
-  
- ### basic rules in JSX
- - اگر بخواهیم تگ css استفاده کنیم به جای class از className استفاده می کنیم. چون class کلمه رزرو شده در js می باشد.
- - یک المنت ریشه واحد باید داشته باشیم.. تمامی کدها باید داخل یک المنت مثلا در react المنت App باشد.
+        ```
+        {/*comment*/}
+        ```
+        - Every element we open must be closed. For example, if we want to use the <br> tag, we need to write it as <br />.
+        - We can only use JavaScript inside JSX as an expression, such as using a loop or displaying the value of a variable.
  
- - کامنت را نمی توانیم مشابه html قرار دهیم بلکه باید مشابه js کامنت بگذاریم.
+        ```
+        const user= "Ehsan";
 
-```
-{/*comment*/}
-```
- - هر المنت که باز می کنیم باید حتما ببندیم. مثلا اگر تگ br بخواهیم استفاده کنیم باید بگیم 
- ```
-<br/>
-```
-- فقط به اندازه یک expression می توانیم داخل jsx از javascript استفاده کنیم. مثلا از حلقه استفاده کنیم .. مقدار یک متغیر را نمایش بدهیم...
- 
- ```
-const user= "Ehsan";
+        <div className="App">
+          {user? <h1>Hello , {user}</h1> : <h1>Hello , User</h1>}
+        </div>
+        ```
 
-<div className="App">
-  {user? <h1>Hello , {user}</h1> : <h1>Hello , User</h1>}
-</div>
-```
+        ```
+        const Users = [
+          {fistName:"Monica"},
+          {fistName:"Ross"},
+          {fistName:"Rachel"}
+        ]
 
-```
-const Users = [
-  {fistName:"Monica"},
-  {fistName:"Ross"},
-  {fistName:"Rachel"}
-]
+        /* in JSX */
+        <div className="App">
+        {Users.map(name =>(
+          <h1>{name.firstName}</h1>
+        ))}
+        </div>
+        ```
+1. #### key 
+      - It is a string property used in lists. This property helps React detect changes and gives each item a unique identity and order.
+      ```
+      const ids = [1,2,3,4,5];
+      const listElements = ids.map((id)=>{
+          return(
+              <li key={id.toString()}>{id}</li>
+          )
+      })
+      ```
 
-/* in JSX */
-<div className="App">
- {Users.map(name =>(
-  <h1>{name.firstName}</h1>
- ))}
-</div>
-```
-### key 
-یک ویژگی رشته ای است که در لیست ها مورد استفاده قرار میگیرد. این ویژگی کمک میکند ریاکت تغییرات را تشخیص دهد و هویت و ترتیب یونیک به هر آیتم می دهد
-```
-const ids = [1,2,3,4,5];
-const listElements = ids.map((id)=>{
-    return(
-        <li key={id.toString()}>{id}</li>
-    )
-})
-```
-
-### چرخه حیات در کامپوننت های تابعی
-
-چرخه حیات در کامپوننت های تابعی توسط هوک useEffect انجام می گیرد
-
-1- mount :
-```
-useEffect(() => { },[]);
-```
-2- update
-```
-useEffect(() => {}, [color]);
-```
-3- unmount
-```
-useEffect(() => { return() => { } },[]);
-```
+1. #### Lifecycle in Functional Components
+      - The lifecycle in functional components is handled by the useEffect hook.
+        1. mount 
+        ```
+        useEffect(() => { },[]);
+        ```
+        1. update
+        ```
+        useEffect(() => {}, [color]);
+        ```
+        1. unmount
+        ```
+        useEffect(() => { return() => { } },[]);
+        ```

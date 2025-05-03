@@ -130,3 +130,6 @@ infoLog('This is an info message #2');
 4. Concurrency and Coordination
 5. Monitoring and Observability
 6. Resilience and Error Handling
+1. ### Imperative vs Declarative
+      - Imperative (دستوری): تمرکز روی چگونه انجام دادن (جزئیات).
+      - Declarative (بیانی): تمرکز روی چه چیزی انجام دادن (نتیجه).
