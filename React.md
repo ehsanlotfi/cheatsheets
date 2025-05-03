@@ -421,7 +421,7 @@
 
           return <Handler {...props} />;
         };
-```
+        ```
 
 1. #### StrictMode Tag
       - It doesn’t render any extra DOM element, but it enables warnings and extra checks for its child components. This only works in development mode.
