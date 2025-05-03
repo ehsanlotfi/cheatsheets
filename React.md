@@ -315,7 +315,7 @@
 1. #### shallow comparison
       - When props or state in a component changes, PureComponent performs a shallow comparison on props and state. This action is called shallow comparison.
 
-### Synthetic events
+1. #### Synthetic events
       - When you define an event like onClick in React, React uses something called a Synthetic Event instead of directly using browser events to provide consistent behavior across all browsers.
 
 1. #### Ref and ForwardRef
