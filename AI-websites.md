@@ -1,5 +1,10 @@
 # AI Tools
 
+### Auto Coding
+- [bolt](https://bolt.new/)
+- [fireBase](https://studio.firebase.google.com)
+- [lovable](https://lovable.dev/)
+
 ### Text
 
 - [chatgpt](https://chatgpt.org)
