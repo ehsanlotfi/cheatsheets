@@ -1,3 +1,26 @@
+1. #### What Next.js Adds to React
+      - Server-Side Rendering (SSR) & Static Generation (SSG)
+        - You can build pages on the server or at build time. This helps with SEO and speed.
+      - File-based Routing
+        - No need for react-router. Just create a file in the pages/ folder and it becomes a route.
+      - Built-in API Routes
+        - You can write backend code (like APIs) directly in pages/api/.
+      - SEO Friendly
+        - Pages are pre-rendered as HTML, so Google can read them easily.
+      - Code Splitting & Fast Loading
+        - Loads only what’s needed. Faster for users.
+      - Image Optimization
+        - The next/image component resizes and loads images efficiently.
+      - Support for CSS, Sass, Tailwind
+        - Styling is easy with built-in support for modern CSS tools.
+      - Easy Deployment with Vercel
+        - You can deploy your app quickly with Vercel, the company behind Next.js.
+      - i18n (Internationalization)
+        - Built-in support for multiple languages.
+      - Mix Static & Dynamic Pages
+        - You can use both static and server-rendered pages in one app.
+
+
 1. #### useState
       ```
       function Counter() {
