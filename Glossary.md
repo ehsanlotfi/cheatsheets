@@ -1,135 +1,151 @@
-#####  Concurrency
-همروندی در برنامه‌نویسی به معنای قابلیت اجرای همزمان چندین فرآیند و یا چندین نخ از یک برنامه است. اما برای استفاده بهینه از Concurrency باید از قفل گذاری و سایر مفاهیم مرتبط با همروندی نیز آگاهی داشته باشیم.
+1. #### SOLID Principles
+  - Single Responsibility Principle
+    - Each class or module should be responsible for a single task.
+  - Open-Closed Principle
+    - A class should be open for extension but closed for modification.
+  - Liskov Substitution Principle
+    - If class A inherits from class B, objects of class A should be able to replace objects of class B without affecting the program.
+  - Interface Segregation Principle
+    - Interfaces should be small and specific, giving access only to the needed parts.
+  - Dependency Inversion Principle
+    - Higher-level classes should not depend on lower-level classes; both should depend on abstractions.
 
-##### FMP ( First Meaningful Paint )
-اولین لحظه ای کاربر میتوان محتوای صفحه را ببیند.
-##### TTI ( Time to Interactive )
-اولین لحظه ای که کاربر میتوان از صفحه استفاده کند.
+1. #### Microservices vs Monolithic
+  - Microservices Advantages
+    - Developer Productivity
+    - Easy Deployment
+  - Microservices Disadvantages
+    - Complex Interactions
+    - Monitoring Challenges
 
-### KISS (keep it simple and stupid)
-ساده ترین روش ممکن کد بزنید و از پیچیدگی اجتناب کنید
+1. #### ACID Properties in DBMS
+  - Atomicity: A transaction should be fully completed or not done at all.
+  - Consistency: The database should transition from one valid state to another.
+  - Isolation: Transactions should be independent of each other.
+  - Durability: Changes made by a transaction must persist, even in case of failures.
 
-### YANGI (You ain't gonna need it)
- شما به آن نیاز نخواهید داشت.
- چه دلیلی داره کدی بنویسید که به آن نیاز ندارید
- کدی اضاف نشود تا وقتی که نیاز آن احساس نشده
- ### DRY ( Don’t repeat yourself )
- خودت را تکرار نکن
- اگر پروژه ای را که آغاز کرده اید بسیار مهم است که هیچ وقت چیزی را دوبار تکرار نکنید.
- 
- ### Shallow Copy VS Deep Copy
- مشابه رفرنس تایپ و وریبل تایپ است.
+### Distributed Systems
+  - Scaling
+    - Vertical: Increasing resources on a single node.
+    - Horizontal: Adding more nodes.
+  - Availability
+    - Ensuring services remain available even in case of failures.
+    - Replication: Having backup nodes.
+    - Load Balancing: Distributing load evenly.
+    - Distributed Data Storage: Storing data in multiple locations.
+    - Consistency Models: Defining the level of consistency among clients.
+  - Latency and Performance
+    - Latency: Time taken to perform an operation.
+    - Performance: Overall efficiency.
+    - Data Locality: Accessing data close to the processing unit.
+    - Caching Strategies: Reducing data retrieval time.
+  - Concurrency and Coordination
+  - Monitoring and Observability
+  - Resilience and Error Handling
 
- ### LOD ( Law of Demeter )
- قانون دمیتر - هر واحد باید تنها دانش اندکی در مورد واحدهای دیگر داشته باشد و این واحدها صرفاً شامل واحدهای کاملاً مرتبط به واحد کنونی باشند. 
- # SOC ( Separation of Concerns )
- تفکیک دغدغه ها - تفکیک کردن حوزه های مختلف نرم افزار می باشد  
- 
-### SOLID
+1. #### Shallow Copy VS Deep Copy
+  - Copy just reference vs. independent copy (new reference)
 
-##### Single Responsibility
-هر کلاس یا ماژول باید مسئولیت یک وظیفه مشخص را داشته باشد 
+1. #### Mutable vs Immutable
+  - Mutable: Can be changed after creation.
+  - Immutable: Cannot be changed after creation.
+    ```
+      // Mutable Example (Object and Array)
+      let obj = { name: "Alice" };
+      obj.name = "Bob";  // Changed: { name: "Bob" }
 
-##### Open closed
+      let arr = [1, 2, 3];
+      arr.push(4);       // Changed: [1, 2, 3, 4]
+    ```
+    ```
+      // Immutable Example (String and Number and ...)
+      let str = "Hello";
+      str[0] = "J";      // No change: "Hello" (strings are immutable)
 
-یک کلاس باید در برابر تغییرات بسته باشد ولی باید قابلیت توسعه را داشته باشد
-##### Liskov
-اگر کلاس A از کلاس B ارث‌بری کرده باشد، در همه‌ی موارد می‌توان از شی‌ء‌های کلاس A به جای شیء‌های کلاس B استفاده کرد، بدون داشتن هیچ تفاوتی در عملکرد برنامه.
+      let num = 5;
+      num = num + 1;     // Creates a new number: 6 (original 5 is unchanged)
+    ```
 
-##### Dependency inversion
+1. #### Parallelism vs Concurrency
+  - Parallelism: Two people doing different tasks at the same time without interfering with each other.
+    - Example: One person draws in the living room, and another in the bedroom, both at the same time.
+  - Concurrency: One person switching between tasks quickly.
+    - Example: One person first draws, then reads a book, switching back and forth.
 
-کلاس سطح بالاتر نباید به کلاس های سطح پایینتر وابسته باشند هر دو باید به انتزاعات وابسته باشد.
-##### Interface Segregation 
-اینترفیس ها اینقدر کوچک شوند که از برنامه نویس فقط به قسمتی که نیاز دارد دسترسی داشته باشد
- 
- 
- 
-### SSL (Secure Sockets Layer) OR TLS (Transport Layer Security)
- یک پروتکل امنیتی است که در اینترنت برای ارتباطات امن بین مرورگر و سرور استفاده می‌شود. SSL با استفاده از الگوریتم‌های رمزنگاری قوی، اطلاعاتی که بین مرورگر و سرور رد و بدل می‌شوند را محافظت می‌کند.
+### Imperative vs Declarative
+  - Imperative: Focus on how to perform tasks.
+  - Declarative: Focus on what to achieve.
 
+1. #### FMP (First Meaningful Paint)
+  - The first moment when the user can see the page content.
 
+1. #### TTI (Time to Interactive)
+  - The first moment when the user can interact with the page.
 
- ### JIT (Just-In-Time) VS AOT (Ahead-of-Time)
-  - در جیت کد برنامه در زمان اجرا کامپایل می شود مثلا ما در مرورگر فایل های تایپ اسکریپت را داریم و و در محیط دولوپ بیشتر کاربرد دارد و تغییرات را میتونیم ببینم انعطاف پذیری بیشتری دارد.
- -  در AOT کد برنامه کامپایل شده است و بیشتر در محیط ها production کاربرد دارد و سرعت و عملکرد بیشتری دارد
- 
+1. #### KISS (Keep It Simple and Stupid)
+  - Write code in the simplest way possible and avoid complexity.
 
-### Parallelism vs Concurrency
-پارالل یعنی این زبان می‌تونه چندین کار رو به صورت هم‌زمان و مجزا شروع و پردازش کنه. ولی همزمانی 
+1. #### YANGI (You Ain't Gonna Need It)
+  - Don't write code you don't need. Add code only when the need arises.
 
+1. #### DRY (Don't Repeat Yourself)
+  - Never repeat anything in your project. Keep the code clean and concise.
 
-### Currying technique
-با این تکنیک می‌تونیم بجای داشتن یک تابع با چندین پارامتر، چند تابع (تو در تو) با یک پارامتر داشته باشیم.
+1. #### LoD (Law of Demeter)
+  - A principle that states an object should only talk to its immediate friends, not to strangers.
+  ```
+  // LoD (Bad Practice)
+    const car = {
+    engine: {
+        start: () => console.log("Engine started")
+      }
+    };
+    car.engine.start();  // "Engine started"
+  ```
+  ```
+  // LoD (GOOD Practice) hides internal details, promoting modularity and easier maintenance.
+    const car = {
+        startEngine: function() {
+          this.engine.start();
+        },
+        engine: {
+          start: () => console.log("Engine started")
+        }
+      };
+    car.startEngine();
+  ```
 
-```
-function logger(level, message) {
-  console.log(`${level}: ${message}`);
-}
+1. #### SOC (Separation of Concerns)
+  - Dividing software into distinct sections to handle different issue.
 
-logger('warning', 'This is a warning message');
-logger('warning', 'This is another warning message');
+1. #### SSL (Secure Sockets Layer) OR TLS (Transport Layer Security)
+  - A security protocol used on the internet for secure communication between the browser and server.
 
-```
-```
-function logger(level) {
-  return function (message) {
-    console.log(`${level}: ${message}`);
-  }
-}
+1. #### JIT (Just-In-Time) VS AOT (Ahead-of-Time)
+  - JIT compiles code at runtime, useful for development with flexibility.
+  - AOT compiles code ahead of time, mostly for production environments with better performance.
 
-const infoLog = logger('info');
+1. #### Currying Technique
+  - Transforming a function with multiple arguments into a sequence of functions each with a single argument.
+    ```
+      function logger(level, message) {
+        console.log(`${level}: ${message}`);
+      }
 
-infoLog('This is an info message #1');
-infoLog('This is an info message #2');
+      logger('warning', 'This is a warning message');
+      logger('warning', 'This is another warning message');
+    ```
+    ```
+      function logger(level) {
+        return function (message) {
+          console.log(`${level}: ${message}`);
+        }
+      }
 
-```
-### Sharding techniques   
-شاردینگ یعنی تقسیم داده‌ها به قطعه‌های کوچک و ذخیره آنها در سرورهای مختلف برای بهبود عملکرد و ظرفیت سیستم.
+      const infoLog = logger('info');
+      infoLog('This is an info message #1');
+      infoLog('This is an info message #2');
+    ```
 
-### Microservices vs Monolithic 
-##### Microservices Advantages
-##### Microservices Disadvantages
-- Developer Productivity
-- Complex Interactions
-- Deployment
-- Monitoring
-
-### ACID Properties in DBMS
-- Atomicity
-  یک تراکنش باید یا به طور کامل انجام شود و تغییرات آن به پایگاه داده اعمال شود، یا هیچ تغییری در پایگاه داده اعمال نشود.
-- Consistency
-   پس از اجرای یک تراکنش، پایگاه داده باید از یک حالت معتبر به حالت دیگری معتبر برود، بدون اینکه در وسط راه به یک حالت نامعتبر برسد
-- Isolation
-  این ویژگی به معنای جدا بودن تراکنش‌ها از یکدیگر است. به این معنا که یک تراکنش نباید توسط تراکنش‌های دیگر تحت تأثیر قرار گیرد و تأثیری بر آنها بگذارد
-- Durability
-  پایداری به معنای این است که هر تغییری که توسط یک تراکنش در پایگاه داده اعمال شود، باید برای همیشه در پایگاه داده باقی بماند و حتی در صورت بروز خطا یا قطع برق، این تغییرات از دست نروند.
-
-### Distributed systems
-1. Scaling
-  
- مقیاس‌پذیری به افزایش قابلیت‌های سیستم با افزایش ترافیک و بار کاری اشاره دارد. این کار با دو روش عمودی و افقی انجام می‌شود. در مقیاس‌پذیری عمودی، منابع یک سرور یا نود افزایش می‌یابند، مثلاً پردازنده و حافظه. اما در مقیاس‌پذیری افقی، به جای افزایش قدرت یک نود، تعداد نودها افزایش می‌یابد.
-1. Availability
-
-دسترسی‌پذیری به این معناست که سیستم به کاربران خدمات خود را حتی در صورت بروز مشکل، ادامه می‌دهد. این مفهوم با میزان زمانی که سیستم در دسترس بوده (uptime) و زمانی که در دسترس نبوده (downtime) سنجیده می‌شود.
-
-  -  Replication and Redundancy
-تکرار و تکثیر به معنای داشتن کپی از یک نود که در صورت خرابی نود به سرعت جایگزین شود
-  -  Load Balancing
-توزیع بار بین نود های مختلف که هیچ نودی تحت فشار زیاد نرود
-  -  Distributed Data Storage
-ذخیره داده در نقاط مختلف جغرافیایی که اگر یک دیتاسنتر مشکل بخورد بقیه دیتاسنتر ها در دسترس باشند
-  - Consistency Models
-ییکپارچگی مشخص می‌کند که در چه میزان عملیات‌های سیستم هماهنگ با یکدیگر باشند. دو مدل معروف یکپارچگی، یعنی قوی و ضعیف، به ما این تفاوت را نشان می‌دهند. در یکپارچگی قوی، همه کلاینت‌ها همواره دیدگاه یکسانی از داده‌ها دارند، در حالی که در یکپارچگی ضعیف، ممکن است دیدگاه داده‌ها بین کلاینت‌ها تفاوت داشته باشد.
-3. Latency and performance
-  تاخیر یعنی زمانی که طول می‌کشد یک عملیات انجام شود، در حالی که عملکرد به کارایی و کیفیت کلی انجام دادن کارها در سیستم یا برنامه اشاره دارد. برای این پارامتر راهکارهای زیر وجود دارد.
-    - Data Locality
-    این معناست که وقتی که یک برنامه داده‌ای را می‌خواند یا مورد استفاده قرار می‌دهد، سعی می‌کند از داده‌هایی استفاده کند که در نزدیکی فرآیند اجرایی یا منبع ذخیره‌سازی قرار دارند
-    - Load Balancing
-    - Cashing Strategies
-      
-4. Concurrency and Coordination
-5. Monitoring and Observability
-6. Resilience and Error Handling
-1. ### Imperative vs Declarative
-      - Imperative (دستوری): تمرکز روی چگونه انجام دادن (جزئیات).
-      - Declarative (بیانی): تمرکز روی چه چیزی انجام دادن (نتیجه).
+1. #### Sharding Techniques
+  - Dividing data into smaller parts and distributing them across multiple servers to improve performance.
