@@ -72,7 +72,7 @@
       - Concurrency: One person switching between tasks quickly.
         - Example: One person first draws, then reads a book, switching back and forth.
 
-### Imperative vs Declarative
+1. #### Imperative vs Declarative
       - Imperative: Focus on how to perform tasks.
       - Declarative: Focus on what to achieve.
 
