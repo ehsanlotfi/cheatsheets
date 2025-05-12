@@ -338,3 +338,7 @@
         - Prevents adding or removing properties, but you can still modify existing ones.
       - `Object.freeze()`
         - Prevents adding, removing, and modifying properties.
+
+1. #### HMR (Hot Module Replacement ) vs Hot reload
+    - `HMR (Hot Module Replacement):` Only the changed part of the app is updated without a full reload, and the state is preserved.
+    - `Hot Reload:` The whole page is reloaded, and the app's state may be lost.
