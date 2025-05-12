@@ -1,3 +1,41 @@
+1. #### Static Class:
+      - A `non-inheritable` class, typically used to extend `built-in classes` (e.g., String) via `extension methods`, and does not require `instantiation`;
+
+1. #### Extension Methods:
+      - Used to add methods to an existing class (like string) without modifying its source code.
+
+1. #### Partial Class:
+      - A class whose definition is split across `multiple files`, useful for `large` and `complex classes`.
+
+1. #### Abstract Class:
+      - Cannot be `instantiated` and is intended solely for `inheritance`.
+
+1. #### Sealed Class:
+      - Prevents further `inheritance`; no class can instance from it.
+
+1. #### Reflection:
+      - The process of obtaining `metadata` about objects and classes at `runtime`.
+
+1. #### Object:
+      - An instance created from a class.
+
+1. #### Abstraction:
+      - Hiding complex implementation details and showing only essential features, like a driver knowing how to accelerate without understanding the engine.
+
+1. #### Overriding vs Overloading
+      - `Overriding:` Replacing a parent class method in a derived class with a new implementation.
+      - `Overloading:` Defining multiple methods with the same name but different parameters (`polymorphism`).
+
+1. #### Abstract vs Interface:
+      - Interface supports `multiple inheritance`, abstract does not.
+      - Abstract can define and `implement methods`; interface can only define.
+      - Abstract is used when not all methods need implementation.
+      - Interface has `no constructors`.
+      - Neither can be instantiated.
+
+1. #### throw vs throw x
+    - `throw` returns more information.
+    
 1. #### SOLID Principles
       - Single Responsibility Principle
         - Each class or module should be responsible for a single task.

@@ -13,7 +13,7 @@
     - `Impure Pipe`: Called on every change detection cycle, regardless of input changes.
 
 1. #### Annotation vs Decorator
-    - `Annotation`: Provides **metadata** about a class or variable `@Input()`, `@Output()`, ... .
+    - `Annotation`: Provides metadata about a class or variable `@Input()`, `@Output()`, ... .
     - `Decorator`: A function that adds behavior or functionality to a class, method, or variable `@Component({ })`, `@Directive({ })`.
 
 1. #### Observable vs Promise 
