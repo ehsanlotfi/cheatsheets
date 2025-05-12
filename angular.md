@@ -1,12 +1,17 @@
-### ng-template vs ng-container
- در واقع ng-template دو ویژگی زیر را دارد.
-- برای مواقعی است که نمیخوام بصورت سریع نمایش داده شود و نمایش آن بسته به شروطی است
-- برای استفاده از دایرکتیو های پیش فرض مثل ngIf *ngFor* باید بصورت  [ngIf]  استفاده شود.
-
-در مورد ng-container  دقیقا دو مورد بالا را برعکس کنید.
+1. #### ng-template vs ng-container
+    - ng-template:
+        - It is used to define a template that is not rendered directly in the `DOM`.
+        - It will only be displayed when a condition is met (e.g., using `*ngIf` or `*ngFor`).
+        - It does not appear in the `DOM` unless activated.
+    - ng-container:
+        - It is a virtual element that does not create an extra tag in the `DOM`.
+        - Used to group multiple elements without affecting the structure of the `DOM`.
+            - Suitable for applying directives like `*ngIf` and `*ngFor`
  
-### pure pipe vs impure pipe
-بصورت پیش فرض pure است این نوع پایپ ها زمانی فراخوانی میشوند که ورودی تغییر کند و impure ها همیشه فراخوانی می شوند.
+1. #### pure pipe vs impure pipe
+    - Pure Pipe: Called only when the input value changes (default behavior).
+    - Impure Pipe: Called on every change detection cycle, regardless of input changes.
+
 ### Annotation vs Decorator
  فرقی پیدا نکردم فقط Annotation ها درون کلاس استفاده می شود برای تعریف یک متغیر مثل `()Input@` ولی Decorator برای تعریف یک کلاس استفاده می شود مثل `()component@` 
 ### Observable vs Promise 
@@ -21,3 +26,25 @@
 
 ### HMR (Hot Module Replacement ) vs Hot reload
 قسمتی از صفحه بروز می شود و استیت ها تغییر نمیکند 
+
+## Subjects
+- #### Subject in Rxjs
+مشترکین بعد از عضو شدن به سابجکت میتوانند خروجی ها را دریافت کنند. آخرین مقدار که قبلا منتشر شده را ندارند
+- #### BehaviorSubject
+مشترکین جدید آخرین مقدار منتشر شده یا مقدار اولیه را بلافاصله پس از اشتراک دریافت می کنند.
+- #### ReplaySubject
+مشترکین جدید تمام مقادیر منتشر شده قبلی را بلافاصله پس از اشتراک دریافت می کنند
+- #### AsyncSubject
+پس از تکمیل آخرین مقدار نکس شده را همه دریافت میکنند. 
+
+- #### MergeMap, FlatMap  in Rxjs
+مرج مپ نسخه جدید فلت مپ هست درخواست ها باهم ارسال میشوند و بدون در نظر گرفتن ترتیب هر کدوم تمام شد بر میگردد. 
+
+- #### ConcatMap in Rxjs
+درخواست بصورت سری و با توجه به زمان تمام شدن قبلی بر میگردد
+
+- #### SwitchMap in Rxjs
+درخواست ها ارسال میشود به محض دریافت درخواست جدید درخواست قبلی کنسل می شود و به درخواست آخری پاسخ داده می شود مثلا برای استفاده در کادر جستجو
+
+- #### ExhaustMap in Rxjs
+برعکس سوئیچ مپ فقط درخواست اول پاسخ داده میشود بقیه همه کنسل می شود
