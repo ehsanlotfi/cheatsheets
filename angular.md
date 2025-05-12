@@ -13,7 +13,7 @@
     - `Impure Pipe`: Called on every change detection cycle, regardless of input changes.
 
 1. #### Annotation vs Decorator
-    - `Annotation`: Provides metadata about a class or variable `@Input()`, `@Output()`, ... .
+    - `Annotation`: Provides *metadata* about a class or variable `@Input()`, `@Output()`, ... .
     - `Decorator`: A function that adds behavior or functionality to a class, method, or variable `@Component({ })`, `@Directive({ })`.
 
 1. #### Observable vs Promise 
@@ -27,10 +27,10 @@
     - In Angular, unit testing is done using the `Jasmine` framework for writing test assertions and `Karma` for running the tests.
 
 1. #### type of Subject in Rxjs
-    `Subject`: Subscribers receive new values after subscribing but do not get the last emitted value.
-    `BehaviorSubject`: New subscribers immediately receive the last emitted value or the initial value.
-    `ReplaySubject`: New subscribers immediately receive all previously emitted values.
-    `AsyncSubject`: Only after completion, the last emitted value is sent to all subscribers
+    - `Subject`: Subscribers receive new values after subscribing but do not get the last emitted value.
+    - `BehaviorSubject`: New subscribers immediately receive the last emitted value or the initial value.
+    - `ReplaySubject`: New subscribers immediately receive all previously emitted values.
+    - `AsyncSubject`: Only after completion, the last emitted value is sent to all subscribers
 
 1. #### important operators in Rxjs
     - `MergeMap / FlatMap`: Requests are sent simultaneously, and the order doesn't matter; the result is returned when each one finishes.
