@@ -29,7 +29,7 @@
         ```
 
 1. #### Encapsulation 
-    - it defaults is `internal`.
+    - defaults is `internal`.
 ![image](https://github.com/ehsanlotfi/cheatsheets/assets/25532726/7b17b920-4f98-4c00-9630-ce8a8536ff69)
 
 
