@@ -392,26 +392,25 @@
 
 1. #### PropType
       - In development environments, it's useful for specifying the input type of a component. With TypeScript, you can also perform type checking to ensure that the correct types are passed to components.
-      
-            ```
-            import React from "react";
-            import PropTypes from "prop-types";
 
-            const User = (props) => {
-              return (
-                <>
-                  <h1>{`Welcome, ${props.name}`}</h1>
-                  <h2>{`Age, ${props.age}`}</h2>
-                </>
-              );
-            }
+      ```
+        import React from "react";
+        import PropTypes from "prop-types";
 
-            User.propTypes = {
-              name: PropTypes.string.isRequired,
-              age: PropTypes.number.isRequired,
-            };
-            ```
+        const User = (props) => {
+          return (
+            <>
+              <h1>{`Welcome, ${props.name}`}</h1>
+              <h2>{`Age, ${props.age}`}</h2>
+            </>
+          );
+        }
 
+        User.propTypes = {
+          name: PropTypes.string.isRequired,
+          age: PropTypes.number.isRequired,
+        };
+      ```
 1. #### error boundary
       - In class components, error boundaries are used and implemented with methods like componentDidCatch(error, info) and static getDerivedStateFromError.
       - In function components, error boundaries can't be used directly, and they are usually not needed. Instead, for most cases, an error boundary is defined for the entire application, which can be implemented with try...catch.
