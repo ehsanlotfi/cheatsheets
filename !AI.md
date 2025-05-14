@@ -105,7 +105,7 @@
 
 
 0. Unconditional Image Generation
-    - These are models that generate new images without requiring specific input. A model like GAN.
+    - These are models that generate new images without requiring specific input. a model like GAN.
 
 0. Depth Estimation
     - These are models that estimate depth (3D information) from 2D images.  
@@ -154,7 +154,7 @@
     - Reinforcement Learning from Human Feedback (RLHF)
 
 0. Model Distillation 
-    - iis a technique where a big model (teacher) teaches a smaller model (student).
+    - Is a technique where a big model (teacher) teaches a smaller model (student).
     - The big model is smart but slow. The small model learns from it to be fast and still good.
     - It uses the soft outputs (like 0.7 cat, 0.2 dog, 0.1 rabbit) instead of just hard labels.
 
@@ -184,7 +184,7 @@
     - OpenCV
     - Transformers
 
-0. Deep learning And Anylyse data
+0. Deep learning And Analyse data
     - Jupyter Notebook, Polar, PySpark, Plotly
 
 0. Vector Databases

@@ -88,6 +88,7 @@
     - `IQueryable`: Used for `querying` data from external sources like `databases` (e.g., `LINQ` to `SQL`). It supports `Deferred Execution` and allows dynamic query building through Expression Trees.
 
 1. #### Delegate VS Event 
+    - A `Delegate` is a method pointer that can be `called directly`, while an Event is a restricted delegate that can only be `triggered by the class` that defines it.
     - `Delegate`: A `pointer` type that can hold references to one or more methods. When invoked, the method associated with it gets executed. Delegate is used to implement design patterns like `Observer` and `Callback`.
         - `Default Delegate`: A delegate that points to a specific method.
             ```
@@ -156,8 +157,8 @@
     - `readonly`: Can be assigned either at declaration or in the constructor.
 
 1. #### var vs dynamic 
-    - `var`: The variable type is determined at compile time.
-    - `dynamic`: The variable type is determined at runtime.
+    - `var`: The variable type is determined at `compile time`.
+    - `dynamic`: The variable type is determined `at runtime`.
         ```
         var x = 10;           // Compile-time type (int)
         dynamic y = "Hello";  // Runtime type (string)
@@ -176,8 +177,8 @@
         ```
 
 1. #### string vs StringBuilder
-    `string`: Creates a `new memory space` for each concatenation.
-    `StringBuilder`: Modifies the existing memory space without creating a new one.
+    - `string`: Creates a `new memory space` for each concatenation.
+    - `StringBuilder`: Modifies the `existing memory space` without creating a new one.
         ```
         string str = "Hello";
         str += " World";  // New memory allocated
@@ -186,8 +187,8 @@
         ```
 
 1. #### is vs as
-    `is`: Checks if an object is of a specific type (returns true or false).
-    `as`: Tries to cast an object to a specific type (returns null if the cast fails).
+    - `is`: Checks if an object is of a specific type (returns true or false).
+    - `as`: Tries to cast an object to a specific type (returns null if the cast fails).
         ```
         object obj = "Hello";
 

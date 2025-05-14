@@ -122,12 +122,12 @@
           ```
 1. #### useMemo And useCallback
       - They are used for caching and preventing unnecessary renders.
-      - useMemo is used to remember a calculated value so it only re-computes when certain dependencies change.
+      - useMemo is used to `remember a calculated value` so it only re-computes when certain dependencies change.
       - in the below example will only recalculate number * 2 when number changes.
         ```
         const result = useMemo(() => number * 2, [number]);
         ```
-      - useCallback is used to remember a function so it doesn’t get recreated on every render.
+      - useCallback is used to `remember a function` so it doesn’t get recreated on every render.
         ```
         const handleClick = useCallback(() => { console.log('Clicked!'); }, []);
         ```
@@ -226,7 +226,7 @@
       - Whenever the main data changes, the virtual DOM is compared with the real DOM, and the changes are applied.
 
 1. #### Props vs State
-      - The first refers to the inputs of a component, while the second refers to the variables inside a component.
+      - The first refers to the `inputs` of a component, while the second refers to the variables `inside` a component.
 
 1. #### Events in React and HTML
       - In HTML, event names are in lowercase, while in React they are in camelCase.
@@ -245,10 +245,10 @@
       ```
 
 1. #### Reconciliation
-      - The literal meaning of `reconciliation` is when the state or props of a component change, React compares the newly returned element with the previously rendered one to decide whether a DOM update is really necessary. When these two values are not equal, React performs a DOM update. This process is called "reconciliation.
+      - The literal meaning of `reconciliation` is when the state or props of a component change, React compares the newly returned element with the previously rendered one to decide whether a DOM update is really necessary. When these two values are not equal, React performs a DOM update. This process is called `reconciliation`.
 
 1. #### React Fiber
-      - The new engine for reconciliation is essentially a reimplementation of the core React algorithm in version 16. The purpose of implementing React Fiber was to improve performance in areas like animations, working with layout, handling gestures, and providing the ability to pause, interrupt, or resume operations. It can also manage prioritization of necessary updates to the DOM. The most important feature of React Fiber is incremental rendering, which allows for chunking the execution process and pausing or resuming it across different frames.
+      - The new engine for `reconciliation` is essentially a reimplementation of the core React algorithm in version 16. The purpose of implementing React Fiber was to improve performance in areas like animations, working with layout, handling gestures, and providing the ability to pause, interrupt, or resume operations. It can also manage prioritization of necessary updates to the DOM. The most important feature of React Fiber is incremental rendering, which allows for chunking the execution process and pausing or resuming it across different frames.
 
 1. #### set state for dynamic Model
       ```
@@ -311,6 +311,24 @@
       console.log(applyOperation(3, 5, add));        // Output: 8
       console.log(applyOperation(3, 5, multiply));  // Output: 15
       ```
+1. #### props proxy in HOC
+      - We can add or modify the props passed to a component using the props proxy pattern.
+      ```
+      function HOC(WrappedComponent) {
+        return class Test extends Component {
+          render() {
+            const newProps = {
+              title: "New Header",
+              footer: false,
+              showFeatureX: false,
+              showFeatureY: true,
+            };
+
+            return <WrappedComponent {...this.props} {...newProps} />;
+          }
+        };
+      }
+      ```
 
 1. #### Headless Component
       - A Headless component in programming (especially in React) is a component that only manages logic and has no specific rendering.
@@ -338,28 +356,8 @@
       - When you define an event like onClick in React, React uses something called a Synthetic Event instead of directly using browser events to provide consistent behavior across all browsers.
 
 1. #### Ref and ForwardRef
-      - In class components, we use React.createRef, and in function components, we use the useRef hook.
+      - In class components, we use `React.createRef`, and in function components, we use the `useRef` hook.
     
-
-1. #### props proxy in HOC
-      - We can add or modify the props passed to a component using the props proxy pattern.
-      ```
-      function HOC(WrappedComponent) {
-        return class Test extends Component {
-          render() {
-            const newProps = {
-              title: "New Header",
-              footer: false,
-              showFeatureX: false,
-              showFeatureY: true,
-            };
-
-            return <WrappedComponent {...this.props} {...newProps} />;
-          }
-        };
-      }
-      ```
-
 1. #### Fragment
       - Using multiple elements without adding extra nodes.
       - key is the only attribute that can be passed to a Fragment.
@@ -383,12 +381,14 @@
       ```
 
 1. #### portal in React
-      - Sometimes, you need to create something like a modal or notification that visually and functionally exists outside the main part of the application. With portals, you can directly add these components to a specific part of the DOM (like <div id="modal-root">).
-        ```
-        ReactDOM.createPortal(child, container);
-        ```
-       - child: The content you want to display (e.g., a modal).
-       - container: The location in the DOM where you want the content to be rendered (e.g., #modal-root).
+      - Sometimes, you need to create something like a modal or notification that visually and functionally exists outside the main part of the application. With portals, you can directly add these components to a specific part of the DOM (like `<div id="modal-root">`).
+
+          ```
+          ReactDOM.createPortal(child, container);
+          ```
+
+      - child: The content you want to display (e.g., a modal).
+      - container: The location in the DOM where you want the content to be rendered (e.g., #modal-root).
 
 1. #### PropType
         - In development environments, it's useful for specifying the input type of a component. With TypeScript, you can also perform type checking to ensure that the correct types are passed to components.
