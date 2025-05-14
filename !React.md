@@ -411,9 +411,10 @@
           age: PropTypes.number.isRequired,
         };
       ```
+
 1. #### error boundary
-      - In class components, error boundaries are used and implemented with methods like componentDidCatch(error, info) and static getDerivedStateFromError.
-      - In function components, error boundaries can't be used directly, and they are usually not needed. Instead, for most cases, an error boundary is defined for the entire application, which can be implemented with try...catch.
+      - In class components, error boundaries are used and implemented with methods like `componentDidCatch(error, info)` and `static getDerivedStateFromError`.
+      - In function components, error boundaries can't be used directly, and they are usually not needed. Instead, for most cases, an error boundary is defined for the entire application, which can be implemented with `try...catch`.
 
 1. #### SSR in pure React
         ```
@@ -424,7 +425,7 @@
         ```
 
 1. #### Switcher Component
-      - A component that can conditionally render multiple components based on certain conditions
+      - A component that can conditionally render multiple components based on certain conditions.
         ```
         import HomePage from "./HomePage";
         import AboutPage from "./AboutPage";
@@ -461,18 +462,18 @@
       ```
 
 1. #### constructor VS getInitialState 
-      - When we use ES6 classes, we need to initialize the state inside the constructor. But when using React.createClass, we should use the getInitialState method.
+      - When we use ES6 classes, we need to initialize the state inside the constructor. But when using `React.createClass`, we should use the `getInitialState` method.
 
 1. #### super() VS super(props)
-      - Outside the constructor, it doesn't matter. But if we want to access props inside the constructor, we must use super(props).
+      - Outside the `constructor`, it doesn't matter. But if we want to access props inside the `constructor`, we must use `super(props)`.
 
 1. #### Loop in JSX
-      - only Array.prototype.map OR for statement
+      - only `Array.prototype.map`.
 
 1. #### setState Vs replaceState
       - Both are used in class components.
-      - setState merges the current state with the new one.
-      - replaceState completely replaces the current state with the new state.
+      - `setState` merges the current state with the new one.
+      - `replaceState` completely replaces the current state with the new state.
 
 1. #### State change Detection
         ```
@@ -517,6 +518,7 @@
 
         // old version
         const history = useHistory();
+
         // new 
         const navigate = useNavigate();
 
@@ -544,7 +546,7 @@
       ```
 
 1. #### Shallow Renderer package
-      - It is used for writing unit tests, and allows you to deeply inspect a component one level at a time.
+      - It is used for writing `unit tests`, and allows you to deeply inspect a component one level at a time.
         ```
         function MyComponent() {
           return (
@@ -591,14 +593,14 @@
           - `selector` is used to select a part of the state.
       - Middleware 
           - Redux Thunk
-            - It allows us to have async actions.
+            - It allows us to have `async` actions.
             - It allows us to create actions that return functions instead of normal actions.
           - Redux Promise
           - Redux Saga.
-            - A middleware for managing side effects logic in Redux applications as separate threads.
+            - A middleware for managing `side effects` logic in Redux applications as separate threads.
 
 1. #### put and call in react sega
-      - Both call and put effects are effect creators. The call function is used to create an effect that instructs the middleware to wait for the call. The put function creates an effect that tells the store to execute a specific action.
+      - Both `call` and `put` effects are effect creators. The call function is used to create an effect that instructs the middleware to wait for the call. The put function creates an effect that tells the store to execute a specific action.
 
 1. #### React Style (CSS)
         ```
@@ -619,32 +621,6 @@
           }}
         />
         ```
-
-1. #### NOTES
-      - If we update the state directly, our component will not re-render.
-      - Callback methods in React are usually passed as the second parameter of hooks and can be executed after the hook operation is done.
-      ```
-      setState({ name: "John" }, () =>
-        console.log("The name has updated and component re-rendered")
-      )
-      ```
-      - The dangerouslySetInnerHTML feature is React's alternative to using innerHTML in the browser's DOM. Its functionality is similar to innerHTML, but using it carries a high risk of cross-site-scripting (XSS) attacks.
-
-      - The CLI environment in React is called CRA, which stands for create-react-app.
-
-      - If we use Template strings in the template, we must include the this keyword. If we use it normally, there is no need for it.
-      ```
-      <img className="image" src={"images/" + props.image} />
-
-      <img className="image" src={`images/${this.props.image}`} />
-      ```
-
-      - To run the application with SSL, we use the following command.
-      ```
-      "scripts": {
-        "start": "set HTTPS=true && react-scripts start"
-      }
-      ```
 
 1. #### React Routing
         ```
@@ -745,15 +721,32 @@
 
 1. #### Lifecycle in Functional Components
       - The lifecycle in functional components is handled by the useEffect hook.
-        1. mount 
-        ```
-        useEffect(() => { },[]);
-        ```
-        1. update
-        ```
-        useEffect(() => {}, [color]);
-        ```
-        1. unmount
-        ```
-        useEffect(() => { return() => { } },[]);
-        ```
+        - mount  ``` useEffect(() => { },[]); ```
+        - update ``` useEffect(() => {}, [color]);  ```
+        - unmount  ```  useEffect(() => { return() => { } },[]); ```
+
+1. #### NOTES
+      - If we update the state directly, our component will not re-render.
+      - Callback methods in React are usually passed as the second parameter of hooks and can be executed after the hook operation is done.
+      ```
+      setState({ name: "John" }, () =>
+        console.log("The name has updated and component re-rendered")
+      )
+      ```
+      - The dangerouslySetInnerHTML feature is React's alternative to using innerHTML in the browser's DOM. Its functionality is similar to innerHTML, but using it carries a high risk of cross-site-scripting (XSS) attacks.
+
+      - The CLI environment in React is called CRA, which stands for create-react-app.
+
+      - If we use Template strings in the template, we must include the this keyword. If we use it normally, there is no need for it.
+      ```
+      <img className="image" src={"images/" + props.image} />
+
+      <img className="image" src={`images/${this.props.image}`} />
+      ```
+
+      - To run the application with SSL, we use the following command.
+      ```
+      "scripts": {
+        "start": "set HTTPS=true && react-scripts start"
+      }
+      ```
