@@ -392,6 +392,7 @@
 
 1. #### PropType
       - In development environments, it's useful for specifying the input type of a component. With TypeScript, you can also perform type checking to ensure that the correct types are passed to components.
+      
             ```
             import React from "react";
             import PropTypes from "prop-types";
