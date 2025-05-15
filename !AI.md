@@ -31,6 +31,29 @@
 
 6. Train the Model
     - Train the model using the training data.
+      ```
+        from sklearn.model_selection import train_test_split
+        from sklearn.linear_model import LinearRegression
+        from sklearn.datasets import make_regression
+        from sklearn.metrics import mean_squared_error
+
+        # Generate some synthetic data (features and labels)
+        X, y = make_regression(n_samples=100, n_features=1, noise=10, random_state=42)
+        
+        # Step 1: Split the Data (80% training, 20% testing)
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        
+        # Step 2: Train the Model
+        model = LinearRegression()
+        model.fit(X_train, y_train)
+        
+        # Step 3: Test the Model
+        y_pred = model.predict(X_test)
+        
+        # Step 4: Evaluate the Model
+        mse = mean_squared_error(y_test, y_pred)
+        print(f"Mean Squared Error: {mse:.2f}")
+      ```
 
 7. Evaluate the Model
     - Evaluate the model's performance using the test data.
