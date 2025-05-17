@@ -1,3 +1,54 @@
+1. #### useEffect vs useLayoutEffect
+      - `useEffect`: runs `after` painting, best for `async` and `non-visual` updates.
+      - `useLayoutEffect`:  runs `before` painting, best for `layout` and visual updates.
+
+1. #### cleanup in useEffect
+      - a way to clean up `side effects` when a component is `unmounted` or when `dependencies changes`.
+      - Why Use Cleanup?
+        - To prevent `memory leaks`.
+        - To `unsubscribe` from events.
+        - To `clear intervals` or `timeouts`.
+        - To cancel network requests.
+      ```
+      useEffect(() => {
+          // Side effect Section
+          console.log("Effect runs");
+
+           const intervalId = setInterval(() => { // do st }, 1000);
+
+          return () => {
+              // Cleanup Section
+
+              clearInterval(intervalId);
+              console.log("Cleanup runs");
+          };
+      }, [dependencies]);
+      ```
+
+1. #### Event Batching
+      - Event Batching `groups multiple state` updates into `one render`.
+      - `React 18+` batches updates even in `async` contexts.
+      - Use `flushSync()` to force immediate updates.
+      - Improves performance by reducing unnecessary renders.
+      ```
+      const handleImmediateUpdate = () => {
+          () => setCount1((prev) => prev + 1);
+          () => setCount2((prev) => prev + 1);
+          console.log("Immediately updated counts:", count1, count2);
+      };
+      ```
+      ```
+      import { flushSync } from "react-dom";
+
+      const handleImmediateUpdate = () => {
+          flushSync(() => setCount1((prev) => prev + 1));
+          flushSync(() => setCount2((prev) => prev + 1));
+          console.log("Immediately updated counts:", count1, count2);
+      };
+      ```
+1. #### useMemo Vs. useCallback
+    - useMemo is used to `remember a calculated value` and useCallback is used to `remember a function`.
+
 1. #### What Next.js Adds to React
       - Server-Side Rendering (SSR) & Static Generation (SSG)
         - You can build pages on the server or at build time. This helps with SEO and speed.

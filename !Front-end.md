@@ -273,6 +273,23 @@
               return ":)";
           }
         ```
+
+1. #### Type of scopes
+        - `Global Scope`: Accessible everywhere.
+        - `Function Scope`: Accessible only within a function.
+        - `Block Scope`: Accessible only within a block (`if block`, `for(loop) block`, ...).
+        - `Module Scope`: Accessible within a module unless exported.
+        - `Lexical Scope`: Inner functions can access variables from their parent scope.
+          ```
+          function outerFunction() {
+              let outerVar = "I am from outer";
+              function innerFunction() {
+                  console.log(outerVar); // Accessible due to lexical scope
+              }
+              return innerFunction;
+          }
+          ```
+
 1. #### TDZ (Temporal Dead Zone)
         - `TDZ` is the time before a `let` or `const` variable is declared, where trying to use it gives a `ReferenceError`. With `var`, this doesn't happen because it's `hoisted` and set to `undefined`.
         ```
