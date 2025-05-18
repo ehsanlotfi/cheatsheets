@@ -28,8 +28,19 @@
           - `Notifications & Background API` – Show notifications, sync in background (Notification, Service Worker).
           - `Performance & Timing API` – Measure performance and handle animation frames.
 
-1. #### MonoRepo (Microfrontend) vs MultiRepo
-      - Nx
+1. #### MonoRepo  vs Microfrontend
+      - `MonoRepo` is a version control strategy where multiple projects (often related or interdependent) are stored in a `single repository`.
+        - [Nx](https://nx.dev/)
+        - [Turborepo](https://turborepo.com)
+        - [Lerna](https://lerna.js.org/)
+        - [Bazel](https://bazel.build/)
+        - [Rush](https://rushjs.io/)
+
+      - `Microfrontend` is an architectural approach where a frontend application is divided into smaller, independently developed, deployed, and maintained pieces.
+        - [Module Federation (Webpack)](https://webpack.js.org/concepts/module-federation/)
+        - [Single-SPA](https://single-spa.js.org/)
+        - [Qiankun](https://qiankun.umijs.org/)
+        - [Piral](https://piral.io/)
 
 1. #### Front optimization technique List
       - bundlle optimization like Tree shaking, Compression, Minification
