@@ -1,10 +1,11 @@
 1. #### Hybrid vs. Cross-Platform Apps
-      - `Hybrid Apps` are web applications wrapped in a native container (`WebView`), allowing them to run as mobile apps and access to native device features through `plugins`.
-            - `Languages`: `JavaScript`
-            - `Frameworks`: `Ionic`, `Apache` `Cordova`, `PhoneGap`
+      - `Hybrid Apps` are web applications wrapped in a native container (`WebView`), allowing them to run as mobile apps and access native device features through `plugins`.
+         - Languages: `JavaScript`
+         - Frameworks: `Ionic`, `Apache Cordova`, `PhoneGap`
+
       - `Cross-Platform Apps` are built using a single codebase but compiled into native code, offering better performance than hybrid apps.
-            - `Languages`: `JavaScript`, `Dart`, `C#`
-            - `Frameworks`: `React Native`, `Flutter`, `Xamarin`
+         - Languages: `JavaScript`, `Dart`, `C#`
+         - Frameworks: `React Native`, `Flutter`, `Xamarin`
 
 1. #### Static Class:
       - A `non-inheritable` class, typically used to extend `built-in classes` (e.g., String) via `extension methods`, and does not require `instantiation`;
