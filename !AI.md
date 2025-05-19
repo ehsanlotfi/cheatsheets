@@ -1,12 +1,156 @@
 
-## Supervised Learning vs Unsupervised Learning
+## types of Machine Learning
 1. Supervised Learning
-    - In this type of learning, the data is labeled, and the goal is to predict new labels (such as classification and regression)
-    - Logistic and Linear Regression, SVM, Naive Bayes, KNN, Random Forest
+    - Predicts labels from labeled data (Classification, Regression)
+        - Classification Algorithms
+            - Logistic Regression
+            - SVM
+            - Naive Bayes
+            - KNN
+            - Decision Tree
+            - Random Forest
+
+        - Regression Algorithms
+            - Linear Regression
+            - Decision Tree
+            - Random Forest
 
 2. Unsupervised Learning
-    - In this type of learning, the data is unlabeled, and the goal is to identify patterns and hidden structures within the data (such as clustering and dimensionality reduction).
-    - K-Means, PCA, t-SNE, Hierarchical Clustering
+    - Finds hidden patterns in unlabeled data (Clustering, Dimensionality Reduction).
+    - Clustering Algorithms
+        - K-Means
+        - Hierarchical Clustering
+    - Dimensionality Reduction Algorithms
+        - PCA
+        - t-SNE
+
+3. Semi-Supervised Learning
+    - Combines a small amount of labeled data with a large amount of unlabeled data to enhance accuracy.
+    - Techniques:
+        - Self Training
+        - Low Density Separation
+        - Graph-based Algorithms
+
+4. Reinforcement Learning (RL)
+    - Learns through `rewards` and `penalties` to perform tasks better.
+    - Reinforcement Learning from Human Feedback (RLHF)
+    - Algorithms:
+        - Q-Learning
+        - Deep Q-Networks (DQN)
+        - RL from Human Feedback (RLHF)
+
+## Deep Learning
+    - Convolutional Neural Networks (CNN)
+        - Layers
+            - Pooling
+            - Fully-Connected
+            - Max Pooling
+            - Average Pooling
+            - Padding
+
+        - Techniques
+            - Data Augmentation
+            - Super-Pixel
+            - Inception Module
+            - Feature Extractor
+
+    - Recurrent Neural Networks (RNN)
+        - Challenges
+            - Vanishing Gradient
+            - Exploding Gradient
+        - Activation Functions
+            - ReLU
+            - Softmax
+
+    - Advanced Architectures
+        - AlexNet
+        - VGGNet
+        - GoogleNet
+        - ResNet
+        - YOLO
+        - SqueezeNet
+        - SegNet
+        - GANs: (e.g., U-Net, DeepLab)
+
+## Artificial Neural Networks ( ANNs )
+    - Components
+        - Neuron
+        - Bias
+        - Node
+
+    - Architectures
+        - MLP
+        - Feedforward
+        - Radial Basis Functions
+        - Hopfield
+
+    - Learning Techniques
+        - Forward/Backward Propagation
+        - Gradient Descent
+
+
+## Keywords and Concepts
+0. Digital twin
+    - A digital twin is a digital replica of a physical object, system, or structure (such as a factory, data center, the Earth, or a shrine), which allows us to observe and analyze it in real time.  
+
+
+0. Unconditional Image Generation
+    - These are models that generate new images without requiring specific input. a model like GAN.
+
+0. Depth Estimation
+    - These are models that estimate depth (3D information) from 2D images.  
+    - Example: Imagine you have an image of a road—the model estimates the depth of different objects like cars and trees.
+
+0. Zero-Shot Image Classification
+    - These are models that can classify images without being directly trained on those specific categories.
+    - Example: If a model has been trained on categories like "dog" and "cat," but is able to classify an image of an "elephant" without having seen any training data for "elephant."
+
+0. Zero-Shot Object Detection
+    - These are models that can recognize an object in images without having seen specific examples of that object before.
+    - Example: The model has been trained to identify "cars" and "bicycles," but is now able to recognize a "bus" without direct training on it.
+
+0. Token Classification
+    - These are models that assign each word or token in a sentence to a specific category.
+    - Example: In a sentence like "Ali went to school," the model can classify "Ali" as a name and "school" as a location.
+
+
+0. Table Question Answering
+    - These are models that answer questions about data in tables.
+    - Example: You have a table of product sales and ask, "Which product had the highest sales?"—the model provides the answer.
+
+0. Fill-Mask
+    - These are models that fill in missing words in a sentence.
+    - Example: You give the model a sentence like "The weather is [MASK]," and the model completes it as "The weather is sunny."
+
+0. Voice Activity Detection
+    - These are models that detect which parts of an audio file contain speech.
+    - Example: A model that identifies segments with human speech in a long audio recording.
+
+0. Tabular Classification
+    - These are models that classify tabular data based on different categories.
+    - Example: A model that classifies customer data into categories like "loyal buyer" and "regular buyer."
+
+0. Tabular Regression
+    - These are models that predict continuous values based on tabular data.
+    - Example: A model that predicts the price of a house based on features like size and location.
+
+0. Time Series Forecasting
+    - These are models that predict future trends based on time series data.
+    - Example: A model that forecasts how stock prices will change in the next month.
+
+0. Model Distillation 
+    - Is a technique where a big model (teacher) teaches a smaller model (student).
+    - The big model is smart but slow. The small model learns from it to be fast and still good.
+    - It uses the soft outputs (like 0.7 cat, 0.2 dog, 0.1 rabbit) instead of just hard labels.
+
+0. Model Collapse
+    - is a problem where a model starts giving very limited or repetitive outputs.
+    - a generative model might start producing almost the same image or sentence every time.
+
+0. Mixture of Experts (MoE)
+    - is a machine learning approach where multiple specialized models (called "experts") are trained to handle different tasks. A gating model decides which expert to use for a given input.
+    - The idea is to combine the strengths of different models, making the system more efficient and powerful by using the right expert for each task.
+
 
 ## Steps in the Machine Learning Process
 1. Define the Problem
@@ -171,11 +315,6 @@
     - These are models that predict future trends based on time series data.
     - Example: A model that forecasts how stock prices will change in the next month.
 
-0. Reinforcement Learning (RL)
-    - These are models that learn how to perform tasks better through rewards and penalties.
-    - A model that learns to play a video game by trying different moves. When it wins or scores points, it gets a reward, and when it loses, it gets a penalty. Over time, it learns which actions lead to better results and plays the game more skillfully.
-    - Reinforcement Learning from Human Feedback (RLHF)
-
 0. Model Distillation 
     - Is a technique where a big model (teacher) teaches a smaller model (student).
     - The big model is smart but slow. The small model learns from it to be fast and still good.
@@ -194,34 +333,35 @@
     -  A system that suggests items (like movies, products, or songs) to users based on their preferences and behavior.
 
 ## Tools
-0. Machin Learning
-    - Numpy
-    - Pandas
-    - Matplotlib
-    - Seaborn
-    - Scikit-learn
-    - TensorFlow
-    - Keras
-    - PyTorch
-    - HuggingFace
-    - OpenCV
-    - Transformers
+    - ML and Data Analysis
+        - Numpy
+        - Pandas
+        - Matplotlib
+        - Scikit-learn
+        - TensorFlow
+        - Keras
+        - PyTorch
 
-0. Deep learning And Analyse data
-    - Jupyter Notebook, Polar, PySpark, Plotly
+    - Data Visualization
+        - Seaborn
+        - Plotly
 
-0. Vector Databases
-    - Pinecone 
-    - Weaviate
+    - Deep Learning Frameworks
+        - Jupyter
+        - PySpark
+        - Polar
 
-0. crypto currency
-    - `Pine Script` Is a lightweight programming language created by `TradingView` for writing custom indicators, strategies, and alerts on     financial charts. It's easy to learn and allows traders to automate technical analysis directly within the TradingView platform.
+    - Image Processing
+        - YOLO
+        - Detectron2
+        - MediaPipe
 
-0. Image Processing
-    - YOLO, Detectron2, MediaPipe, OCR
+    - Vector Databases
+        - Pinecone
+        - Weaviate
 
-0. Video Processing
+    - Text Processing
+        - NLP tools and models
 
-0. Voice Processing
-
-0. Text Processing
+    - crypto currency
+        - `Pine Script` Is a lightweight programming language created by `TradingView` for writing custom indicators, strategies, and alerts on     financial charts. It's easy to learn and allows traders to automate technical analysis directly within the TradingView platform.

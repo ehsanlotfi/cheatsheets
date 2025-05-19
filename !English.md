@@ -469,6 +469,7 @@
 - rack my brains. خیلی فکر کردن
 - I'm on cloud nine -> to be extremely happy and excited. 
 - How can I get in touch. چطور میتونم تماس بگیرم
+- what are you implying? منظورت چیه؟
 
 #### a.k.a.  OR aka 
 - also known as که به‌صورت دیگری نیز شناخته می‌شود
