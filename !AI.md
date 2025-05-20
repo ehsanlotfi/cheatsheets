@@ -39,39 +39,6 @@
         - Deep Q-Networks (DQN)
         - RL from Human Feedback (RLHF)
 
-## Deep Learning
-    - Convolutional Neural Networks (CNN)
-        - Layers
-            - Pooling
-            - Fully-Connected
-            - Max Pooling
-            - Average Pooling
-            - Padding
-
-        - Techniques
-            - Data Augmentation
-            - Super-Pixel
-            - Inception Module
-            - Feature Extractor
-
-    - Recurrent Neural Networks (RNN)
-        - Challenges
-            - Vanishing Gradient
-            - Exploding Gradient
-        - Activation Functions
-            - ReLU
-            - Softmax
-
-    - Advanced Architectures
-        - AlexNet
-        - VGGNet
-        - GoogleNet
-        - ResNet
-        - YOLO
-        - SqueezeNet
-        - SegNet
-        - GANs: (e.g., U-Net, DeepLab)
-
 ## Artificial Neural Networks ( ANNs )
     - Components
         - Neuron
@@ -89,10 +56,62 @@
         - Gradient Descent
 
 
+## Deep Learning
+    - Convolutional Neural Networks (CNN)
+        - [Demo](https://poloclub.github.io/cnn-explainer/?utm_source=chatgpt.com)
+        - Layers
+            - `Input` The image or input data that enters the network.
+            - `Convolution (filters, kernels)` that slide over the input to extract important features (like `edges`, `textures`, `shapes`).
+            - `Padding` Adds extra pixels (usually zeros) around the image to preserve its size after convolution.
+            - `Activation Functions` Add non-linearity to the model, helping it learn complex patterns.
+                - `ReLU (Rectified Linear Unit)` Keeps only positive values; turns negative values into zero.
+                - `Softmax` Converts the output into probabilities (used in the final layer for classification).
+            - `Pooling` Reduces the size of the data while keeping important features. It makes the network faster and more robust.
+                - `Max Pooling` Selects the maximum value from each region (most common).
+                - `Average Pooling` Calculates the average value from each region.
+            - `Flatten` Converts the 2D feature maps into a 1D vector before feeding it to fully-connected layers.
+            - `Output` Prediction is made
+
+        - Techniques
+            - Data Augmentation
+            - Super-Pixel
+            - Inception Module
+            - Feature Extractor
+
+    - Recurrent Neural Networks (RNN)
+        - Challenges
+            - Vanishing Gradient
+            - Exploding Gradient
+
+    - Advanced Architectures
+        - AlexNet
+        - VGGNet
+        - GoogleNet
+        - ResNet
+        - YOLO
+        - SqueezeNet
+        - SegNet
+        - GANs: (e.g., U-Net, DeepLab)
+
+## 🧱 Web3 & Blockchain
+0. Smart Contract Platforms
+    - Blockchains like `Ethereum` that allow developers to create self-executing contracts without intermediaries (e.g., for `finance` or `games`).
+
+0. Pine Script 
+    - Is a lightweight programming language created by `TradingView` for writing custom indicators, strategies, and alerts on financial charts. It's easy to learn and allows traders to automate technical analysis directly within the TradingView platform.
+
+0. Decentralized Finance (DeFi)
+    - A financial system built on blockchain where users lend, borrow, trade, or earn without relying on banks or central authorities.
+
 ## Keywords and Concepts
+0. Generative AI / LLMs
+    - creates new content (text, images, music) using models like Large Language Models (`LLMs`). They learn patterns from data to generate human-like output.
+
+0. AI Ethics and Governance
+    - Focuses on responsible AI use, including fairness, transparency, bias reduction, and regulation to ensure AI benefits society safely.
+
 0. Digital twin
     - A digital twin is a digital replica of a physical object, system, or structure (such as a factory, data center, the Earth, or a shrine), which allows us to observe and analyze it in real time.  
-
 
 0. Unconditional Image Generation
     - These are models that generate new images without requiring specific input. a model like GAN.
@@ -112,7 +131,6 @@
 0. Token Classification
     - These are models that assign each word or token in a sentence to a specific category.
     - Example: In a sentence like "Ali went to school," the model can classify "Ali" as a name and "school" as a location.
-
 
 0. Table Question Answering
     - These are models that answer questions about data in tables.
@@ -150,6 +168,10 @@
 0. Mixture of Experts (MoE)
     - is a machine learning approach where multiple specialized models (called "experts") are trained to handle different tasks. A gating model decides which expert to use for a given input.
     - The idea is to combine the strengths of different models, making the system more efficient and powerful by using the right expert for each task.
+
+0. Bias
+    - in generally, An `unfair preference` of something or against something. In AI, it refers to unfairness toward certain outcomes, people, or ideas.
+    - example: If an AI is trained mostly on male data, it might show gender bias.
 
 
 ## Steps in the Machine Learning Process
@@ -328,6 +350,12 @@
     - is a machine learning approach where multiple specialized models (called "experts") are trained to handle different tasks. A gating model decides which expert to use for a given input.
     - The idea is to combine the strengths of different models, making the system more efficient and powerful by using the right expert for each task.
 
+0. GNN (Graph Neural Network)
+    - A neural network designed for graph-structured data (e.g., social networks), learning from relationships between nodes and edges.
+
+0. GCN (Graph Convolutional Network)
+    - A special type of GNN that applies convolution to graphs, enabling deep learning on non-grid structures (e.g., molecules, networks).
+
 ## Recommendation Systems (RS)
 0. Recommendation Systems
     -  A system that suggests items (like movies, products, or songs) to users based on their preferences and behavior.
@@ -363,5 +391,3 @@
     - Text Processing
         - NLP tools and models
 
-    - crypto currency
-        - `Pine Script` Is a lightweight programming language created by `TradingView` for writing custom indicators, strategies, and alerts on     financial charts. It's easy to learn and allows traders to automate technical analysis directly within the TradingView platform.
