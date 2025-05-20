@@ -35,6 +35,8 @@
 - 📲 [Thunkable](https://thunkable.com/)
   - A no-code platform for building native mobile apps with drag-and-drop components. Perfect for educators, students, and startups.
 
+- [n8n](https://n8n.io/)
+- [supabase](https://supabase.com/)
 
 ### Text
 
