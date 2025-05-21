@@ -35,8 +35,21 @@
 - 📲 [Thunkable](https://thunkable.com/)
   - A no-code platform for building native mobile apps with drag-and-drop components. Perfect for educators, students, and startups.
 
+- [LangChain](https://www.langchain.com/)
+  - A framework for building applications powered by large language models (LLMs) and external data sources.
+
+- [LlamaIndex](https://www.llamaindex.ai/)
+  - A data framework that connects LLMs to private or custom data like documents, databases, and APIs.
+
+- [Hugging Face](https://huggingface.co/)
+  - An open-source platform for sharing, training, and deploying machine learning models, especially Transformers.
+
 - [n8n](https://n8n.io/)
-- [supabase](https://supabase.com/)
+  - A workflow automation tool that lets you connect apps and services to automate tasks with or without code.
+  
+- [Supabase](https://supabase.com/)
+  - An open-source backend-as-a-service (BaaS) that provides a real-time PostgreSQL database, authentication, storage, and more.
+
 
 ### Text
 
