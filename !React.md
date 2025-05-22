@@ -49,7 +49,7 @@
 1. #### useMemo Vs. useCallback
     - useMemo is used to `remember a calculated value` and useCallback is used to `remember a function`.
 
-1. #### useTransition <sub>#v.19</sub>
+1. #### useTransition <sub>`#v.19`</sub>
       - lets you update the UI without blocking urgent interactions — it helps keep the app smooth during slow or heavy updates (e.g. loading page)
       ```
       function App() {
