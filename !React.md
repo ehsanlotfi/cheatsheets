@@ -49,6 +49,34 @@
 1. #### useMemo Vs. useCallback
     - useMemo is used to `remember a calculated value` and useCallback is used to `remember a function`.
 
+1. #### <sub>#react19</sub> useTransition
+      - lets you update the UI without blocking urgent interactions — it helps keep the app smooth during slow or heavy updates (e.g. loading page)
+      ```
+      function App() {
+        const [list, setList] = useState([]);
+        const [isPending, startTransition] = useTransition();
+
+        const handleClick = () => {
+          startTransition(() => {
+            const newList = Array.from({ length: 10000 }, (_, i) => `Item ${i + 1}`);
+            setList(newList);
+          });
+        };
+
+        return (
+          <div>
+            <button onClick={handleClick}>Generate List</button>
+            {isPending && <p>Loading...</p>}
+            <ul>
+              {list.map((item, index) => (
+                <li key={index}>{item}</li>
+              ))}
+            </ul>
+          </div>
+        );
+      }
+      ```
+
 1. #### What Next.js Adds to React
       - Server-Side Rendering (SSR) & Static Generation (SSG)
         - You can build pages on the server or at build time. This helps with SEO and speed.
@@ -237,33 +265,7 @@
             }));
             ```
 
-1. #### useTransition
-      - lets you update the UI without blocking urgent interactions — it helps keep the app smooth during slow or heavy updates (e.g. loading page)
-      ```
-      function App() {
-        const [list, setList] = useState([]);
-        const [isPending, startTransition] = useTransition();
 
-        const handleClick = () => {
-          startTransition(() => {
-            const newList = Array.from({ length: 10000 }, (_, i) => `Item ${i + 1}`);
-            setList(newList);
-          });
-        };
-
-        return (
-          <div>
-            <button onClick={handleClick}>Generate List</button>
-            {isPending && <p>Loading...</p>}
-            <ul>
-              {list.map((item, index) => (
-                <li key={index}>{item}</li>
-              ))}
-            </ul>
-          </div>
-        );
-      }
-      ```
 1. #### useDeferredValue
       - It's used to delay updating a heavy value.
 
