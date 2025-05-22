@@ -77,6 +77,59 @@
       }
       ```
 
+1. #### useActionState <sub>`v19`</sub>
+      ```
+      function ChangeName({ name, setName }) {
+        const [error, submitAction, isPending] = useActionState(
+          async (previousState, formData) => {
+            const error = await updateName(formData.get("name"));
+            if (error) {
+              return error;
+            }
+            redirect("/path");
+            return null;
+          },
+          null,
+        );
+
+        return (
+          <form action={submitAction}>
+            <input type="text" name="name" />
+            <button type="submit" disabled={isPending}>Update</button>
+            {error && <p>{error}</p>}
+          </form>
+        );
+      }
+      ```
+1. #### useFormStatus <sub>`v19`</sub>
+    ```
+      import {useFormStatus} from 'react-dom';
+
+      function DesignButton() {
+        const {pending} = useFormStatus();
+        return <button type="submit" disabled={pending} />
+      }
+    ```
+
+1. #### useOptimistic <sub>`v19`</sub>
+
+1. #### use <sub>`v19`</sub>
+
+1. Improvements in React 19
+    - `ref` as a `prop` insted of `forwardRef`.
+      ```
+        function MyInput({placeholder, ref}) {
+          return <input placeholder={placeholder} ref={ref} />
+        }
+        <MyInput ref={ref} />
+      ```
+    - `<Context>` as a provider insted of  `<Context.Provider>`
+    - meta data tags
+      - When React renders component, it will see the `<title>` `<link>` and `<meta>` tags, and automatically hoist them to the `<head>` section of document.
+      
+1. hydration
+1. `FC` rules
+
 1. #### What Next.js Adds to React
       - Server-Side Rendering (SSR) & Static Generation (SSG)
         - You can build pages on the server or at build time. This helps with SEO and speed.
