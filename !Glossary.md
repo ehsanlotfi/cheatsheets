@@ -1,3 +1,15 @@
+1. #### Webhook vs API
+| Feature              | API                          | Webhook                           |
+|----------------------|-------------------------------|------------------------------------|
+| Communication Type   | Pull (client sends request)   | Push (server sends data)           |
+| Trigger              | Client                       | Server                             |
+| Real-time            | ❌ No                        | ✅ Yes                              |
+| Polling Needed       | ✅ Yes                       | ❌ No                               |
+| Use Case             | Get data when needed          | Get notified when event happens    |
+| Example              | Get list of users             | Notify on new user registration    |
+
+
+
 1. #### Hybrid vs. Cross-Platform Apps
       - `Hybrid Apps` are web applications wrapped in a native container (`WebView`), allowing them to run as mobile apps and access native device features through `plugins`.
          - Languages: `JavaScript`

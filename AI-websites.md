@@ -122,3 +122,9 @@
 
 2. The Third method
 [alejandro-ao](https://github.com/alejandro-ao/ask-multiple-pdfs)
+
+
+### JavaScript Machine Learning
+  - brain.js
+  - ml5.js
+  - TensorFlow.js

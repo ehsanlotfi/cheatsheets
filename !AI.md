@@ -46,6 +46,7 @@
 - Neuron
 - Bias
 - Node
+- Perceptrons
 
 ### Architectures
 - MLP
