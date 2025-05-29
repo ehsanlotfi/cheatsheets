@@ -43,10 +43,8 @@
 ## Artificial Neural Networks (ANNs)
 
 ### Components
-- Neuron
+- [Perceptrons, Neuron, Node](https://www.youtube.com/watch?v=zd-Ku1GbtKU)
 - Bias
-- Node
-- Perceptrons
 
 ### Architectures
 - MLP
@@ -100,6 +98,11 @@
 
 ### Smart Contract Platforms
 - Blockchains like `Ethereum` that allow developers to create self-executing contracts without intermediaries (e.g., for `finance` or `games`)
+- solority
+- remix IDE
+- hardHat
+- NFT
+- DAPP
 
 ### Pine Script
 - Is a lightweight programming language created by `TradingView` for writing custom indicators, strategies, and alerts on financial charts

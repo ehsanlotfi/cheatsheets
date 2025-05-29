@@ -208,3 +208,11 @@
 
 1. #### Sharding Techniques
       - Dividing data into smaller parts and distributing them across multiple servers to improve performance.
+      
+1. #### MVP (Minimum viable product)
+
+1. #### ROI (Return on Investment)
+      -  Shows how much profit you made compared to what you spent.
+      
+1. #### KPI (Key Performance Indicator)
+      - A number that shows how well you're doing toward a goal.
