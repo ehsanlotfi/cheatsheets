@@ -1,6 +1,6 @@
 # AI Tools
 
-### Low-Code/No-Code Platforms
+### Low-Code , No-Code , Vibe Coding
 
 - ⚡ [Bolt.new](https://bolt.new/)
   - A browser-based full-stack development platform that uses AI to generate complete applications from simple text prompts. Suitable for both developers and non-technical users.

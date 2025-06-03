@@ -1,3 +1,9 @@
+1. #### Hydration
+  - Hydration is the process of making a server-rendered `HTML` page interactive by attaching `JavaScript`.
+
+1. #### llms.txt 
+  - Is a simple text file at your website’s root that helps AI models understand your site’s key content. 
+
 1. #### Service Worker
      - A Service Worker is a special script that runs in the background of a web app. It helps with `offline access`, `caching`, `faster loading`, sending `push notifications` and `PWA`.
 

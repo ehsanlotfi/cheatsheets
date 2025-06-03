@@ -403,3 +403,6 @@ print(f"Mean Squared Error: {mse:.2f}")
     - Text Processing
         - NLP tools and models
 
+    - Data Analyst
+        - Power BI
+        - Tableau
