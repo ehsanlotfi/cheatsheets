@@ -252,7 +252,7 @@ print(f"Mean Squared Error: {mse:.2f}")
     - `Overfitting`: Model learned too much, including noise
     - `Underfitting`: Model didn't learn enough, too simple
 
-### 10. Deploy the Model
+### 11. Deploy the Model
 - Deploy the model into production for real-time predictions
 
 ### 11. Model Maintenance and Updates
@@ -260,7 +260,7 @@ print(f"Mean Squared Error: {mse:.2f}")
 
 ## 𝐓𝐨𝐩 𝐌𝐚𝐜𝐡𝐢𝐧𝐞 𝐋𝐞𝐚𝐫𝐧𝐢𝐧𝐠 𝐀𝐥𝐠𝐨𝐫𝐢𝐭𝐡𝐦𝐬
 
-0. K-Means
+1. K-Means
 
     - First, we specify the number of clusters (K).
     - Then, we select K points as the initial centers and assign each data point to the nearest center.
@@ -268,7 +268,7 @@ print(f"Mean Squared Error: {mse:.2f}")
     - We repeat these steps until no further changes occur in the cluster centers.
     - Finally, the data is categorized into K similar groups.
 
-0. Linear Regression vs Logistic Regression
+1. Linear Regression vs Logistic Regression
     - Regression itself means predicting the changes in one variable based on the changes in another variable.
     - The `sigmoid` function is a mathematical function that takes any input and keeps its output between 0 and 1.
 
@@ -282,98 +282,98 @@ print(f"Mean Squared Error: {mse:.2f}")
         - The output is a probability between 0 and 1.
 
 
-0. Decision Tree
+1. Decision Tree
     - A decision tree is a machine learning model that classifies or predicts data by using a series of yes/no questions or comparisons.
 
-0. Random Forest
+1. Random Forest
     - It creates a set of decision trees (each making a prediction). By taking a vote from all the trees, it makes the final decision.
 
-0. Naive Bayes
+1. Naive Bayes
     - We calculate the probability of a data point belonging to each class and select the one with the highest probability.
 
-0. KNN
+1. KNN
     - It looks at the K nearest neighbors and makes a decision based on their votes regarding similarity.
 
-0. SVM (Support Vector Machine)
+1. SVM (Support Vector Machine)
     - SVM is a classification algorithm that finds the best line or hyperplane that separates data from different classes and tries to maximize the distance between the data points and the separating boundary.
 
-0. Dimensionality Reduction
+1. Dimensionality Reduction
     - When the data has many features, these algorithms help keep only the most important ones. This makes the model faster, simpler, and more accurate.
 
 ## Kaywords
-0. Digital twin
+1. Digital twin
     - A digital twin is a digital replica of a physical object, system, or structure (such as a factory, data center, the Earth, or a shrine), which allows us to observe and analyze it in real time.  
 
 
-0. Unconditional Image Generation
+1. Unconditional Image Generation
     - These are models that generate new images without requiring specific input. a model like GAN.
 
-0. Depth Estimation
+1. Depth Estimation
     - These are models that estimate depth (3D information) from 2D images.  
     - Example: Imagine you have an image of a road—the model estimates the depth of different objects like cars and trees.
 
-0. Zero-Shot Image Classification
+1. Zero-Shot Image Classification
     - These are models that can classify images without being directly trained on those specific categories.
     - Example: If a model has been trained on categories like "dog" and "cat," but is able to classify an image of an "elephant" without having seen any training data for "elephant."
 
-0. Zero-Shot Object Detection
+1. Zero-Shot Object Detection
     - These are models that can recognize an object in images without having seen specific examples of that object before.
     - Example: The model has been trained to identify "cars" and "bicycles," but is now able to recognize a "bus" without direct training on it.
 
-0. Token Classification
+1. Token Classification
     - These are models that assign each word or token in a sentence to a specific category.
     - Example: In a sentence like "Ali went to school," the model can classify "Ali" as a name and "school" as a location.
 
 
-0. Table Question Answering
+1. Table Question Answering
     - These are models that answer questions about data in tables.
     - Example: You have a table of product sales and ask, "Which product had the highest sales?"—the model provides the answer.
 
-0. Fill-Mask
+1. Fill-Mask
     - These are models that fill in missing words in a sentence.
     - Example: You give the model a sentence like "The weather is [MASK]," and the model completes it as "The weather is sunny."
 
-0. Voice Activity Detection
+1. Voice Activity Detection
     - These are models that detect which parts of an audio file contain speech.
     - Example: A model that identifies segments with human speech in a long audio recording.
 
-0. Tabular Classification
+1. Tabular Classification
     - These are models that classify tabular data based on different categories.
     - Example: A model that classifies customer data into categories like "loyal buyer" and "regular buyer."
 
-0. Tabular Regression
+1. Tabular Regression
     - These are models that predict continuous values based on tabular data.
     - Example: A model that predicts the price of a house based on features like size and location.
 
-0. Time Series Forecasting
+1. Time Series Forecasting
     - These are models that predict future trends based on time series data.
     - Example: A model that forecasts how stock prices will change in the next month.
 
-0. Model Distillation 
+1. Model Distillation 
     - Is a technique where a big model (teacher) teaches a smaller model (student).
     - The big model is smart but slow. The small model learns from it to be fast and still good.
     - It uses the soft outputs (like 0.7 cat, 0.2 dog, 0.1 rabbit) instead of just hard labels.
 
-0. Model Collapse
+1. Model Collapse
     - is a problem where a model starts giving very limited or repetitive outputs.
     - a generative model might start producing almost the same image or sentence every time.
 
-0. Mixture of Experts (MoE)
+1. Mixture of Experts (MoE)
     - is a machine learning approach where multiple specialized models (called "experts") are trained to handle different tasks. A gating model decides which expert to use for a given input.
     - The idea is to combine the strengths of different models, making the system more efficient and powerful by using the right expert for each task.
 
-0. GNN (Graph Neural Network)
+1. GNN (Graph Neural Network)
     - A neural network designed for graph-structured data (e.g., social networks), learning from relationships between nodes and edges.
 
-0. GCN (Graph Convolutional Network)
+1. GCN (Graph Convolutional Network)
     - A special type of GNN that applies convolution to graphs, enabling deep learning on non-grid structures (e.g., molecules, networks).
 
 ## Recommendation Systems (RS)
-0. Recommendation Systems
+1. Recommendation Systems
     -  A system that suggests items (like movies, products, or songs) to users based on their preferences and behavior.
 
 ## Tools
-0. ML and Data Analysis
+1. ML and Data Analysis
     - Numpy
     - Pandas
     - Matplotlib
@@ -382,27 +382,27 @@ print(f"Mean Squared Error: {mse:.2f}")
     - Keras
     - PyTorch
 
-0. Data Visualization
+1. Data Visualization
     - Seaborn
     - Plotly
 
-0. Deep Learning Frameworks
+1. Deep Learning Frameworks
     - Jupyter
     - PySpark
     - Polar
 
-0. Image Processing
+1. Image Processing
     - YOLO
     - Detectron2
     - MediaPipe
 
-0. Vector Databases
+1. Vector Databases
     - Pinecone
     - Weaviate
 
-0. Text Processing
+1. Text Processing
     - NLP tools and models
 
-0. Data Analyst
+1. Data Analyst
     - Power BI
     - Tableau
