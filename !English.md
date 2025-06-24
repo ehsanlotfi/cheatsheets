@@ -1,3 +1,10 @@
+1. #### alternative ot `I think`
+    - from my point of view
+    - If you ask me
+    - as far as I'm concerned
+    - as far as I can
+    - I would say
+
 1. #### stand for
     - IT stands for Information Technology
 
@@ -104,7 +111,7 @@
     - I dare say you will succeed in the election.
 
 1. #### How often—?
-    - How often is there a leap year?
+    - How often is there a leap year?0
     - How often is there a flight to Shanghai?
     - How often do you write to your parents?
 

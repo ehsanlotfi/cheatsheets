@@ -1,4 +1,5 @@
 1. #### Hydration
+  - `Literal meaning` Giving water to a person who has lost a lot of water from their body.
   - Hydration is the process of making a server-rendered `HTML` page interactive by attaching `JavaScript`.
 
 1. #### llms.txt 

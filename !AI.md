@@ -373,36 +373,36 @@ print(f"Mean Squared Error: {mse:.2f}")
     -  A system that suggests items (like movies, products, or songs) to users based on their preferences and behavior.
 
 ## Tools
-    - ML and Data Analysis
-        - Numpy
-        - Pandas
-        - Matplotlib
-        - Scikit-learn
-        - TensorFlow
-        - Keras
-        - PyTorch
+0. ML and Data Analysis
+    - Numpy
+    - Pandas
+    - Matplotlib
+    - Scikit-learn
+    - TensorFlow
+    - Keras
+    - PyTorch
 
-    - Data Visualization
-        - Seaborn
-        - Plotly
+0. Data Visualization
+    - Seaborn
+    - Plotly
 
-    - Deep Learning Frameworks
-        - Jupyter
-        - PySpark
-        - Polar
+0. Deep Learning Frameworks
+    - Jupyter
+    - PySpark
+    - Polar
 
-    - Image Processing
-        - YOLO
-        - Detectron2
-        - MediaPipe
+0. Image Processing
+    - YOLO
+    - Detectron2
+    - MediaPipe
 
-    - Vector Databases
-        - Pinecone
-        - Weaviate
+0. Vector Databases
+    - Pinecone
+    - Weaviate
 
-    - Text Processing
-        - NLP tools and models
+0. Text Processing
+    - NLP tools and models
 
-    - Data Analyst
-        - Power BI
-        - Tableau
+0. Data Analyst
+    - Power BI
+    - Tableau
