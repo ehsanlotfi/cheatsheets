@@ -216,3 +216,29 @@
       
 1. #### KPI (Key Performance Indicator)
       - A number that shows how well you're doing toward a goal.
+
+1. ## Cyber Attacks
+
+1. #### DDoS and DoS  (Distributed Denial of Service)
+      - Send too many requests to a server so it crashes or stops working.
+
+1. #### Phishing
+      -Fake email or message to trick people into giving passwords or credit card info.
+
+1. #### MITM (Man-in-the-Middle)
+      - Hacker secretly reads or changes data between two people.
+
+1. #### SQL Injection (SQLi)
+      - Insert bad code into input fields to read or change data in a database.
+
+1. #### XSS (Cross-Site Scripting)
+      - Inject harmful script into a webpage to steal info from users.
+
+1. #### Brute Force Attack
+      - Try many passwords until the correct one is found.
+
+1. #### Ransomware Attack
+      - Hacker locks your files and asks for money to unlock them.
+
+1. #### Social Engineering
+      - Trick people (not systems) into giving secret information.
