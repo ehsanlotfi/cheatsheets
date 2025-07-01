@@ -372,6 +372,41 @@ print(f"Mean Squared Error: {mse:.2f}")
 1. Recommendation Systems
     -  A system that suggests items (like movies, products, or songs) to users based on their preferences and behavior.
 
+## Reasoning Strategies in LLMs
+
+1. #### Chain of Thought (CoT)
+    - A step-by-step reasoning method where the model explains its thinking before giving an answer.
+    - Used for solving multi-step problems like math, logic, or complex questions.
+
+1. #### Tree of Thoughts (ToT)
+    - Instead of a single reasoning path, the model explores multiple paths like a tree, and chooses the best one.
+    - Helps with complex decision-making, planning, and creative tasks.
+    - Choosing how to go to school: walk, bike, or bus — then evaluating each option before deciding.
+
+1. #### Self-Consistency
+    - The model generates multiple CoT answers and selects the most common or consistent one.
+    - Improves reliability and correctness of final answers.
+
+1. #### CoT + Voting / Reflection
+    - Multiple reasoning paths are generated and compared. The model may revise its thinking to fix mistakes.
+    - Helpful in tasks where accuracy and verification are important.
+
+1. #### Program-Aided CoT
+    - The model writes and runs code (e.g., Python) to support or verify its reasoning.
+    - Useful for math, calculations, or structured logic problems.
+
+1. #### ReAct (Reason + Act)
+    - The model combines reasoning with external actions (e.g., web search, tool use) during thinking.
+    - Best for real-world tasks like answering current events or using APIs/tools.
+
+1. #### Tool-Use / Toolformer
+    - The model learns when and how to use external tools (calculator, database, etc.) during its reasoning process.
+    - Extends the model's abilities beyond language, improving accuracy in factual or numerical tasks.
+
+1. #### Tree Search / MCTS (Monte Carlo Tree Search)
+    - An advanced form of Tree of Thoughts that simulates many reasoning paths and chooses the most promising one.
+    - Used in strategic planning and decision-making (e.g., game AI, puzzle solving).
+    
 ## Tools
 1. ML and Data Analysis
     - Numpy
