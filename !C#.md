@@ -1,3 +1,23 @@
+1. #### Service Lifetime
+    - `Transient`: A new instance is created every time it’s requested.
+    - `Scoped`: One instance per HTTP request, shared within that request.
+    - `Singleton`: One instance for the whole application lifetime.
+    ```
+        builder.Services.AddTransient<IMyService, MyService>();
+        builder.Services.AddScoped<IMyService, MyService>();
+        builder.Services.AddSingleton<IMyService, MyService>();
+    ```
+
+1. #### Service Type
+    - `Service`: Contains business logic.
+    - `Repository`: Handles database access.
+    - `Middleware`: Runs between HTTP request and response.
+    ``` app.UseMiddleware<MyCustomMiddleware>(); ```
+    - `Hosted Service (Background Service)`: Runs in background, independent of requests.
+    ``` builder.Services.AddHostedService<MyBackgroundService>(); ```
+    - `HttpClient / External Services`: Communicates with external APIs.
+    ``` builder.Services.AddHttpClient<IMyApiService, MyApiService>(); ```
+
 1. #### out, ref, params:
     - `params`: Allows a method to accept a variable number of arguments.
         ```
