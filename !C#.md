@@ -2,12 +2,12 @@
     - `Transient`: A new instance is created every time it’s requested.
     - `Scoped`: One instance per HTTP request, shared within that request.
     - `Singleton`: One instance for the whole application lifetime.
-    
-    ```
-        builder.Services.AddTransient<IMyService, MyService>();
-        builder.Services.AddScoped<IMyService, MyService>();
-        builder.Services.AddSingleton<IMyService, MyService>();
-    ```
+
+        ```
+            builder.Services.AddTransient<IMyService, MyService>();
+            builder.Services.AddScoped<IMyService, MyService>();
+            builder.Services.AddSingleton<IMyService, MyService>();
+        ```
 
 1. #### Service Type
     - `Service`: Contains business logic.
