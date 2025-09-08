@@ -4,9 +4,9 @@
     - `Singleton`: One instance for the whole application lifetime.
 
         ```
-            builder.Services.AddTransient<IMyService, MyService>();
-            builder.Services.AddScoped<IMyService, MyService>();
-            builder.Services.AddSingleton<IMyService, MyService>();
+        builder.Services.AddTransient<IMyService, MyService>();
+        builder.Services.AddScoped<IMyService, MyService>();
+        builder.Services.AddSingleton<IMyService, MyService>();
         ```
 
 1. #### Service Type
@@ -16,12 +16,12 @@
     - `Hosted Service (Background Service)`: Runs in background, independent of requests.
 
         ``` 
-            builder.Services.AddHostedService<MyBackgroundService>(); 
+        builder.Services.AddHostedService<MyBackgroundService>(); 
         ```
     - `HttpClient / External Services`: Communicates with external APIs.
 
         ``` 
-            builder.Services.AddHttpClient<IMyApiService, MyApiService>(); 
+        builder.Services.AddHttpClient<IMyApiService, MyApiService>(); 
         ```
 
 1. #### out, ref, params:
