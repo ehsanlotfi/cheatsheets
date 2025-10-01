@@ -136,16 +136,15 @@
 
 1. #### picture Tag
       -  Used to specify multiple image sources for different screen sizes or resolutions. It allows responsive images.
-
-        ```
+  
         <picture>
             <source media="(min-width: 900px)" srcset="img-large.jpg">
             <source media="(min-width: 600px)" srcset="img-medium.jpg">
             <img src="img-small.jpg">
         </picture>
-        ```
+       
 
-1. #### what is d.ts in TypeScript
+2. #### what is d.ts in TypeScript
       - A declaration file that defines types, interfaces, and modules for external libraries, allowing TypeScript to understand their structure without the actual implementation.
 
 
