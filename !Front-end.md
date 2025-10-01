@@ -138,11 +138,11 @@
       -  Used to specify multiple image sources for different screen sizes or resolutions. It allows responsive images.
 
         ```
-          <picture>
+        <picture>
             <source media="(min-width: 900px)" srcset="img-large.jpg">
             <source media="(min-width: 600px)" srcset="img-medium.jpg">
             <img src="img-small.jpg">
-          </picture>
+        </picture>
         ```
 
 1. #### what is d.ts in TypeScript
