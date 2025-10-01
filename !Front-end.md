@@ -127,10 +127,12 @@
 
 1. #### RESTful API
       - HEAD Method  
-        -  Sends a request to fetch only the headers of a resource, without the body.
+        - Same as `GET`, but only returns headers, not the body.
+        - Used to check if a resource exists or to know its size/type without downloading it.
 
       - OPTION Method  
-        -  Used to describe the communication options for a resource, like allowed methods (GET, POST, etc.).
+        -  Returns which HTTP methods are allowed for a resource.
+        - Often used for CORS (browsers check permissions before the real request).
 
 1. #### picture Tag
       -  Used to specify multiple image sources for different screen sizes or resolutions. It allows responsive images.
