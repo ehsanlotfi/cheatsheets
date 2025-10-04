@@ -133,6 +133,7 @@
       - OPTION Method  
         -  Returns which HTTP methods are allowed for a resource.
         - Often used for CORS (browsers check permissions before the real request).
+        - `Preflight request` is a small request (using the OPTIONS method) that the browser sends to the server before the real request. It happens when the main request is not "simple" (for example, it uses custom headers or JSON).
 
 1. #### picture Tag
       -  Used to specify multiple image sources for different screen sizes or resolutions. It allows responsive images.
@@ -379,3 +380,12 @@
 1. #### HMR (Hot Module Replacement ) vs Hot reload
     - `HMR (Hot Module Replacement):` Only the changed part of the app is updated without a full reload, and the state is preserved.
     - `Hot Reload:` The whole page is reloaded, and the app's state may be lost.
+
+
+
+
+
+
+
+
+
