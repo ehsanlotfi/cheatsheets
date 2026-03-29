@@ -242,3 +242,18 @@
 
 1. #### Social Engineering
       - Trick people (not systems) into giving secret information.
+         
+1. #### OLTP (Online Transaction Processing)
+      - A database system for daily operations like insert, update, and transactions. Used in apps such as banking, shopping, and order systems.
+
+1. #### OLAP (Online Analytical Processing)
+      - A system for analyzing large amounts of data quickly. Used for reports, dashboards, and business analysis.
+
+1. #### Data Warehouse
+      - A central place to store data from different sources for reporting and analysis.
+
+1. #### Business Intelligence
+      - Tools and processes that turn data into useful insights for better business decisions.
+
+1. #### ClickHouse
+      - A fast column-based database built for OLAP queries on large datasets, such as logs, analytics, and dashboards.
