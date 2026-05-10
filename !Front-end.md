@@ -1,6 +1,7 @@
 1. #### Hydration
   - `Literal meaning` Giving water to a person who has lost a lot of water from their body.
-  - Hydration is the process of making a server-rendered `HTML` page interactive by attaching `JavaScript`.
+  - `Hydration` is the bridge between a page rendered by `SSR` and the `client-side JavaScript code`, like React. Both must match so the components can become interactive. If they don’t match, the common `Hydration Mismatch` error occurs.
+  - `Hydration Mismatch ERROR`
 
 1. #### llms.txt 
   - Is a simple text file at your website’s root that helps AI models understand your site’s key content. 
