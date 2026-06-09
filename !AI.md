@@ -35,15 +35,11 @@
 ### 4. Reinforcement Learning (RL)
 - Learns through `rewards` and `penalties` to perform tasks better
     - Reinforcement Learning from Human Feedback (RLHF)
-    - Algorithms
-        - Q-Learning
-        - Deep Q-Networks (DQN)
-        - RL from Human Feedback (RLHF)
 
 ## Artificial Neural Networks (ANNs)
 
 ### Components
-- [Perceptrons, Neuron, Node](https://www.youtube.com/watch?v=zd-Ku1GbtKU)
+- Perceptrons, Neuron, Node
 - Bias
 
 ### Architectures
@@ -299,74 +295,6 @@ print(f"Mean Squared Error: {mse:.2f}")
 
 1. Dimensionality Reduction
     - When the data has many features, these algorithms help keep only the most important ones. This makes the model faster, simpler, and more accurate.
-
-## Kaywords
-1. Digital twin
-    - A digital twin is a digital replica of a physical object, system, or structure (such as a factory, data center, the Earth, or a shrine), which allows us to observe and analyze it in real time.  
-
-
-1. Unconditional Image Generation
-    - These are models that generate new images without requiring specific input. a model like GAN.
-
-1. Depth Estimation
-    - These are models that estimate depth (3D information) from 2D images.  
-    - Example: Imagine you have an image of a road—the model estimates the depth of different objects like cars and trees.
-
-1. Zero-Shot Image Classification
-    - These are models that can classify images without being directly trained on those specific categories.
-    - Example: If a model has been trained on categories like "dog" and "cat," but is able to classify an image of an "elephant" without having seen any training data for "elephant."
-
-1. Zero-Shot Object Detection
-    - These are models that can recognize an object in images without having seen specific examples of that object before.
-    - Example: The model has been trained to identify "cars" and "bicycles," but is now able to recognize a "bus" without direct training on it.
-
-1. Token Classification
-    - These are models that assign each word or token in a sentence to a specific category.
-    - Example: In a sentence like "Ali went to school," the model can classify "Ali" as a name and "school" as a location.
-
-
-1. Table Question Answering
-    - These are models that answer questions about data in tables.
-    - Example: You have a table of product sales and ask, "Which product had the highest sales?"—the model provides the answer.
-
-1. Fill-Mask
-    - These are models that fill in missing words in a sentence.
-    - Example: You give the model a sentence like "The weather is [MASK]," and the model completes it as "The weather is sunny."
-
-1. Voice Activity Detection
-    - These are models that detect which parts of an audio file contain speech.
-    - Example: A model that identifies segments with human speech in a long audio recording.
-
-1. Tabular Classification
-    - These are models that classify tabular data based on different categories.
-    - Example: A model that classifies customer data into categories like "loyal buyer" and "regular buyer."
-
-1. Tabular Regression
-    - These are models that predict continuous values based on tabular data.
-    - Example: A model that predicts the price of a house based on features like size and location.
-
-1. Time Series Forecasting
-    - These are models that predict future trends based on time series data.
-    - Example: A model that forecasts how stock prices will change in the next month.
-
-1. Model Distillation 
-    - Is a technique where a big model (teacher) teaches a smaller model (student).
-    - The big model is smart but slow. The small model learns from it to be fast and still good.
-    - It uses the soft outputs (like 0.7 cat, 0.2 dog, 0.1 rabbit) instead of just hard labels.
-
-1. Model Collapse
-    - is a problem where a model starts giving very limited or repetitive outputs.
-    - a generative model might start producing almost the same image or sentence every time.
-
-1. Mixture of Experts (MoE)
-    - is a machine learning approach where multiple specialized models (called "experts") are trained to handle different tasks. A gating model decides which expert to use for a given input.
-    - The idea is to combine the strengths of different models, making the system more efficient and powerful by using the right expert for each task.
-
-1. GNN (Graph Neural Network)
-    - A neural network designed for graph-structured data (e.g., social networks), learning from relationships between nodes and edges.
-
-1. GCN (Graph Convolutional Network)
-    - A special type of GNN that applies convolution to graphs, enabling deep learning on non-grid structures (e.g., molecules, networks).
 
 ## Recommendation Systems (RS)
 1. Recommendation Systems
