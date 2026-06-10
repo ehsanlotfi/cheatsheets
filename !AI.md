@@ -25,10 +25,10 @@
 - `Perceptrons, Neuron, Node` A unit in a neural network that takes inputs and generates an output
 - `Bias` A value that helps the neuron make better decisions
 - `Weights`  Values that determine how important each input is
-- `Activation Functions`  Functions that help the network learn complex patterns and make decisions
+- `Activation Functions` Help the network learn complex patterns
 - `Loss Functions`  Functions that measure how far the model's predictions are from the correct answers
-- Forward Propagation
-- Backpropagation
+- `Forward Propagation` Passes data through the network to generate an output
+- `Backpropagation` Updates the network using prediction errors to improve learning
 
 ## Model Training
 - Dataset
@@ -42,14 +42,9 @@
 - Regularization
 
 ## Deep Learning Architectures
-
-### Feed Forward Networks (MLP)
-
-### Convolutional Neural Networks (CNN)
-
-### Recurrent Neural Networks (RNN)
-- LSTM
-- GRU
+`Feed Forward Networks (MLP, Multilayer Perceptron)` A neural network where data moves in one direction only, from input to output through multiple layers, with no memory or loops
+`Convolutional Neural Networks (CNN)` A neural network designed for image data that uses filters to detect patterns like edges, shapes, and textures
+`Recurrent Neural Networks (RNN)` A neural network designed for sequential data that remembers previous information to help process current inputs
 
 ### Transformers
 - Encoder
