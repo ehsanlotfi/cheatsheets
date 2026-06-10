@@ -1,61 +1,248 @@
-# Artificial Intelligence & Machine Learning
+# Artificial Intelligence
 
-## Types of Machine Learning
+## Foundations
+- Artificial Intelligence (AI)
+- Machine Learning (ML)
+- Deep Learning (DL)
+- Artificial Neural Networks (ANN)
 
-### 1. Supervised Learning
-- Predicts labels from labeled data (Classification, Regression)
-    - Classification Algorithms
-        - Logistic Regression
-        - SVM
-        - Naive Bayes
-        - KNN
-        - Decision Tree
-        - Random Forest
-    - Regression Algorithms
-        - Linear Regression
-        - Decision Tree
-        - Random Forest
+## Learning Paradigms
+-  `Supervised Learning` Predicts labels from labeled data (Classification, Regression)
+    - Classification Algorithms ( Logistic Regression, SVM, Naive Bayes, KNN, Decision Tree, Random Forest )
+    - Regression Algorithms ( Linear Regression, Decision Tree, Random Forest )
+-  `Unsupervised Learning` Finds hidden patterns in unlabeled data (Clustering, Dimensionality Reduction)
+    - Clustering Algorithms ( K-Means, Hierarchical Clustering )
+    - Dimensionality Reduction Algorithms ( PCA, t-SNE )
 
-### 2. Unsupervised Learning
-- Finds hidden patterns in unlabeled data (Clustering, Dimensionality Reduction)
-    - Clustering Algorithms
-        - K-Means
-        - Hierarchical Clustering
-    - Dimensionality Reduction Algorithms
-        - PCA
-        - t-SNE
+-  `Semi-Supervised Learning` Combines a small amount of labeled data with a large amount of unlabeled data to enhance accuracy
 
-### 3. Semi-Supervised Learning
-- Combines a small amount of labeled data with a large amount of unlabeled data to enhance accuracy
-    - Techniques
-        - Self Training
-        - Low Density Separation
-        - Graph-based Algorithms
+-  `Self-Supervised Learning`  the model creates `its own training labels` from the data itself, without requiring manual labeling.
 
-### 4. Reinforcement Learning (RL)
-- Learns through `rewards` and `penalties` to perform tasks better
+-  `Reinforcement Learning (RL)` Learns through `rewards` and `penalties` to perform tasks better 
     - Reinforcement Learning from Human Feedback (RLHF)
 
-## Artificial Neural Networks (ANNs)
+## Neural Network Fundamentals
+- `Perceptrons, Neuron, Node` A unit in a neural network that takes inputs and generates an output
+- `Bias` A value that helps the neuron make better decisions
+- `Weights`  Values that determine how important each input is
+- `Activation Functions`  Functions that help the network learn complex patterns and make decisions
+- `Loss Functions`  Functions that measure how far the model's predictions are from the correct answers
+- Forward Propagation
+- Backpropagation
 
-### Components
-- Perceptrons, Neuron, Node
-- Bias
+## Model Training
+- Dataset
+- Training Set
+- Validation Set
+- Test Set
+- Epoch
+- Batch
+- Learning Rate
+- Optimizer
+- Regularization
 
-### Architectures
-- MLP
-- Feedforward
-- Radial Basis Functions
-- Hopfield
+## Deep Learning Architectures
 
-### Learning Techniques
-- Forward/Backward Propagation
-- Gradient Descent
+### Feed Forward Networks (MLP)
+
+### Convolutional Neural Networks (CNN)
+
+### Recurrent Neural Networks (RNN)
+- LSTM
+- GRU
+
+### Transformers
+- Encoder
+- Decoder
+- Attention
+- Self-Attention
+
+## Generative AI
+
+### Large Language Models (LLMs)
+
+### Generative Models
+- GAN
+- VAE
+- Diffusion Models
+
+## Computer Vision
+
+### Image Classification
+
+### Object Detection
+- YOLO
+- Faster R-CNN
+
+### Image Segmentation
+- U-Net
+- SegNet
+- DeepLab
+
+### Depth Estimation
+
+### Image Generation
+
+## Natural Language Processing (NLP)
+
+### Text Classification
+
+### Token Classification
+
+### Question Answering
+
+### Text Generation
+
+### Summarization
+
+### Translation
+
+## Speech & Audio
+
+### Speech Recognition
+
+### Text To Speech (TTS)
+
+### Voice Activity Detection
+
+## Recommendation Systems
+
+### Collaborative Filtering
+
+### Content-Based Filtering
+
+### Hybrid Systems
+
+## Time Series
+
+### Forecasting
+
+## Reasoning & Agents
+
+### Chain of Thought (CoT)
+
+### Tree of Thoughts (ToT)
+
+### ReAct
+
+### Tool Use
+
+### AI Agents
+
+## Modern LLM Concepts
+
+### RAG
+
+### Fine-Tuning
+
+### LoRA
+
+### RLHF
+
+### Distillation
+
+### Quantization
+
+### Mixture of Experts (MoE)
+
+## Evaluation
+
+### Accuracy
+
+### Precision
+
+### Recall
+
+### F1 Score
+
+### Confusion Matrix
+
+## Responsible AI
+
+### Bias & Fairness
+
+### Explainability
+
+### AI Ethics
+
+### AI Governance
+
+## MLOps
+
+### Model Deployment
+
+### Monitoring
+
+### Retraining
+
+### Model Versioning
+
+## Tools & Frameworks
+
+### ML Frameworks
+- Scikit-learn
+- TensorFlow
+- PyTorch
+
+### Data Processing
+- NumPy
+- Pandas
+
+### Visualization
+- Matplotlib
+- Seaborn
+- Plotly
+
+### Vector Databases
+- Pinecone
+- Weaviate
+
+### Data Analytics
+- Power BI
+- Tableau
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Deep Learning
 
 ### Convolutional Neural Networks (CNN)
-- [Demo](https://poloclub.github.io/cnn-explainer/?utm_source=chatgpt.com)
 - Layers
     - `Input`: The image or input data that enters the network
     - `Convolution (filters, kernels)`: Slides over the input to extract important features (like `edges`, `textures`, `shapes`)
