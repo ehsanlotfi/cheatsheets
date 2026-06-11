@@ -46,13 +46,11 @@
     - `Pooling layers`: Reduces the size of the data while keeping important features( Max Pooling, Average Pooling )
     - `Flatten`: Converts the 2D feature maps into a 1D vector before feeding it to fully-connected layers
     - `Output`: Prediction is made
-- `RNN ( Recurrent Neural Networks )` A neural network designed for sequential data that **remembers previous information** to help process current inputs.
+- `RNN ( Recurrent Neural Networks )` A neural network designed for sequential data that **remembers previous information** to help process current inputs. Two improved architectures of this method are given below.
+    - `LSTM` (Long Short-Term Memory) 
+    -  `GRU` (Gated Recurrent Unit)`
 
-### Transformers
-- Encoder
-- Decoder
-- Attention
-- Self-Attention
+- `Transformers` The main idea of this architecture is that instead of reading words one by one in order, it looks at all elements at the same time and uses an `Self-Attention` mechanism to figure out how each part is related to the other parts.
 
 ### Generative AI
 - `LLMs ( Large Language Models )`
