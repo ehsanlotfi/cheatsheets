@@ -59,35 +59,47 @@
   - VAE
   - Diffusion Models
 
-### Computer Vision
-- `Image Classification`
-- `Object Detection` YOLO, Faster R-CNN
-- `Image Segmentation` U-Net, SegNet, DeepLab
-- `Depth Estimation`
-- `Image Generation`
-
-### NLP ( Natural Language Processing )
-- `Text Classification`
-- `Token Classification`
-- `Question Answering`
-- `Text Generation`
-- `Summarization`
-- `Translation`
-
-### Speech & Audio
-- `Speech Recognition`
-- `Text To Speech (TTS)`
-- `Voice Activity Detection`
-
 ### Modern LLM Concepts
-- `RAG`
+- `Prompt Engineering`
+    - zero-shot
+    - one-shot
+    - few-shot
+- `Embeddings` vector representation of text
+- `RAG (Retrieval-Augmented Generation)`
 - `Fine-Tuning`
+  - `SFT (Supervised Fine-Tuning)` Training a model on labeled input–output examples so it learns to produce correct answers.
 - `LoRA`
 - `RLHF`
-- `Distillation`
-- `Quantization`
-- `Mixture of Experts (MoE)`
+  - `DPO (Direct Preference Optimization)` Training a model using preference data so it learns to choose better responses over worse ones.
+- `Vector Database (Vector DB)`
+- `Similarity Methods`
+  - Cosine
+  - Dot Product
+  - Euclidean distance
 
+### Reasoning Strategies in LLMs
+- `CoT ( Chain of Thought )` step-by-step reasoning before giving an answer.
+- `ToT ( Tree of Thoughts )` exploring multiple reasoning paths and choosing the best one.
+- `Self-Consistency` generating multiple answers and selecting the most consistent one.
+- `CoT + Voting / Reflection` comparing multiple reasoning paths and correcting mistakes.
+- `Program-Aided CoT` using code execution to help solve and verify problems.
+- `ReAct (Reason + Act)` combining reasoning with external actions like search or tools.
+- `Tool-Use / Toolformer` use external tools during reasoning.
+- `Tree Search / MCTS` exploring many possible solutions and selecting the most promising one.
+
+### Model Compression Techniques
+- `Quantization` Reduce weight (e.g., FP32 → INT8/INT4).
+- `KD (Knowledge Distillation)` Technique where a large model (teacher) transfers its knowledge to a smaller model (student). The goal is to keep most of the teacher's performance while reducing model size and inference cost. The student learns from the teacher's soft predictions rather than only the correct labels.
+  - Type
+    - `response-based` Student learns from the teacher's output probabilities.
+    - `feature-based` Student learns from intermediate features or hidden layers.
+    - `relation-based` Student learns relationships between samples, features, or layers.
+  - Method
+    - `offline` A pre-trained teacher trains a separate student model.
+    - `online` Teacher and student are trained together at the same time.
+    - `self-distillation` A model learns from its own deeper layers or earlier versions.
+- `Pruning` Remove less important weights or neurons from the model.
+- `Low-Rank Factorization` Replace large matrix with smaller matrix.
 
 ### Evaluation
 - `Accuracy`
@@ -106,19 +118,11 @@
 - `Seaborn`
 - `Plotly`
 
-### Web3 & Blockchain
-- `Smart Contract Platforms` Blockchains like Ethereum that allow developers to create self-executing contracts without intermediaries (e.g., for finance or games )solority, remix IDE, hardHat, NFT, DAPP
-
-- `Pine Script` Is a lightweight programming language created by TradingView for writing custom indicators, strategies.
-
-- `Decentralized Finance (DeFi)` A financial system built on blockchain where users lend, borrow, trade, or earn without relying on banks or central authorities
 
 ### Keywords
 - `Digital Twin` A digital replica of a physical object, system, or structure (such as a factory, data center, the Earth, or a shrine) Allows us to observe and analyze it in real time.
   
 - `Fill-Mask` models that fill in missing words in a sentence e.g. "The weather is [MASK]" to "The weather is sunny".
-
-- `KD ( Knowledge Distillation )` Technique where a big model (teacher) teaches a smaller model (student), The big model is smart but slow; the small model learns to be fast while maintaining quality, Uses soft outputs (like 0.7 cat, 0.2 dog, 0.1 rabbit) instead of just hard labels.
 
 - `Model Collapse` Problem where a model starts giving very limited or repetitive outputs. e.g. A generative model producing almost the same image or sentence every time.
 
@@ -126,14 +130,7 @@
 - `Recommendation Systems (RS)` A system that suggests items users may like based on their preferences.
 - `Overfitting` Model learned too much, including noise.
 - `Underfitting` Model didn't learn enough, too simple.
+- `Hard Target vs Soft Target (Dark Knowledge)` Hard targets contain only the correct label, while soft targets include confidence scores and class relationships (e.g., Hard: Cat=1, Dog=0 | Soft: Cat=0.7, Dog=0.2, Rabbit=0.1).
+- `Logit` The raw output of a neural network before applying activation like softmax or sigmoid (e.g., [2.3, -1.1, 0.7] before converting to probabilities).
+- `Dropout` A method where random neurons are turned off during training to prevent overfitting.
 
-
-### Reasoning Strategies in LLMs
-- `CoT ( Chain of Thought )` step-by-step reasoning before giving an answer.
-- `ToT ( Tree of Thoughts )` exploring multiple reasoning paths and choosing the best one.
-- `Self-Consistency` generating multiple answers and selecting the most consistent one.
-- `CoT + Voting / Reflection` comparing multiple reasoning paths and correcting mistakes.
-- `Program-Aided CoT` using code execution to help solve and verify problems.
-- `ReAct (Reason + Act)` combining reasoning with external actions like search or tools.
-- `Tool-Use / Toolformer` use external tools during reasoning.
-- `Tree Search / MCTS` exploring many possible solutions and selecting the most promising one.
