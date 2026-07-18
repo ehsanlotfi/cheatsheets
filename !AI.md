@@ -6,6 +6,33 @@
 - Deep Learning (DL)
 - Artificial Neural Networks (ANN)
 
+### Common AI Tasks
+- `Binary Classification`
+- `Multi-Class Classification`
+- `Multi-Label Classification`
+- `Regression` Predicts a numerical value (e.g., House price).
+- `Clustering`
+- `Anomaly Detection` Detects rare or abnormal patterns in data (e.g., Fraud detection).
+- `Recommendation`
+- `Ranking` Orders items by relevance or importance.
+- `Time Series Forecasting`
+- `Object Detection`
+- `Image Segmentation`
+- `Text Generation`
+- `Question Answering (QA)`
+- `Machine Translation`
+- `Speech Recognition (ASR)`
+- `Image Generation`
+
+### Linear Algebra Fundamentals
+- `Scalar` A single value (0D Tensor), e.g., `5`.
+- `Vector` A one-dimensional array of values (1D Tensor), e.g., `[2, 4, 6]`.
+- `Matrix` A two-dimensional array of values (2D Tensor), e.g., `[[1,2],[3,4]]`.
+- `Tensor` A multidimensional array (N-D).
+- `Dot Product` Vector * Vector = Scalar
+- `Matrix Multiplication` Matrix * Matrix = Matrix
+- `Transpose` Swaps the dimensions of a matrix or tensor.
+
 ### Learning Paradigms
 -  `Supervised Learning` Predicts labels from labeled data (Classification, Regression)
     - Classification Algorithms ( Logistic Regression, SVM, Naive Bayes, KNN, Decision Tree, Random Forest )
