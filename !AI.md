@@ -146,6 +146,11 @@
 - `Plotly`
 
 
+### AI Agents
+  - `Harness` The execution framework that connects the LLM, tools, memory, and workflows to run an AI agent.
+  - `Loop` The repeated decision cycle an AI agent follows until the task is completed. `Observe` → `Reason` →  `Act` →  `Done?`
+  - `LLMOps` The practices and tools for developing, deploying, monitoring, evaluating, and maintaining LLM applications in production.
+
 ### Keywords
 - `Digital Twin` A digital replica of a physical object, system, or structure (such as a factory, data center, the Earth, or a shrine) Allows us to observe and analyze it in real time.
   
