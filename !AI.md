@@ -149,6 +149,8 @@
 ### AI Agents
   - `Harness` The execution framework that connects the LLM, tools, memory, and workflows to run an AI agent.
   - `Loop` The repeated decision cycle an AI agent follows until the task is completed. `Observe` → `Reason` →  `Act` →  `Done?`
+  - `Memory`
+  - `Tool`
   - `LLMOps` The practices and tools for developing, deploying, monitoring, evaluating, and maintaining LLM applications in production.
 
 ### Keywords
