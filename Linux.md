@@ -1,0 +1,2 @@
+- `LXC ( Linux Containers )`: A Linux technology for running lightweight containers that share the host's Linux kernel.
+  - `Incus`: A management system for Linux containers and virtual machines, built on Linux Containers technology.

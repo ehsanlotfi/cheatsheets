@@ -257,3 +257,5 @@
 
 1. #### ClickHouse
       - A fast column-based database built for OLAP queries on large datasets, such as logs, analytics, and dashboards.
+  
+1. #### FOMO ( Fear of missing out)

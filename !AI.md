@@ -78,6 +78,14 @@
     -  `GRU` (Gated Recurrent Unit)`
 
 - `Transformers` The main idea of this architecture is that instead of reading words one by one in order, it looks at all elements at the same time and uses an `Self-Attention` mechanism to figure out how each part is related to the other parts.
+  - Encoder/Decoder
+  - Query, Key, Value (QKV) 
+    - `Query (Q)` What am I looking for?
+    - `Key (K)` What information is available?
+    - `Value (V)` What information should I retrieve?
+  - Hard Lookup vs Soft Lookup
+    - `Hard Lookup` Selects one exact item. Example: `Query → Best Match → Value`
+    - `Soft Lookup` Uses multiple items with different weights. Example: `Query → 70% A + 20% B + 10% C → Result`
 
 ### Generative AI
 - `LLMs ( Large Language Models )`
@@ -151,6 +159,8 @@
   - `Loop` The repeated decision cycle an AI agent follows until the task is completed. `Observe` → `Reason` →  `Act` →  `Done?`
   - `Memory`
   - `Tool`
+  - `ReAct ( Reasoning + Acting )`
+  - `MCP ( Model Context Protocol )` A standard that allows AI models to connect to and use external tools, data, and services.
   - `LLMOps` The practices and tools for developing, deploying, monitoring, evaluating, and maintaining LLM applications in production.
 
 ### Keywords
@@ -167,4 +177,10 @@
 - `Hard Target vs Soft Target (Dark Knowledge)` Hard targets contain only the correct label, while soft targets include confidence scores and class relationships (e.g., Hard: Cat=1, Dog=0 | Soft: Cat=0.7, Dog=0.2, Rabbit=0.1).
 - `Logit` The raw output of a neural network before applying activation like softmax or sigmoid (e.g., [2.3, -1.1, 0.7] before converting to probabilities).
 - `Dropout` A method where random neurons are turned off during training to prevent overfitting.
+- `Ablation Study`: Testing a model by removing one component at a time to see how much it affects performance.
+- `Confusion Matrix`: A table that shows the correct and incorrect predictions of a classification model.
+  - `TP`: Correct positive prediction
+  - `TN`: Correct negative prediction
+  - `FP`: Incorrect positive prediction
+  - `FN`: Incorrect negative prediction
 
