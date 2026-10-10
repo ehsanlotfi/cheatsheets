@@ -7,6 +7,7 @@
 | Polling Needed       | ✅ Yes                       | ❌ No                               |
 | Use Case             | Get data when needed          | Get notified when event happens    |
 | Example              | Get list of users             | Notify on new user registration    |
+
  - `Polling` means checking a server regularly to see if there is new information.
 
 
