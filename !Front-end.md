@@ -235,48 +235,46 @@
       - It iterates over object and have high order time due to prototypes.
 
 1. #### Web Components
-      - Advantages  
-        Reusable, Encapsulated
+      - Advantages ``` Reusable, Encapsulated ```
       - terms
-        - Custom Elements
-            ``` <my-button></my-button> ```
+        - Custom Elements  ``` <my-button></my-button> ```
         - Shadow DOM
         - HTML Templates
           ``` 
           <template id="my-template">
-            <button>کلیک کن</button>
+            <button>click me!</button>
           </template>
           ```
 
-2. #### gzip
+1. #### gzip
       - `Gzip` is a file compression format and utility used to reduce the size of files (such as text, HTML, JavaScript, and CSS) for faster transmission over the internet. It is widely used in web servers (like Apache or Nginx) to compress HTTP responses. and useful for Faster Load Times and Reduced Bandwidth.
 
-3. #### void vs never in typescript
-        - `void` used for functions that don’t return anything.
-        - `never` used for functions that never return (for example, they throw an error or enter an infinite loop).
+2. #### void vs never in typescript
+     - `void` used for functions that don’t return anything.
+     - `never` used for functions that never return (for example, they throw an error or enter an infinite loop).
 
-        ```
-            function logMessage(message: string): void {
-              console.log(message);
-            }
+     ```
+         function logMessage(message: string): void {
+           console.log(message);
+         }
 
-            function throwError(message: string): never {
-              throw new Error(message);
-            }
-        ```
+         function throwError(message: string): never {
+           throw new Error(message);
+         }
+     ```
 
-4. #### JavaScript types  
+3. #### JavaScript types  
       - 'null', 'undefined', 'string', 'number', 'boolean', 'object', 'symbol', 'bigint'
 
-5. #### Event Propagation (Capturing, Bubbling)
+4. #### Event Propagation (Capturing, Bubbling)
       - Event Propagation is the process of an event traveling through the DOM, including both capturing (top to target) and bubbling (target to top); you choose the phase using addEventListener's third argument (true for capture,  false for bubble).
       - `event.stopPropagation()`
         - prevents the event from bubbling up or capturing down the DOM tree.
 
-6. #### event.preventDefault()
+5. #### event.preventDefault()
       - event.preventDefault() stops the default action of an element, often used with forms and links (<a> tags).
 
-7. #### event.target vs event.currentTarget  
+6. #### event.target vs event.currentTarget  
       - `event.target` is the element that actually triggered the event.
       - `event.currentTarget` is the element that the event listener is attached to.
       ```
@@ -287,10 +285,10 @@
       ```
       - If you click a child inside parent, event.target will be the child, and event.currentTarget will be parent. Want a visual or analogy to better understand the difference?
 
-8. #### Double NOT !!
+7. #### Double NOT !!
       - is a common trick to convert any value to a boolean.
 
-9. #### Hoisting 
+8. #### Hoisting 
       - Hoisting is JavaScript's behavior of moving declarations (not initializations) to the top of their scope before code execution.
         ```
           smile();
@@ -300,7 +298,7 @@
           }
         ```
 
-10. #### Type of scopes
+9.  #### Type of scopes
         - `Global Scope`: Accessible everywhere.
         - `Function Scope`: Accessible only within a function.
         - `Block Scope`: Accessible only within a block (`if block`, `for(loop) block`, ...).
@@ -316,18 +314,18 @@
           }
           ```
 
-11. #### TDZ (Temporal Dead Zone)
+10. #### TDZ (Temporal Dead Zone)
         - `TDZ` is the time before a `let` or `const` variable is declared, where trying to use it gives a `ReferenceError`. With `var`, this doesn't happen because it's `hoisted` and set to `undefined`.
         ```
           console.log(x); // ❌ ReferenceError: Cannot access 'x' before initialization
           let x = 5;
         ```
 
-12. #### Debounce vs Throttle
+11. #### Debounce vs Throttle
       - `Debounce` waits for a specific time after the last event, and only runs if no new event happens during that time (e.g., during search typing).
       - `Throttle` ensures a function runs once during a fixed time period, no matter how many times the event occurs (e.g., scroll, resize, Mousemove).
 
-13. #### apply , call, bind
+12. #### apply , call, bind
       - `call()` and `apply()` invoke the function immediately but differ in how arguments are passed.
          ``` func.call(thisArg, arg1, arg2, ...) ```
          ``` func.apply(thisArg, [arg1, arg2, ...]) ```
@@ -337,15 +335,15 @@
           greetAlice();
         ```
 
-14. #### Reduce 
+13. #### Reduce 
         ```
         [1, 2, 3, 4].reduce((total, currect) => total + currect);
         ```
 
-15. #### localStorage, sessionStorage, Cookies, IndexedDB, webSQL
+14. #### localStorage, sessionStorage, Cookies, IndexedDB, webSQL
     - They differ in data size and lifetime and data type.
 
-16. #### Types of Functions
+15. #### Types of Functions
       - Regular Functions.
         - ``` function greet() { console.log("Hello!"); } ```
       - Arrow Functions.
@@ -357,7 +355,7 @@
         -  is a function that runs immediately after it's defined.
         ``` (function () { })(); ```
 
-17. #### Rest vs Spread
+16. #### Rest vs Spread
       - `rest` Collects multiple elements into one array or object.
       ```
         function sum(...numbers) {
@@ -369,20 +367,20 @@
         const arr = [1, 2, 3];
         console.log(...arr); // 1 2 3
       ```
-18. #### Implicit Coercion vs Explicit Coercion
+17. #### Implicit Coercion vs Explicit Coercion
       - two ways of typecasting in JavaScript.
       - ‌‌Implicit Coercion
       ``` console.log(1 + '6');  ```
       - Explicit Coercion
       ```  console.log(1 + parseInt('6')); ```
 
-19. #### freeze vs seal 
+18. #### freeze vs seal 
       - `Object.seal()`
         - Prevents adding or removing properties, but you can still modify existing ones.
       - `Object.freeze()`
         - Prevents adding, removing, and modifying properties.
 
-20. #### HMR (Hot Module Replacement ) vs Hot reload
+19. #### HMR (Hot Module Replacement ) vs Hot reload
     - `HMR (Hot Module Replacement):` Only the changed part of the app is updated without a full reload, and the state is preserved.
     - `Hot Reload:` The whole page is reloaded, and the app's state may be lost.
 
