@@ -253,13 +253,16 @@
 1. #### ETL (Extract, Transform, Load)
       - take data clean or change it and move it to another / small database.
 
-2. #### Data Warehouse
+1. #### Data Warehouse
       - A central place to store data from different sources for reporting and analysis.
 
-3. #### Business Intelligence
+1. #### Business Intelligence
       - Tools and processes that turn data into useful insights for better business decisions.
 
-4. #### ClickHouse
+1. #### ClickHouse
       - A fast column-based database built for OLAP queries on large datasets, such as logs, analytics, and dashboards.
   
-5. #### FOMO ( Fear of missing out)
+1. #### FOMO ( Fear of missing out)
+
+1. #### RFI (Request for Information)
+      - A request to collect information about software requirements, features, and capabilities.
