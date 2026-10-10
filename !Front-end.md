@@ -363,20 +363,19 @@
         const arr = [1, 2, 3];
         console.log(...arr); // 1 2 3
       ```
-17. #### Implicit Coercion vs Explicit Coercion
-      - two ways of typecasting in JavaScript.
+17. #### Implicit Coercion vs Explicit Coercion `two ways of typecasting in JavaScript.`
       - ‌‌Implicit Coercion
       ``` console.log(1 + '6');  ```
       - Explicit Coercion
       ```  console.log(1 + parseInt('6')); ```
 
-18. #### freeze vs seal 
+1.  #### freeze vs seal 
       - `Object.seal()`
         - Prevents adding or removing properties, but you can still modify existing ones.
       - `Object.freeze()`
         - Prevents adding, removing, and modifying properties.
 
-19. #### HMR (Hot Module Replacement ) vs Hot reload
+2.  #### HMR `(Hot Module Replacement )` vs Hot reload
     - `HMR (Hot Module Replacement):` Only the changed part of the app is updated without a full reload, and the state is preserved.
     - `Hot Reload:` The whole page is reloaded, and the app's state may be lost.
 
