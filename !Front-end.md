@@ -279,7 +279,7 @@
        <button id="btn"><span>Hello</span></button>
       ```
    - `event.target` is the element that actually triggered the event like `span`.
-   - `event.currentTarget` is the element that the event listener is attached to like `button`.
+   - `event.currentTarget` is the element that the **event listener** is attached to like `button`.
 
 7. #### Double NOT !!
       - is a common trick to convert any value to a boolean.
