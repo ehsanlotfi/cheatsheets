@@ -251,7 +251,7 @@
       - A system for analyzing large amounts of data quickly. Used for reports, dashboards, and business analysis.
 
 1. #### ETL (Extract, Transform, Load)
-      - take data, clean or change it, and move it to another/ small database.
+      - take data clean or change it and move it to another / small database.
 
 2. #### Data Warehouse
       - A central place to store data from different sources for reporting and analysis.
