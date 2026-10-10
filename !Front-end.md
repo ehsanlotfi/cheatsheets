@@ -275,15 +275,11 @@
       - event.preventDefault() stops the default action of an element, often used with forms and links (<a> tags).
 
 6. #### event.target vs event.currentTarget  
-      - `event.target` is the element that actually triggered the event.
-      - `event.currentTarget` is the element that the event listener is attached to.
       ```
-        parent.addEventListener('click', function(event) {
-          console.log('target:', event.target);
-          console.log('currentTarget:', event.currentTarget);
-        });
+       <button id="btn"><span>Hello</span></button>
       ```
-      - If you click a child inside parent, event.target will be the child, and event.currentTarget will be parent. Want a visual or analogy to better understand the difference?
+   - `event.target` is the element that actually triggered the event like `span`.
+   - `event.currentTarget` is the element that the event listener is attached to like `button`.
 
 7. #### Double NOT !!
       - is a common trick to convert any value to a boolean.
