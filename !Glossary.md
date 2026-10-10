@@ -250,13 +250,16 @@
 1. #### OLAP (Online Analytical Processing)
       - A system for analyzing large amounts of data quickly. Used for reports, dashboards, and business analysis.
 
-1. #### Data Warehouse
+1. #### ETL (Extract, Transform, Load)
+      - take data, clean or change it, and move it to another/ small database.
+
+2. #### Data Warehouse
       - A central place to store data from different sources for reporting and analysis.
 
-1. #### Business Intelligence
+3. #### Business Intelligence
       - Tools and processes that turn data into useful insights for better business decisions.
 
-1. #### ClickHouse
+4. #### ClickHouse
       - A fast column-based database built for OLAP queries on large datasets, such as logs, analytics, and dashboards.
   
-1. #### FOMO ( Fear of missing out)
+5. #### FOMO ( Fear of missing out)
