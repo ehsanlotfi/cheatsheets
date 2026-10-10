@@ -71,19 +71,19 @@
       ```
 
 1. #### Non-null Assertion
-       - This operator tells TypeScript that the value is definitely not null, even without a check.
+    - This operator tells TypeScript that the value is definitely not null, even without a check.
       ```
         // use the '!' character   at the end of the phrase
         const test = model.user.name!;
       ```
 
-1. #### Shallow Rendering
+2. #### Shallow Rendering
       -  it's a test technique that tests a component without rendering its child components.
 
-1. #### Polyfill 
+3. #### Polyfill 
       -  A piece of code that adds missing javascript new features (like Ecmascript new features) to older browsers.
 
-1. #### Utility Types in TypeScript 
+4. #### Utility Types in TypeScript 
       - `Partial<Type>`
         -  Makes all properties of a type optional.
       - `Required<Type>`
@@ -194,15 +194,15 @@
         ```
 
 1. #### preload vs prefetch
-        - Both of them are for downloading resources before they are needed.
-        - Preload is for resources needed right away, while Prefetch is for resources that will be used later.
-        - Preload blocks the page rendering to fetch the resource, while Prefetch works in the background to optimize future page loads.
-          ```
-          <link rel="preload" href="/font.woff" as="font" />
-          <link rel="prefetch" href="/prism.js" as="script" />
-          ```
+     - Both of them are for downloading resources before they are needed.
+     - Preload is for resources needed right away, while Prefetch is for resources that will be used later.
+     - Preload blocks the page rendering to fetch the resource, while Prefetch works in the background to optimize future page loads.
+       ```
+       <link rel="preload" href="/font.woff" as="font" />
+       <link rel="prefetch" href="/prism.js" as="script" />
+       ```
 
-1. #### Core Web Vitals 
+2. #### Core Web Vitals 
       - A set of performance metrics used by Google to measure the user experience of a website
         - Largest Contentful Paint (LCP)  
           - It tracks the time it takes for the largest content element (image, text, etc.) to be visible to the user.
@@ -211,7 +211,7 @@
         -  Cumulative Layout Shift (CLS)  
           -  It tracks how much the page layout shifts during loading, causing unexpected movement of content.
 
-1. #### CORS ( Cross-Origin Resource Sharing )
+3. #### CORS ( Cross-Origin Resource Sharing )
       - A security feature implemented by web browsers to restrict how web pages can request resources from domains other than their own.
 
 
