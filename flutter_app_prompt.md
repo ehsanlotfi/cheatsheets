@@ -44,6 +44,18 @@
 - ADB 37.0.1
 - Java (JBR): OpenJDK 21.0.10
 
+- در تنظیم و تولید فایل‌های Android پروژه‌های Flutter، دقیقاً از استاندارد Gradle پروژه مرجع استفاده کن.
+1. فایل `settings.gradle` باید شامل Plugin Management، دریافت مسیر Flutter از local.properties و مخازن Myket، Aliyun، Google، Maven Central و Gradle Plugin Portal باشد.
+2. فایل `build.gradle` باید مخازن Myket، Flutter Myket، Aliyun، Google، Maven Central و JitPack را مطابق پروژه مرجع تعریف کند.
+3. مخازن Aliyun باید قبل از مخازن رسمی Google و Maven Central قرار بگیرند.
+4. مخازن Buildscript و Subprojects نیز مطابق پروژه مرجع تعریف شوند.
+5. نسخه Android Gradle Plugin برابر 8.11.1 و Kotlin برابر 2.2.20 باشد، مگر اینکه ناسازگاری مشخصی وجود داشته باشد.
+6. فایل gradle.properties باید تنظیمات AndroidX، Jetifier، JVM و گزینه‌های سازگاری Flutter 3.47 را مطابق پروژه مرجع داشته باشد.
+7. JDK 22 و Java Source/Target 17 رعایت شوند.
+8. تنظیمات موجود و ضروری پروژه، مانند Signing، Flavors، Application ID و تنظیمات اختصاصی اپلیکیشن حفظ شوند.
+9. هیچ پروکسی در gradle.properties تعریف نشود.
+10. ساختار و ترتیب مخازن تا حد امکان با پروژه مرجع یکسان باشد و از تغییرات غیرضروری اجتناب شود.
+هدف: تمام پروژه‌های Flutter از یک استاندارد یکسان برای تنظیمات Android و دریافت وابستگی‌های Gradle استفاده کنند.- 
 ---
 
 
