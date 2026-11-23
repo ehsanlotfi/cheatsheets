@@ -35,9 +35,14 @@
 - هیچ SDK تبلیغاتی یا آنالیتیکس اضافه نشود.
 - حالت‌های خالی، لودینگ و خطا در همه لیست‌ها و صفحات طراحی شوند و برای عملیات مخرب (حذف داده، بازگردانی پشتیبان) دیالوگ تأیید گرفته شود.
 - محیط توسعه من به شکل زیر است برنامه و کتابخانه ها بر طبق این ورژن ها نوشته شود.
-  - Flutter 3.47.9  
-  - Dart 3.13.7
-  - DevTools 2.60.0
+- OS: Windows 11 Enterprise
+- Flutter version 3.47.9
+- Dart version 3.13.7 (DevTools 2.60.0)
+- Pub/Flutter mirror: [https://pub.myket.ir](https://pub.myket.ir)
+- Android SDK: 36.1.0
+- Build-Tools 36.1.0
+- ADB 37.0.1
+- Java (JBR): OpenJDK 21.0.10
 
 ---
 
