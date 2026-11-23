@@ -55,6 +55,11 @@
 8. تنظیمات موجود و ضروری پروژه، مانند Signing، Flavors، Application ID و تنظیمات اختصاصی اپلیکیشن حفظ شوند.
 9. هیچ پروکسی در gradle.properties تعریف نشود.
 10. ساختار و ترتیب مخازن تا حد امکان با پروژه مرجع یکسان باشد و از تغییرات غیرضروری اجتناب شود.
+11. فایل `android/gradle/wrapper/gradle-wrapper.properties` باید دقیقاً شامل این مقدار باشد:
+
+`distributionUrl=https\://services.gradle.org/distributions/gradle-8.14-all.zip`
+
+نسخه Gradle Wrapper برابر 8.14 باشد و از نسخه‌های قدیمی‌تر استفاده نشود.
 هدف: تمام پروژه‌های Flutter از یک استاندارد یکسان برای تنظیمات Android و دریافت وابستگی‌های Gradle استفاده کنند.- 
 ---
 
