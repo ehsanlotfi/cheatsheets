@@ -527,6 +527,7 @@ dependencyResolutionManagement {
 }
 
 include(":app")
+```
 
 #### sample android/gradle/wrapper/gradle-wrapper.properties
 ```
