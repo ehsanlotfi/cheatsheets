@@ -59,8 +59,7 @@
 
 `distributionUrl=https\://services.gradle.org/distributions/gradle-8.14-all.zip`
 
-نسخه Gradle Wrapper برابر 8.14 باشد و از نسخه‌های قدیمی‌تر استفاده نشود.
-هدف: تمام پروژه‌های Flutter از یک استاندارد یکسان برای تنظیمات Android و دریافت وابستگی‌های Gradle استفاده کنند.- 
+
 ---
 
 
