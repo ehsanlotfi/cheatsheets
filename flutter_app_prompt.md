@@ -34,6 +34,7 @@
 - پیش از تحویل، همه کدها دقیق بررسی شوند؛ نیازی به اجرای تست نیست ولی کد نباید مشکل سینتکس یا منطق داشته باشد.
 - هیچ SDK تبلیغاتی یا آنالیتیکس اضافه نشود.
 - حالت‌های خالی، لودینگ و خطا در همه لیست‌ها و صفحات طراحی شوند و برای عملیات مخرب (حذف داده، بازگردانی پشتیبان) دیالوگ تأیید گرفته شود.
+- نمونه فایل های موفق که در محیط من بدون مشکل اجرا می شود را در پایین لیست کردم مشابه همان ها ایجاد کن.
 - محیط تست و اجرا و بیلد پروژه من به شرح زیر است سازگار با این محیط پیاده سازی کن
     - Windows 11 Enterprise
     - Flutter: 3.47.9
@@ -320,4 +321,217 @@ jobs:
           files: dist/*.ipa
           overwrite_files: true
           fail_on_unmatched_files: true
+```
+
+
+
+#### sample android/build.gradle
+```
+
+buildscript {
+    repositories {
+        maven { url "https://maven.myket.ir/" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://maven.myket.ir/" }
+
+        maven {
+            url "https://pub.myket.ir/download.flutter.io"
+            content {
+                includeGroupByRegex "io\\.flutter.*"
+            }
+        }
+
+        maven {
+            url "https://storage.googleapis.com/download.flutter.io"
+            content {
+                includeGroupByRegex "io\\.flutter.*"
+            }
+        }
+
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+subprojects {
+    afterEvaluate { project ->
+        if (project.hasProperty("android")) {
+            project.android {
+                if (compileSdk == null || compileSdk < 36) {
+                    compileSdk = 36
+                }
+
+                compileOptions {
+                    sourceCompatibility = JavaVersion.VERSION_17
+                    targetCompatibility = JavaVersion.VERSION_17
+                }
+            }
+        }
+
+        project.tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+            kotlinOptions {
+                jvmTarget = "17"
+            }
+        }
+    }
+}
+
+rootProject.buildDir = file("../build")
+
+subprojects {
+    project.buildDir = file("${rootProject.buildDir}/${project.name}")
+}
+
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
+```
+
+#### android/app/build.gradle
+```
+
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.app"
+    compileSdk = 36
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
+        applicationId = "com.example.app"
+        minSdkVersion = flutter.minSdkVersion
+        targetSdk = 35
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix = ".debug"
+            debuggable = true
+        }
+
+        release {
+            signingConfig = signingConfigs.debug
+            minifyEnabled = false
+            shrinkResources = false
+        }
+    }
+}
+
+configurations.all {
+    exclude group: "com.android.billingclient"
+}
+
+flutter {
+    source = "../.."
+}
+
+```
+#### android/settings.gradle
+```
+
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        file("local.properties").withInputStream {
+            properties.load(it)
+        }
+
+        def flutterSdkPath = properties.getProperty("flutter.sdk")
+        assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
+
+        return flutterSdkPath
+    }()
+
+    includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")
+
+    repositories {
+        maven { url "https://maven.myket.ir/" }
+        maven { url "https://maven.aliyun.com/repository/gradle-plugin" }
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id("dev.flutter.flutter-plugin-loader") version "1.0.0"
+    id("com.android.application") version "8.11.1" apply false
+    id("org.jetbrains.kotlin.android") version "2.2.20" apply false
+}
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_PROJECT)
+
+    repositories {
+        maven { url "https://maven.myket.ir/" }
+
+        maven {
+            url "https://pub.myket.ir/download.flutter.io"
+            content {
+                includeGroupByRegex "io\\.flutter.*"
+            }
+        }
+
+        maven {
+            url "https://storage.googleapis.com/download.flutter.io"
+            content {
+                includeGroupByRegex "io\\.flutter.*"
+            }
+        }
+
+        maven { url "https://maven.aliyun.com/repository/google" }
+        maven { url "https://maven.aliyun.com/repository/public" }
+
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+include(":app")
+
+#### sample android/gradle/wrapper/gradle-wrapper.properties
+```
+distributionBase=GRADLE_USER_HOME
+distributionPath=wrapper/dists
+zipStoreBase=GRADLE_USER_HOME
+zipStorePath=wrapper/dists
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.14-all.zip
 ```
