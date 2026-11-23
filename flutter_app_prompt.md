@@ -34,30 +34,20 @@
 - پیش از تحویل، همه کدها دقیق بررسی شوند؛ نیازی به اجرای تست نیست ولی کد نباید مشکل سینتکس یا منطق داشته باشد.
 - هیچ SDK تبلیغاتی یا آنالیتیکس اضافه نشود.
 - حالت‌های خالی، لودینگ و خطا در همه لیست‌ها و صفحات طراحی شوند و برای عملیات مخرب (حذف داده، بازگردانی پشتیبان) دیالوگ تأیید گرفته شود.
-- محیط توسعه من به شکل زیر است برنامه و کتابخانه ها بر طبق این ورژن ها نوشته شود.
-- OS: Windows 11 Enterprise
-- Flutter version 3.47.9
-- Dart version 3.13.7 (DevTools 2.60.0)
-- Pub/Flutter mirror: [https://pub.myket.ir](https://pub.myket.ir)
-- Android SDK: 36.1.0
-- Build-Tools 36.1.0
-- ADB 37.0.1
-- Java (JBR): OpenJDK 21.0.10
-
-- در تنظیم و تولید فایل‌های Android پروژه‌های Flutter، دقیقاً از استاندارد Gradle پروژه مرجع استفاده کن.
-1. فایل `settings.gradle` باید شامل Plugin Management، دریافت مسیر Flutter از local.properties و مخازن Myket، Aliyun، Google، Maven Central و Gradle Plugin Portal باشد.
-2. فایل `build.gradle` باید مخازن Myket، Flutter Myket، Aliyun، Google، Maven Central و JitPack را مطابق پروژه مرجع تعریف کند.
-3. مخازن Aliyun باید قبل از مخازن رسمی Google و Maven Central قرار بگیرند.
-4. مخازن Buildscript و Subprojects نیز مطابق پروژه مرجع تعریف شوند.
-5. نسخه Android Gradle Plugin برابر 8.11.1 و Kotlin برابر 2.2.20 باشد، مگر اینکه ناسازگاری مشخصی وجود داشته باشد.
-6. فایل gradle.properties باید تنظیمات AndroidX، Jetifier، JVM و گزینه‌های سازگاری Flutter 3.47 را مطابق پروژه مرجع داشته باشد.
-7. JDK 22 و Java Source/Target 17 رعایت شوند.
-8. تنظیمات موجود و ضروری پروژه، مانند Signing، Flavors، Application ID و تنظیمات اختصاصی اپلیکیشن حفظ شوند.
-9. هیچ پروکسی در gradle.properties تعریف نشود.
-10. ساختار و ترتیب مخازن تا حد امکان با پروژه مرجع یکسان باشد و از تغییرات غیرضروری اجتناب شود.
-11. فایل `android/gradle/wrapper/gradle-wrapper.properties` باید دقیقاً شامل این مقدار باشد:
-
-`distributionUrl=https\://services.gradle.org/distributions/gradle-8.14-all.zip`
+- محیط تست و اجرا و بیلد پروژه من به شرح زیر است سازگار با این محیط پیاده سازی کن
+    - Windows 11 Enterprise
+    - Flutter: 3.47.9
+    - Dart: 3.13.7
+    - DevTools: 2.60.0
+    - Pub Mirror: https://pub.myket.ir
+    - Android SDK: 36.1.0
+    - Build-Tools: 36.1.0
+    - ADB: 37.0.1
+    - Java (JBR): 21.0.10
+    - Gradle Wrapper: 8.14
+    - Android Gradle Plugin: 8.11.1
+    - Kotlin: 2.2.20
+    - Java Source/Target: 17
 
 
 ---
