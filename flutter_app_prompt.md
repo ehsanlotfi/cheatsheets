@@ -99,79 +99,18 @@ on:
   workflow_dispatch:
     inputs:
       tag:
-        description: "Base release tag (e.g. v2.0)"
+        description: GitHub release tag
         required: true
-        default: "v1.0"
-        type: string
-
-      flavors:
-        description: "Comma-separated flavors (e.g. production,staging or default)"
-        required: true
-        default: "default"
-        type: string
-
-      bundle_ids:
-        description: "Comma-separated Bundle IDs (same order as flavors; optional)"
-        required: false
-        type: string
-
-      display_names:
-        description: "Comma-separated display names (same order as flavors; optional)"
-        required: false
-        type: string
-
-      url_schemes:
-        description: "Comma-separated URL schemes (same order as flavors; optional)"
-        required: false
-        type: string
-
-      market:
-        description: "Application market"
-        required: true
-        default: "default"
-        type: string
-
-      extra_defines:
-        description: "Additional Dart defines (comma-separated KEY=VALUE)"
-        required: false
-        type: string
-
-      app_name:
-        description: "Release and artifact name"
-        required: true
-        default: "app"
-        type: string
-
-      flutter_version:
-        description: "Flutter version"
-        required: true
-        default: "3.47.7"
+        default: v2.0
         type: string
 
 permissions:
   contents: write
 
 jobs:
-  prepare:
-    name: Prepare Build Matrix
-    runs-on: ubuntu-latest
-    outputs:
-      flavors: ${{ steps.matrix.outputs.flavors }}
-    steps:
-      - name: Generate matrix
-        id: matrix
-        env:
-          FLAVORS: ${{ inputs.flavors }}
-        run: |
-          python3 -c 'import os,json; f=[x.strip() for x in os.environ["FLAVORS"].split(",") if x.strip()]; assert f, "At least one flavor is required"; print("matrix="+json.dumps({"flavor":f}))' >> "$GITHUB_OUTPUT"
-
   build-ios:
-    name: Build iOS (${{ matrix.flavor }})
-    needs: prepare
+    name: Build iOS IPA
     runs-on: macos-latest
-    strategy:
-      fail-fast: false
-      matrix: ${{ fromJson(needs.prepare.outputs.flavors) }}
 
     steps:
       - name: Checkout
@@ -181,150 +120,35 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version: ${{ inputs.flutter_version }}
           cache: true
+          pub-cache: true
 
       - name: Install Flutter dependencies
         run: flutter pub get
 
-      - name: Configure iOS
-        env:
-          FLAVOR: ${{ matrix.flavor }}
-          FLAVORS: ${{ inputs.flavors }}
-          BUNDLE_IDS: ${{ inputs.bundle_ids }}
-          DISPLAY_NAMES: ${{ inputs.display_names }}
-          URL_SCHEMES: ${{ inputs.url_schemes }}
-        run: |
-          python3 <<'PY'
-          import os
-          import re
-
-          def get_value(key):
-              values = [x.strip() for x in os.environ.get(key, "").split(",")]
-              flavors = [x.strip() for x in os.environ["FLAVORS"].split(",")]
-              flavor = os.environ["FLAVOR"]
-              if not os.environ.get(key):
-                  return ""
-              if len(values) != len(flavors):
-                  raise ValueError(f"{key} must contain one value per flavor")
-              return values[flavors.index(flavor)]
-
-          bundle_id = get_value("BUNDLE_IDS")
-          display_name = get_value("DISPLAY_NAMES")
-          url_scheme = get_value("URL_SCHEMES")
-
-          pbxproj = "ios/Runner.xcodeproj/project.pbxproj"
-
-          if bundle_id:
-              with open(pbxproj, encoding="utf-8") as f:
-                  content = f.read()
-              content = re.sub(
-                  r"PRODUCT_BUNDLE_IDENTIFIER = [^;]+;",
-                  f"PRODUCT_BUNDLE_IDENTIFIER = {bundle_id};",
-                  content
-              )
-              with open(pbxproj, "w", encoding="utf-8") as f:
-                  f.write(content)
-
-          plist = "ios/Runner/Info.plist"
-
-          if display_name:
-              os.system(f"/usr/libexec/PlistBuddy -c 'Set :CFBundleDisplayName {display_name}' {plist}")
-
-          if url_scheme:
-              os.system(f"/usr/libexec/PlistBuddy -c 'Set :CFBundleURLTypes:0:CFBundleURLSchemes:0 {url_scheme}' {plist}")
-
-          print(f"Flavor: {os.environ['FLAVOR']}")
-          print(f"Bundle ID: {bundle_id or 'Project default'}")
-          PY
-
-      - name: Generate app icon
-        env:
-          FLAVOR: ${{ matrix.flavor }}
-        run: |
-          CONFIG="flutter_launcher_icons_${FLAVOR}.yaml"
-          if [ "$FLAVOR" != "default" ] && [ -f "$CONFIG" ]; then
-            dart run flutter_launcher_icons -f "$CONFIG"
-          elif [ -f "flutter_launcher_icons.yaml" ]; then
-            dart run flutter_launcher_icons -f flutter_launcher_icons.yaml
-          fi
-
       - name: Build iOS
-        env:
-          FLAVOR: ${{ matrix.flavor }}
-          MARKET: ${{ inputs.market }}
-          EXTRA_DEFINES: ${{ inputs.extra_defines }}
-        run: |
-          ARGS=()
-          ARGS+=(--dart-define="APP_FLAVOR=$FLAVOR")
-          ARGS+=(--dart-define="APP_MARKET=$MARKET")
-
-          IFS=',' read -ra DEFINES <<< "$EXTRA_DEFINES"
-          for DEFINE in "${DEFINES[@]}"; do
-            DEFINE="$(echo "$DEFINE" | xargs)"
-            if [ -n "$DEFINE" ]; then
-              ARGS+=(--dart-define="$DEFINE")
-            fi
-          done
-
-          if [ "$FLAVOR" = "default" ]; then
-            flutter build ios --release --no-codesign "${ARGS[@]}"
-          else
-            flutter build ios --release --no-codesign --flavor "$FLAVOR" "${ARGS[@]}"
-          fi
+        run: flutter build ios --release --no-codesign
 
       - name: Package IPA
+        shell: bash
         working-directory: build/ios/iphoneos
-        env:
-          APP_NAME: ${{ inputs.app_name }}
-          FLAVOR: ${{ matrix.flavor }}
         run: |
           mkdir -p Payload
           cp -R Runner.app Payload/
-          ditto -c -k --sequesterRsrc --keepParent Payload "${APP_NAME}-${FLAVOR}.ipa"
-
-      - name: Upload IPA artifact
-        uses: actions/upload-artifact@v7
-        with:
-          name: ${{ inputs.app_name }}-${{ matrix.flavor }}-ipa
-          path: build/ios/iphoneos/${{ inputs.app_name }}-${{ matrix.flavor }}.ipa
-          if-no-files-found: error
-
-  release-ios:
-    name: Release iOS (${{ matrix.flavor }})
-    needs: [prepare, build-ios]
-    runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix: ${{ fromJson(needs.prepare.outputs.flavors) }}
-
-    steps:
-      - name: Download IPA artifact
-        uses: actions/download-artifact@v8
-        with:
-          name: ${{ inputs.app_name }}-${{ matrix.flavor }}-ipa
-          path: dist
+          ditto -c -k --sequesterRsrc --keepParent Payload FlutterIpaExport.ipa
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v3
         with:
           token: ${{ github.token }}
-          tag_name: ${{ matrix.flavor == 'default' && inputs.tag || format('{0}-{1}', matrix.flavor, inputs.tag) }}
+          tag_name: ${{ inputs.tag }}
           target_commitish: ${{ github.sha }}
-          name: iOS ${{ matrix.flavor }} ${{ inputs.tag }}
-          body: |
-            Automated iOS IPA build.
-
-            Application: ${{ inputs.app_name }}
-            Flavor: ${{ matrix.flavor }}
-            Market: ${{ inputs.market }}
-            Commit: ${{ github.sha }}
-          files: dist/*.ipa
+          name: iOS ${{ inputs.tag }}
+          body: Automated iOS build.
+          files: build/ios/iphoneos/FlutterIpaExport.ipa
           overwrite_files: true
           fail_on_unmatched_files: true
 ```
-
-
 
 #### sample android/build.gradle
 ```
